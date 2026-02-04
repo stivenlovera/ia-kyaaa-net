@@ -1,0 +1,77 @@
+{
+    "Index": {
+        "title": "NUEVOS:",
+        "description": "Nuevos"
+    },
+    "Tag": {
+        "title": "TODAS LAS ETIQUETAS:",
+        "description": "Todas las etiquetas:"
+    },
+    "TagName": {
+        "title": "ETIQUETA: ",
+        "description": "etiqueta: "
+    },
+    "Serie": {
+        "title": "TODAS LAS SERIES:",
+        "description": "Todas las series:"
+    },
+    "SerieName": {
+        "title": "SERIE: ",
+        "description": "Serie "
+    },
+    "Artist": {
+        "title": "TODOS LOS ARTISTAS:",
+        "description": "Todos los artistas"
+    },
+    "ArtistName": {
+        "title": "ARTISTA: ",
+        "description": "Artista "
+    },
+    "Character": {
+        "title": "TODOS LOS PERSONAJES:",
+        "description": "Todos los personajes"
+    },
+    "CharacterName": {
+        "title": "PERSONAJE: ",
+        "description": "Personaje "
+    },
+    "Group": {
+        "title": "TODOS LOS GRUPOS:",
+        "description": "Todos los grupos "
+    },
+    "GroupName": {
+        "title": "GRUPO: ",
+        "description": "Grupos "
+    },
+    "Language": {
+        "title": "TODOS LOS IDIOMAS:",
+        "description": "Todos los idiomas"
+    },
+    "LanguageName": {
+        "title": "IDIOMAS: ",
+        "description": "Idiomas "
+    },
+    "Category": {
+        "title": "TODAS LAS CATEGORIAS:",
+        "description": "Todas las categorias"
+    },
+    "CategoryName": {
+        "title": "CATEGORIA: ",
+        "description": "categoria "
+    },
+    "Code": {
+        "series": "Series",
+        "characters": "Personajes",
+        "tags": "Etiquetas",
+        "artists": "Artistas",
+        "group": "Grupos",
+        "language": "Idiomas",
+        "category": "Categoria",
+        "pages": "Paginas",
+        "update": "Actualizado"
+    },
+    "View": {
+        "backGalery": "Volver a galeria",
+        "paginate": "de"
+    }
+}

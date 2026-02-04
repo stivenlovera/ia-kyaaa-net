@@ -1,0 +1,80 @@
+[2026-02-03 11:34:25] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202950",
+	"pages": [
+		{
+			"num": "001",
+			"page_type": {
+				"extension": "avif"
+			}
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-03 11:34:25] LOG.INFO: 1
+[2026-02-03 11:34:25] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]

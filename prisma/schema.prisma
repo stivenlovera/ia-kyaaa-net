@@ -1,0 +1,197 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../node_modules/.prisma/client"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+model Pack {
+  pack_id        Int              @id @default(autoincrement())
+  name           String
+  description    String
+  code           String
+  state          Int
+  create_at      DateTime?
+  update_at      DateTime?
+  pages          Page[]
+  pack_types     Pack_type[]
+  pack_character Pack_character[]
+  pack_label     Pack_label[]
+  pack_serie     Pack_serie[]
+  pack_authors   Pack_author[]
+  pack_languages Pack_language[]
+
+  @@map(name: "pack")
+}
+
+model Page {
+  page_id      Int       @id @default(autoincrement())
+  pack         Pack      @relation(fields: [pack_id], references: [pack_id])
+  pack_id      Int
+  page_type    Page_type @relation(fields: [page_type_id], references: [page_type_id])
+  page_type_id Int
+  num          String
+  state        Int
+  create_at    DateTime?
+  update_at    DateTime?
+
+  @@map(name: "page")
+}
+
+model Type {
+  type_id    Int         @id @default(autoincrement())
+  name       String
+  state      Int
+  pack_types Pack_type[]
+  create_at  DateTime?
+  update_at  DateTime?
+
+  @@map(name: "type")
+}
+
+model Label {
+  label_id    Int          @id @default(autoincrement())
+  name        String
+  state       Int
+  create_at   DateTime?
+  update_at   DateTime?
+  pack_labels Pack_label[]
+
+  @@map(name: "label")
+}
+
+model Character {
+  character_id    Int              @id @default(autoincrement())
+  name            String
+  state           Int
+  create_at       DateTime?
+  update_at       DateTime?
+  pack_characters Pack_character[]
+
+  @@map(name: "character")
+}
+
+model Serie {
+  serie_id    Int          @id @default(autoincrement())
+  name        String
+  pack_series Pack_serie[]
+  state       Int
+  create_at   DateTime?
+  update_at   DateTime?
+
+  @@map(name: "serie")
+}
+
+model Author {
+  author_id    Int           @id @default(autoincrement())
+  name         String
+  pack_authors Pack_author[]
+  state        Int
+  create_at    DateTime?
+  update_at    DateTime?
+
+  @@map(name: "author")
+}
+
+model Language {
+  language_id    Int             @id @default(autoincrement())
+  name           String
+  pack_languages Pack_language[]
+  state          Int
+  create_at      DateTime?
+  update_at      DateTime?
+
+  @@map(name: "language")
+}
+
+model Page_type {
+  page_type_id Int       @id @default(autoincrement())
+  name         String
+  extension    String
+  pages        Page[]
+  state        Int
+  create_at    DateTime?
+  update_at    DateTime?
+
+  @@map(name: "page_type")
+}
+
+model Pack_type {
+  type      Type      @relation(fields: [type_id], references: [type_id])
+  type_id   Int
+  pack      Pack      @relation(fields: [pack_id], references: [pack_id])
+  pack_id   Int
+  create_at DateTime?
+  update_at DateTime?
+
+  @@id([pack_id, type_id])
+  @@map(name: "pack_type")
+}
+
+model Pack_label {
+  label_id  Int
+  pack_id   Int
+  create_at DateTime?
+  update_at DateTime?
+  pack      Pack      @relation(fields: [pack_id], references: [pack_id])
+  label     Label     @relation(fields: [label_id], references: [label_id])
+
+  @@id([label_id, pack_id])
+  @@map(name: "pack_label")
+}
+
+model Pack_serie {
+  serie_id  Int
+  pack_id   Int
+  create_at DateTime?
+  update_at DateTime?
+  serie     Serie     @relation(fields: [serie_id], references: [serie_id])
+  pack      Pack      @relation(fields: [pack_id], references: [pack_id])
+
+  @@id([serie_id, pack_id])
+  @@map(name: "pack_serie")
+}
+
+model Pack_character {
+  character_id Int
+  character    Character @relation(fields: [character_id], references: [character_id])
+  pack_id      Int
+  pack         Pack      @relation(fields: [pack_id], references: [pack_id])
+  create_at    DateTime?
+  update_at    DateTime?
+
+  @@id([character_id, pack_id])
+  @@map(name: "pack_character")
+}
+
+model Pack_author {
+  author_id Int
+  author    Author    @relation(fields: [author_id], references: [author_id])
+  pack_id   Int
+  pack      Pack      @relation(fields: [pack_id], references: [pack_id])
+  create_at DateTime?
+  update_at DateTime?
+
+  @@id([author_id, pack_id])
+  @@map(name: "pack_author")
+}
+
+model Pack_language {
+  language_id Int
+  language    Language  @relation(fields: [language_id], references: [language_id])
+  pack_id     Int
+  pack        Pack      @relation(fields: [pack_id], references: [pack_id])
+  create_at   DateTime?
+  update_at   DateTime?
+
+  @@id([language_id, pack_id])
+  @@map(name: "pack_language")
+}
