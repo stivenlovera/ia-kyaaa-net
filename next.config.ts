@@ -5,14 +5,15 @@ const withNextIntl = createNextIntlPlugin('./app/i18n/request.ts');
 
 const nextConfig: NextConfig = {
   images: {
-    remotePatterns: [
+    /* remotePatterns: [
       {
-        protocol: "http",
-        hostname: "localhost",
+        protocol: "https",
+        hostname: "usc1.contabostorage.com",
         port: "80",
         pathname: "/**",
       },
-    ],
+    ], */
+    domains: ['usc1.contabostorage.com'],
   },
 
 };

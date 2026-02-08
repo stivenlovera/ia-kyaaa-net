@@ -1,15 +1,38 @@
 import Link from 'next/link';
 import React from 'react'
-import { packService, totalCharacter, totalLabel, totalSerie, totalType } from './_service/code.service';
+import { packInfo, packPages, totalCharacter, totalLabel, totalSerie, totalType } from './_service/code.service';
 import moment from 'moment';
 import { CardSection } from './_components/card-section';
 import logger, { jsonLog } from '../../utils/logger';
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
+import { Metadata } from 'next';
+
+interface PagePaginateProps {
+    params: Promise<{
+        code: string
+    }>
+}
+
+export async function generateMetadata({ params }: PagePaginateProps): Promise<Metadata> {
+    const { code } = await params;
+    const pack = await packInfo(code);
+    if (pack === null) {
+        return {
+            title: "Pagina no encontra",
+            description: "No hay informacion",
+        };
+    }
+    return {
+        title: pack.name,
+        description: pack.description,
+    };
+}
 
 export default async function PageCode({ params }: { params: Promise<{ code: string }> }) {
     const { code } = await params;
 
-    const pack = await packService(code);
+    const pack = await packInfo(code);
     if (pack === null) {
         logger.warn(`PageCode/pack not notFound`)
         return notFound();
@@ -52,28 +75,31 @@ export default async function PageCode({ params }: { params: Promise<{ code: str
     })
     const tagLanguages = await totalLabel(languages);
 
+    const pages = await packPages(code);
+
     return (
         <div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 pb-2">
                 <div
-                    className="border-2 border-neutral-800"
+                    className="border-2 border-neutral-700"
                 >
                     <Link
                         href={`/${pack?.code}/${pack?.pages[0].num}`}
                         className="flex flex-row min-h-full justify-center items-center"
                     >
                         <img
-                            className='h-3/4 w-3/4 p-4'
+                            className='h-3/4 w-3/4 p-1'
                             alt='preview'
-                            src={`${process.env.URL_S3}/${pack?.code}/web/${pack?.pages[0].num}.${pack?.pages[0].page_type.extension}`}
+                            fetchPriority="high"
+                            src={`${process.env.URL_S3}/${pack?.code}/${pack?.pages[0].page_size[0].size.name}/${pack?.pages[0].num}.${pack?.pages[0].page_size[0].size.extension}`}
                         />
                     </Link>
                 </div>
-                <div className="border-2 border-neutral-800 items-center justify-center p-2">
-                    <div className="p-2">
+                <div className="border-2 border-neutral-700 items-center justify-center p-1">
+                    <div className="p-1">
                         <h4 className='text-2xl'>{pack?.name}</h4>
                     </div>
-                    <div className="p-2">
+                    <div className="p-1">
                         <h5 className='text-xl'>{pack?.code}</h5>
                     </div>
                     <CardSection
@@ -126,6 +152,39 @@ export default async function PageCode({ params }: { params: Promise<{ code: str
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div className="border-2 border-neutral-700">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5">
+                    {
+                        pages!.pages.map((page, i) => {
+                            return (
+                                <div
+                                    className="flex p-1 sm:p-1 md:p-1 lg:p-2 xl:p-2 justify-center w-full"
+                                    key={i}
+                                >
+                                    <Link
+                                        href={`/${pack?.code}/${page.num}`}
+                                        className=""
+                                    >
+                                        <Image
+                                            fetchPriority="high"
+                                            src={`${process.env.URL_S3}/${pack?.code}/${page.page_size[0].size.name}/${page.num}.${page.page_size[0].size.extension}`}
+                                            alt={`pagina ${page.num}`}
+                                            width={270}
+                                            height={347}
+                                        />
+                                        {/* <img
+                                            fetchPriority="high"
+                                            className='w-auto'
+                                            alt='preview'
+                                            src={`${process.env.URL_S3}/${pack?.code}/${page.page_size[0].size.name}/${page.num}.${page.page_size[0].size.extension}`}
+                                        /> */}
+                                    </Link>
+                                </div>
+                            )
+                        })
+                    }
                 </div>
             </div>
         </div>

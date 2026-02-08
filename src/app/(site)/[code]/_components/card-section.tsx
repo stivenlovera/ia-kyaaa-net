@@ -11,7 +11,7 @@ interface CardSectionProps {
 }
 export const CardSection = ({ datos, nameSection, route }: CardSectionProps) => {
     return (
-        <div className="p-1">
+        <div className="">
             {
                 datos!.length > 0 ? (
                     <div className="flex mx-auto flex-wrap">

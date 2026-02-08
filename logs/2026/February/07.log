@@ -1,0 +1,140 @@
+[2026-02-07 23:41:00] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202952",
+	"pages": [
+		{
+			"num": "01",
+			"page_size": [
+				{
+					"size": {
+						"extension": "avif"
+					}
+				}
+			]
+		},
+		{
+			"num": "02",
+			"page_size": []
+		},
+		{
+			"num": "03",
+			"page_size": []
+		},
+		{
+			"num": "04",
+			"page_size": []
+		},
+		{
+			"num": "05",
+			"page_size": []
+		},
+		{
+			"num": "06",
+			"page_size": []
+		},
+		{
+			"num": "07",
+			"page_size": []
+		},
+		{
+			"num": "08",
+			"page_size": []
+		},
+		{
+			"num": "09",
+			"page_size": []
+		},
+		{
+			"num": "10",
+			"page_size": []
+		},
+		{
+			"num": "11",
+			"page_size": []
+		},
+		{
+			"num": "12",
+			"page_size": []
+		},
+		{
+			"num": "13",
+			"page_size": []
+		},
+		{
+			"num": "14",
+			"page_size": []
+		},
+		{
+			"num": "15",
+			"page_size": []
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-07 23:41:00] LOG.INFO: 1
+[2026-02-07 23:41:00] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]

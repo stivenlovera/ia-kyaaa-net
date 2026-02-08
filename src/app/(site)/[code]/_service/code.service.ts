@@ -2,7 +2,7 @@ import prisma from "@/src/app/utils/prisma";
 import { ICountTag } from "../_components/card-section";
 import logger from "@/src/app/utils/logger";
 
-export const packService = async (code: string) => {
+export const packInfo = async (code: string) => {
     const pack = await prisma.pack.findFirst({
         where: {
             code: code
@@ -13,14 +13,20 @@ export const packService = async (code: string) => {
             pack_id: true,
             code: true,
             pages: {
-                where: {
-                    page_type_id: 2
-                },
                 select: {
                     num: true,
-                    page_type: {
+                    page_size: {
+                        where: {
+                            size_id: 2
+                        },
+                        take: 1,
                         select: {
-                            extension: true
+                            size: {
+                                select: {
+                                    extension: true,
+                                    name: true
+                                }
+                            }
                         }
                     }
                 }
@@ -155,4 +161,38 @@ export const totalLanguage = async (language_id: number[]) => {
         group by \`language\`.language_id; `;
 
     return result;
+}
+
+export const packPages = async (code: string) => {
+    const pack = await prisma.pack.findFirst({
+        where: {
+            code: code
+        },
+        select: {
+            name: true,
+            description: true,
+            pack_id: true,
+            code: true,
+            pages: {
+                select: {
+                    num: true,
+                    page_size: {
+                        where: {
+                            size_id: 1
+                        },
+                        take: 1,
+                        select: {
+                            size: {
+                                select: {
+                                    extension: true,
+                                    name: true
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+        }
+    });
+    return pack;
 }

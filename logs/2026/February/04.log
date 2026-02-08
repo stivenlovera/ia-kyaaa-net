@@ -1,4 +1,4 @@
-[2026-02-04 00:40:54] LOG.INFO: PageCode/pack {
+[2026-02-04 20:43:30] LOG.INFO: PageCode/pack {
 	"name": "regalitos anonimos",
 	"description": "",
 	"pack_id": 1,
@@ -7,7 +7,8 @@
 		{
 			"num": "001",
 			"page_type": {
-				"extension": "avif"
+				"extension": "avif",
+				"name": "medium"
 			}
 		}
 	],
@@ -72,30 +73,13 @@
 		}
 	]
 }
-[2026-02-04 00:40:54] LOG.INFO: 1
-[2026-02-04 00:40:54] LOG.WARN: PageCode/ labels [
+[2026-02-04 20:43:30] LOG.INFO: 1
+[2026-02-04 20:43:30] LOG.WARN: PageCode/ labels [
 	1,
 	2,
 	3
 ]
-[2026-02-04 12:40:59] LOG.INFO: PageCode/pack [
-	{
-		"name": "regalitos anonimos",
-		"description": "",
-		"pack_id": 1,
-		"code": "20260128202950",
-		"pages": [
-			{
-				"num": "001",
-				"page_type": {
-					"name": "tumb",
-					"extension": "avif"
-				}
-			}
-		]
-	}
-]
-[2026-02-04 12:41:01] LOG.INFO: PageCode/pack {
+[2026-02-04 20:44:39] LOG.INFO: PageCode/pack {
 	"name": "regalitos anonimos",
 	"description": "",
 	"pack_id": 1,
@@ -104,7 +88,8 @@
 		{
 			"num": "001",
 			"page_type": {
-				"extension": "avif"
+				"extension": "avif",
+				"name": "medium"
 			}
 		}
 	],
@@ -169,8 +154,1466 @@
 		}
 	]
 }
-[2026-02-04 12:41:01] LOG.INFO: 1
-[2026-02-04 12:41:01] LOG.WARN: PageCode/ labels [
+[2026-02-04 20:44:39] LOG.INFO: 1
+[2026-02-04 20:44:39] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-04 20:47:28] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202950",
+	"pages": [
+		{
+			"num": "001",
+			"page_type": {
+				"extension": "avif",
+				"name": "medium"
+			}
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-04 20:47:28] LOG.INFO: 1
+[2026-02-04 20:47:28] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-04 20:48:35] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202950",
+	"pages": [
+		{
+			"num": "001",
+			"page_type": {
+				"extension": "avif",
+				"name": "medium"
+			}
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-04 20:48:35] LOG.INFO: 1
+[2026-02-04 20:48:35] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-04 20:52:23] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202950",
+	"pages": [
+		{
+			"num": "001",
+			"page_type": {
+				"extension": "avif",
+				"name": "medium"
+			}
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-04 20:52:23] LOG.INFO: 1
+[2026-02-04 20:52:23] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-04 20:54:05] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202950",
+	"pages": [
+		{
+			"num": "001",
+			"page_type": {
+				"extension": "avif",
+				"name": "medium"
+			}
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-04 20:54:05] LOG.INFO: 1
+[2026-02-04 20:54:05] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-04 20:54:57] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202950",
+	"pages": [
+		{
+			"num": "001",
+			"page_type": {
+				"extension": "avif",
+				"name": "medium"
+			}
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-04 20:54:57] LOG.INFO: 1
+[2026-02-04 20:54:57] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-04 20:55:31] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202950",
+	"pages": [
+		{
+			"num": "001",
+			"page_type": {
+				"extension": "avif",
+				"name": "medium"
+			}
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-04 20:55:31] LOG.INFO: 1
+[2026-02-04 20:55:31] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-04 20:56:28] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202950",
+	"pages": [
+		{
+			"num": "001",
+			"page_type": {
+				"extension": "avif",
+				"name": "medium"
+			}
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-04 20:56:28] LOG.INFO: 1
+[2026-02-04 20:56:28] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-04 20:56:33] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202950",
+	"pages": [
+		{
+			"num": "001",
+			"page_type": {
+				"extension": "avif",
+				"name": "medium"
+			}
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-04 20:56:33] LOG.INFO: 1
+[2026-02-04 20:56:33] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-04 20:56:43] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202950",
+	"pages": [
+		{
+			"num": "001",
+			"page_type": {
+				"extension": "avif",
+				"name": "medium"
+			}
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-04 20:56:43] LOG.INFO: 1
+[2026-02-04 20:56:43] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-04 20:56:50] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202950",
+	"pages": [
+		{
+			"num": "001",
+			"page_type": {
+				"extension": "avif",
+				"name": "medium"
+			}
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-04 20:56:50] LOG.INFO: 1
+[2026-02-04 20:56:50] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-04 20:56:54] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202950",
+	"pages": [
+		{
+			"num": "001",
+			"page_type": {
+				"extension": "avif",
+				"name": "medium"
+			}
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-04 20:56:54] LOG.INFO: 1
+[2026-02-04 20:56:54] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-04 20:58:58] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202950",
+	"pages": [
+		{
+			"num": "001",
+			"page_type": {
+				"extension": "avif",
+				"name": "medium"
+			}
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-04 20:58:58] LOG.INFO: 1
+[2026-02-04 20:58:58] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-04 20:59:23] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202950",
+	"pages": [
+		{
+			"num": "001",
+			"page_type": {
+				"extension": "avif",
+				"name": "medium"
+			}
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-04 20:59:23] LOG.INFO: 1
+[2026-02-04 20:59:23] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-04 20:59:34] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202950",
+	"pages": [
+		{
+			"num": "001",
+			"page_type": {
+				"extension": "avif",
+				"name": "medium"
+			}
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-04 20:59:34] LOG.INFO: 1
+[2026-02-04 20:59:34] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-04 20:59:47] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202950",
+	"pages": [
+		{
+			"num": "001",
+			"page_type": {
+				"extension": "avif",
+				"name": "medium"
+			}
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-04 20:59:47] LOG.INFO: 1
+[2026-02-04 20:59:47] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-04 21:00:02] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202950",
+	"pages": [
+		{
+			"num": "001",
+			"page_type": {
+				"extension": "avif",
+				"name": "medium"
+			}
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-04 21:00:02] LOG.INFO: 1
+[2026-02-04 21:00:02] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-04 21:00:14] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202950",
+	"pages": [
+		{
+			"num": "001",
+			"page_type": {
+				"extension": "avif",
+				"name": "medium"
+			}
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-04 21:00:14] LOG.INFO: 1
+[2026-02-04 21:00:14] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-04 21:00:44] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202950",
+	"pages": [
+		{
+			"num": "001",
+			"page_type": {
+				"extension": "avif",
+				"name": "medium"
+			}
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-04 21:00:44] LOG.INFO: 1
+[2026-02-04 21:00:44] LOG.WARN: PageCode/ labels [
 	1,
 	2,
 	3

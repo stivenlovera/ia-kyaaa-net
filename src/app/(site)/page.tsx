@@ -2,6 +2,12 @@
 import Link from "next/link";
 import prisma from "../utils/prisma";
 import logger, { jsonLog } from "../utils/logger";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Nuevas entradas',
+  description: 'Nuevas entradas del mes de febrero',
+}
 
 export default async function Home() {
 
@@ -14,14 +20,20 @@ export default async function Home() {
       pages: {
         select: {
           num: true,
-          page_type: {
+          page_size: {
+            where: {
+              size_id: 1
+            },
             select: {
-              name: true,
-              extension: true
+              size: {
+                select: {
+                  extension: true,
+                  name:true
+                }
+              }
             }
           }
-        },
-        take: 1
+        }
       },
     }
   });
@@ -47,7 +59,7 @@ export default async function Home() {
                   <img
                     alt='preview'
                     className="w-full"
-                    src={`${process.env.URL_S3}/${pack.code}/web_tumb/${pack.pages[0].num}.${pack.pages[0].page_type.extension}`}
+                    src={`${process.env.URL_S3}/${pack.code}/${pack.pages[0].page_size[0].size.name}/${pack.pages[0].num}.${pack.pages[0].page_size[0].size.extension}`}
                   />
                   <div className=''>
                     <div className='basis-full bg-gray-800 p-1'>

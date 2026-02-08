@@ -33,7 +33,7 @@ export default async function Layout({
 
                 <body className={`${inter.className} `}>
                     <Header></Header>
-                    <div className="bg-neutral-900 px-2 py-2 md:px-10 lg:px-20 xl:px-52 md:py-5 lg:py-10 xl:py-10">
+                    <div className="bg-neutral-900 px-2 py-2 md:px-10 lg:px-20 xl:px-64 2xl:px-72 md:py-5 lg:py-10 xl:py-14">
                         {children}
                     </div>
 

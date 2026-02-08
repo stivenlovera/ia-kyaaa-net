@@ -33,15 +33,14 @@ model Pack {
 }
 
 model Page {
-  page_id      Int       @id @default(autoincrement())
-  pack         Pack      @relation(fields: [pack_id], references: [pack_id])
-  pack_id      Int
-  page_type    Page_type @relation(fields: [page_type_id], references: [page_type_id])
-  page_type_id Int
-  num          String
-  state        Int
-  create_at    DateTime?
-  update_at    DateTime?
+  page_id   Int         @id @default(autoincrement())
+  pack      Pack        @relation(fields: [pack_id], references: [pack_id])
+  page_size Page_size[]
+  pack_id   Int
+  num       String
+  state     Int
+  create_at DateTime?
+  update_at DateTime?
 
   @@map(name: "page")
 }
@@ -112,16 +111,28 @@ model Language {
   @@map(name: "language")
 }
 
-model Page_type {
-  page_type_id Int       @id @default(autoincrement())
-  name         String
-  extension    String
-  pages        Page[]
-  state        Int
-  create_at    DateTime?
-  update_at    DateTime?
+model Size {
+  size_id   Int         @id @default(autoincrement())
+  name      String
+  extension String
+  page_size Page_size[]
+  state     Int
+  create_at DateTime?
+  update_at DateTime?
 
-  @@map(name: "page_type")
+  @@map(name: "size")
+}
+
+model Page_size {
+  size_id   Int
+  size      Size      @relation(fields: [size_id], references: [size_id])
+  page_id   Int
+  page      Page      @relation(fields: [page_id], references: [page_id])
+  create_at DateTime?
+  update_at DateTime?
+
+  @@id([size_id, page_id])
+  @@map(name: "Page_size")
 }
 
 model Pack_type {
