@@ -12,6 +12,9 @@ COPY . .
 ENV NEXT_TELEMETRY_DISABLED 1
 RUN npm run build
 
+# Generate Prisma Client
+RUN npx prisma generate
+
 # Runner (Producción)
 FROM node:20-alpine AS runner
 WORKDIR /app
