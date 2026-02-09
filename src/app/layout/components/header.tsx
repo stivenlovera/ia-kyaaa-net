@@ -22,14 +22,14 @@ export const Header = () => {
                 email: 'stivenlovera@gmail.com',
                 password: '123456789'
             }); // Replace with your 
-            console.log('response', response.data)
+           // console.log('response', response.data)
         } catch (err) {
-            console.log(err)
+            //console.log(err)
         }
     }
 
     const [menu, setMenu] = useState<ListMenu[]>(initialStateMenu);
-    console.log(menu)
+    //console.log(menu)
     return (
         <nav className="sticky top-0 bg-slate-950 sm:px-10 xl:px-10" >
 

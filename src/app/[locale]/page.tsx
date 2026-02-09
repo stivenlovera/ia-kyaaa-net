@@ -39,7 +39,7 @@ export default async function Home() {
     }
   });
 
-  logger.info(`PageCode/pack ${jsonLog(packs)}`)
+  //logger.info(`PageCode/pack ${jsonLog(packs)}`)
 
   return (
     <div>

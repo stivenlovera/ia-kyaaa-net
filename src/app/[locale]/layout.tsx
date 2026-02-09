@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google';
 import "../globals.css";
 import Header from '../layout/components/header';
 import { routing } from '@/src/i18n/routing';
+import logger, { jsonLog } from '../utils/logger';
 
 
 const inter = Inter({ subsets: ['latin'] });
@@ -38,7 +39,14 @@ export default async function LocaleLayout({
     if (!hasLocale(routing.locales, locale)) {
         notFound();
     }
-
+    logger.info(`env ${jsonLog({
+        host: process.env.DB_HOST,
+        port: parseInt(process.env.DB_PORT!),
+        connectionLimit: parseInt(process.env.DB_CONECTION_LIMIT!),
+        user: process.env.DB_USER,
+        password: process.env.DB_PASS,
+        database: process.env.DB_DATABASE,
+    })}`)
     // Enable static rendering
     setRequestLocale(locale);
 
