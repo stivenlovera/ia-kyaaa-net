@@ -39,7 +39,7 @@ export default async function LocaleLayout({
     if (!hasLocale(routing.locales, locale)) {
         notFound();
     }
-    logger.info(`env ${jsonLog({
+    logger.info(`env LocaleLayout ${jsonLog({
         host: process.env.DB_HOST,
         port: parseInt(process.env.DB_PORT!),
         connectionLimit: parseInt(process.env.DB_CONECTION_LIMIT!),
