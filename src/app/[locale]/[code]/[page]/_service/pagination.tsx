@@ -1,4 +1,5 @@
-import prisma from "@/src/app/utils/prisma";
+import { prisma } from "@/src/app/utils/prisma";
+
 
 export const pagination = async (code: string, page: string) => {
     const pack = await prisma.pack.findFirst({

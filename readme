@@ -1,0 +1,2 @@
+- docker build -t kyaaa_net .
+- docker run -p 3000:3000 kyaaa_net

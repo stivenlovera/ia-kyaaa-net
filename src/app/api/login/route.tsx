@@ -1,8 +1,8 @@
 
-import { IUser } from '@/app/types/user.type';
 import bcrypt, { compare } from 'bcryptjs';
 import { NextRequest, NextResponse } from 'next/server';
 import jwt from 'jsonwebtoken';
+import { IUser } from '../../types/user.type';
 
 const mockUsers: IUser[] = [
     {

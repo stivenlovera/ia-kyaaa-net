@@ -1,4 +1,5 @@
-import prisma from "@/src/app/utils/prisma";
+
+import { prisma } from "@/src/app/utils/prisma";
 import { ICountTag } from "../_components/card-section";
 import logger from "@/src/app/utils/logger";
 

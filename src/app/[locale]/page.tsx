@@ -1,8 +1,9 @@
 
 import Link from "next/link";
-import prisma from "../utils/prisma";
 import logger, { jsonLog } from "../utils/logger";
 import { Metadata } from "next";
+import Image from "next/image";
+import { prisma } from "../utils/prisma";
 
 export const metadata: Metadata = {
   title: 'Nuevas entradas',
@@ -28,7 +29,7 @@ export default async function Home() {
               size: {
                 select: {
                   extension: true,
-                  name:true
+                  name: true
                 }
               }
             }
@@ -56,8 +57,11 @@ export default async function Home() {
                   className="items-start justify-center"
                   href={`/${pack.code}`}
                 >
-                  <img
-                    alt='preview'
+                  <Image
+                    width={400}
+                    height={500}
+                    alt={`Preview ${pack.name}`}
+                    fetchPriority="high"
                     className="w-full"
                     src={`${process.env.URL_S3}/${pack.code}/${pack.pages[0].page_size[0].size.name}/${pack.pages[0].num}.${pack.pages[0].page_size[0].size.extension}`}
                   />

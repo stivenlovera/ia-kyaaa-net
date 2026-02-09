@@ -8,9 +8,6 @@ export function stringToInt(num: string): number {
 
 export function numberToString(num: number, length: number): string {
     const logitud = length.toString().length;
-    /* logger.info(`stringToInt ${jsonLog([num, radix])}`)
-    logger.info(`stringToInt data ${jsonLog([data])}`) */
     const cadena = String(num).padStart(logitud, '0');
-    logger.info(`stringToInt numberToString ${jsonLog([logitud, cadena])}`)
     return cadena
 }

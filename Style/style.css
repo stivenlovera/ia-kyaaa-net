@@ -41,3 +41,4 @@
 .upcoming .slick-next:before, .upcoming .slick-prev:before, .thumb .slick-next:before, .thumb .slick-prev:before{
     @apply lg:inline-block hidden;
 }
+

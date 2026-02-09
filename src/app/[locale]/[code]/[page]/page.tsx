@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: PagePaginateProps): Promise<M
 }
 
 
-export default async function PagePaginate({ params }: PagePaginateProps) {
+export default async function PaginatePage({ params }: PagePaginateProps) {
     const { code, page } = await params;
     logger.info(`PageCode/pack PagePaginate ${jsonLog([code, page])}`)
     //const intValue = parseInt(page, 10)
@@ -71,7 +71,8 @@ export default async function PagePaginate({ params }: PagePaginateProps) {
                 />
                 <View
                     image={`${process.env.URL_S3}/${pack?.code}/web/${pageIsvalid.num}.${pageIsvalid.page_size[0].size.extension}`}
-                    page={currentPage}
+                    numPage={currentPage}
+                    allPage={pages.length}
                 />
                 <PaginationView
                     allPages={pages!}

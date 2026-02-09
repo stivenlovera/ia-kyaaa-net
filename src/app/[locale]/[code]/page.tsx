@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react'
-import { packInfo, packPages, totalCharacter, totalLabel, totalSerie, totalType } from './_service/code.service';
+import { packInfo, packPages, totalAuthor, totalCharacter, totalLabel, totalLanguage, totalSerie, totalType } from './_service/code.service';
 import moment from 'moment';
 import { CardSection } from './_components/card-section';
 import logger, { jsonLog } from '../../utils/logger';
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: PagePaginateProps): Promise<M
     };
 }
 
-export default async function PageCode({ params }: { params: Promise<{ code: string }> }) {
+export default async function PagePage({ params }: { params: Promise<{ code: string }> }) {
     const { code } = await params;
 
     const pack = await packInfo(code);
@@ -67,13 +67,13 @@ export default async function PageCode({ params }: { params: Promise<{ code: str
     pack?.pack_authors.map(({ author }) => {
         authors.push(author.author_id)
     })
-    const tagAuthors = await totalLabel(authors);
+    const tagAuthors = await totalAuthor(authors);
 
     const languages: number[] = [];
     pack?.pack_languages.map(({ language }) => {
         languages.push(language.language_id)
     })
-    const tagLanguages = await totalLabel(languages);
+    const tagLanguages = await totalLanguage(languages);
 
     const pages = await packPages(code);
 
@@ -85,11 +85,13 @@ export default async function PageCode({ params }: { params: Promise<{ code: str
                 >
                     <Link
                         href={`/${pack?.code}/${pack?.pages[0].num}`}
-                        className="flex flex-row min-h-full justify-center items-center"
+                        className="flex flex-row justify-center items-center"
                     >
-                        <img
+                        <Image
+                            width={400}
+                            height={500}
                             className='h-3/4 w-3/4 p-1'
-                            alt='preview'
+                            alt={`Preview ${pack.name}`}
                             fetchPriority="high"
                             src={`${process.env.URL_S3}/${pack?.code}/${pack?.pages[0].page_size[0].size.name}/${pack?.pages[0].num}.${pack?.pages[0].page_size[0].size.extension}`}
                         />
@@ -174,12 +176,6 @@ export default async function PageCode({ params }: { params: Promise<{ code: str
                                             width={270}
                                             height={347}
                                         />
-                                        {/* <img
-                                            fetchPriority="high"
-                                            className='w-auto'
-                                            alt='preview'
-                                            src={`${process.env.URL_S3}/${pack?.code}/${page.page_size[0].size.name}/${page.num}.${page.page_size[0].size.extension}`}
-                                        /> */}
                                     </Link>
                                 </div>
                             )

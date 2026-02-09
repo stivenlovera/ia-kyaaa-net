@@ -1,9 +1,7 @@
 import React from 'react'
 
-const page = () => {
+export default async function NewPage() {
     return (
         <div>new</div>
     )
 }
-
-export default page;
