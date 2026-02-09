@@ -49075,3 +49075,628 @@
 	"password": "",
 	"database": "ia_kyaaa"
 }
+[2026-02-09 19:14:57] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 19:14:58] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 19:14:58] LOG.INFO: env LocaleLayout {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 19:14:58] LOG.INFO: PageCode/pack PagePaginate [
+	"20260128202952",
+	"06"
+]
+[2026-02-09 19:14:58] LOG.INFO: env LocaleLayout {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 19:14:58] LOG.INFO: PageCode/pack PagePaginate [
+	"20260128202952",
+	"06"
+]
+[2026-02-09 19:14:58] LOG.INFO: PageCode/pack PagePaginate [
+	{
+		"name": "regalitos anonimos",
+		"description": "",
+		"pack_id": 1,
+		"code": "20260128202952",
+		"pages": [
+			{
+				"num": "01",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "02",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "03",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "04",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "05",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "06",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "07",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "08",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "09",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "10",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "11",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "12",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "13",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "14",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "15",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			}
+		]
+	}
+]
+[2026-02-09 19:14:58] LOG.WARN: PageCode/pack PagePaginate [
+	6,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 19:14:58] LOG.WARN: PageCode/pack PagePaginate [
+	6,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 19:14:58] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	6,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"07",
+	"15"
+]
+[2026-02-09 19:14:58] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	6,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"07",
+	"15"
+]
+[2026-02-09 19:14:58] LOG.INFO: PageCode/pack PagePaginate [
+	{
+		"name": "regalitos anonimos",
+		"description": "",
+		"pack_id": 1,
+		"code": "20260128202952",
+		"pages": [
+			{
+				"num": "01",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "02",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "03",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "04",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "05",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "06",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "07",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "08",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "09",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "10",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "11",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "12",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "13",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "14",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "15",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			}
+		]
+	}
+]
+[2026-02-09 19:14:58] LOG.WARN: PageCode/pack PagePaginate [
+	6,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 19:14:58] LOG.WARN: PageCode/pack PagePaginate [
+	6,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 19:14:58] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	6,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"07",
+	"15"
+]
+[2026-02-09 19:14:58] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	6,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"07",
+	"15"
+]
+[2026-02-09 19:14:58] LOG.INFO: PageCode/pack PagePaginate [
+	"appspecific",
+	"com.chrome.devtools.json"
+]
+[2026-02-09 19:14:58] LOG.WARN: PageCode/pack not notFound
+[2026-02-09 19:14:59] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 19:15:02] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 19:15:26] LOG.INFO: env LocaleLayout {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 19:15:26] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 19:15:36] LOG.INFO: PageCode/pack PagePaginate [
+	"appspecific",
+	"com.chrome.devtools.json"
+]
+[2026-02-09 19:15:37] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
