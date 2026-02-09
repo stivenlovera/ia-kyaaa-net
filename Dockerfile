@@ -10,27 +10,8 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 ENV NEXT_TELEMETRY_DISABLED 1
-# Generate Prisma Client
-RUN npx prisma generate
-RUN npm run build
-
-# Runner (Producción)
-FROM node:20-alpine AS runner
-WORKDIR /app
-ENV NODE_ENV production
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
-
-COPY --from=builder /app/public ./public
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-
-USER nextjs
-EXPOSE 3000
 
 #env
-ENV PORT 3000
-
 ARG DB_HOST=${DB_HOST}
 ENV DB_HOST=${DB_HOST}
 ARG DB_USER=${DB_USER}
@@ -53,5 +34,26 @@ ARG URL_S3=${URL_S3}
 ENV URL_S3=${URL_S3}
 ARG PATH_LOGS=${PATH_LOGS}
 ENV PATH_LOGS=${PATH_LOGS}
+
+# Generate Prisma Client
+RUN npx prisma generate
+RUN npm run build
+
+# Runner (Producción)
+FROM node:20-alpine AS runner
+WORKDIR /app
+ENV NODE_ENV production
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+COPY --from=builder /app/public ./public
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+USER nextjs
+EXPOSE 3000
+
+#env
+ENV PORT 3000
 
 CMD ["node", "server.js"]
