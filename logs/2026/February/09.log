@@ -39972,3 +39972,6240 @@
 	"password": "",
 	"database": "ia_kyaaa"
 }
+[2026-02-09 15:14:17] LOG.INFO: PageCode/pack [
+	{
+		"name": "regalitos anonimos",
+		"description": "",
+		"pack_id": 1,
+		"code": "20260128202952",
+		"pages": [
+			{
+				"num": "01",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "02",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "03",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "04",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "05",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "06",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "07",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "08",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "09",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "10",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "11",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "12",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "13",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "14",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "15",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			}
+		]
+	}
+]
+[2026-02-09 15:34:32] LOG.INFO: PageCode/pack [
+	{
+		"name": "regalitos anonimos",
+		"description": "",
+		"pack_id": 1,
+		"code": "20260128202952",
+		"pages": [
+			{
+				"num": "01",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "02",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "03",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "04",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "05",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "06",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "07",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "08",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "09",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "10",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "11",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "12",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "13",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "14",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			},
+			{
+				"num": "15",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif",
+							"name": "tumb"
+						}
+					}
+				]
+			}
+		]
+	}
+]
+[2026-02-09 15:34:33] LOG.INFO: PageCode/pack PagePaginate [
+	"appspecific",
+	"com.chrome.devtools.json"
+]
+[2026-02-09 15:34:33] LOG.WARN: PageCode/pack not notFound
+[2026-02-09 15:34:33] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 15:34:33] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 15:34:34] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202952",
+	"pages": [
+		{
+			"num": "01",
+			"page_size": [
+				{
+					"size": {
+						"extension": "avif",
+						"name": "medium"
+					}
+				}
+			]
+		},
+		{
+			"num": "02",
+			"page_size": []
+		},
+		{
+			"num": "03",
+			"page_size": []
+		},
+		{
+			"num": "04",
+			"page_size": []
+		},
+		{
+			"num": "05",
+			"page_size": []
+		},
+		{
+			"num": "06",
+			"page_size": []
+		},
+		{
+			"num": "07",
+			"page_size": []
+		},
+		{
+			"num": "08",
+			"page_size": []
+		},
+		{
+			"num": "09",
+			"page_size": []
+		},
+		{
+			"num": "10",
+			"page_size": []
+		},
+		{
+			"num": "11",
+			"page_size": []
+		},
+		{
+			"num": "12",
+			"page_size": []
+		},
+		{
+			"num": "13",
+			"page_size": []
+		},
+		{
+			"num": "14",
+			"page_size": []
+		},
+		{
+			"num": "15",
+			"page_size": []
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-09 15:34:34] LOG.INFO: 1
+[2026-02-09 15:34:34] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-09 15:34:34] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 15:34:36] LOG.INFO: PageCode/pack PagePaginate [
+	"20260128202952",
+	"03"
+]
+[2026-02-09 15:34:36] LOG.INFO: PageCode/pack PagePaginate [
+	{
+		"name": "regalitos anonimos",
+		"description": "",
+		"pack_id": 1,
+		"code": "20260128202952",
+		"pages": [
+			{
+				"num": "01",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "02",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "03",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "04",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "05",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "06",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "07",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "08",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "09",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "10",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "11",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "12",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "13",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "14",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "15",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			}
+		]
+	}
+]
+[2026-02-09 15:34:36] LOG.WARN: PageCode/pack PagePaginate [
+	3,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 15:34:36] LOG.WARN: PageCode/pack PagePaginate [
+	3,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 15:34:36] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	3,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"04",
+	"15"
+]
+[2026-02-09 15:34:36] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	3,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"04",
+	"15"
+]
+[2026-02-09 15:34:37] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 15:34:44] LOG.INFO: env {
+	"host": "127.0.0.6",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 15:34:44] LOG.INFO: PageCode/pack PagePaginate [
+	"20260128202952",
+	"03"
+]
+[2026-02-09 15:34:44] LOG.INFO: PageCode/pack PagePaginate [
+	"20260128202952",
+	"03"
+]
+[2026-02-09 15:34:44] LOG.INFO: PageCode/pack PagePaginate [
+	{
+		"name": "regalitos anonimos",
+		"description": "",
+		"pack_id": 1,
+		"code": "20260128202952",
+		"pages": [
+			{
+				"num": "01",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "02",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "03",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "04",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "05",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "06",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "07",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "08",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "09",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "10",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "11",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "12",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "13",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "14",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "15",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			}
+		]
+	}
+]
+[2026-02-09 15:34:44] LOG.WARN: PageCode/pack PagePaginate [
+	3,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 15:34:44] LOG.WARN: PageCode/pack PagePaginate [
+	3,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 15:34:44] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	3,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"04",
+	"15"
+]
+[2026-02-09 15:34:44] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	3,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"04",
+	"15"
+]
+[2026-02-09 15:34:44] LOG.INFO: PageCode/pack PagePaginate [
+	{
+		"name": "regalitos anonimos",
+		"description": "",
+		"pack_id": 1,
+		"code": "20260128202952",
+		"pages": [
+			{
+				"num": "01",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "02",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "03",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "04",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "05",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "06",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "07",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "08",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "09",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "10",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "11",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "12",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "13",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "14",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "15",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			}
+		]
+	}
+]
+[2026-02-09 15:34:44] LOG.WARN: PageCode/pack PagePaginate [
+	3,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 15:34:44] LOG.WARN: PageCode/pack PagePaginate [
+	3,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 15:34:44] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	3,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"04",
+	"15"
+]
+[2026-02-09 15:34:44] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	3,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"04",
+	"15"
+]
+[2026-02-09 15:34:44] LOG.INFO: PageCode/pack PagePaginate [
+	"20260128202952",
+	"03"
+]
+[2026-02-09 15:34:44] LOG.INFO: PageCode/pack PagePaginate [
+	{
+		"name": "regalitos anonimos",
+		"description": "",
+		"pack_id": 1,
+		"code": "20260128202952",
+		"pages": [
+			{
+				"num": "01",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "02",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "03",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "04",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "05",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "06",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "07",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "08",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "09",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "10",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "11",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "12",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "13",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "14",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "15",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			}
+		]
+	}
+]
+[2026-02-09 15:34:44] LOG.INFO: PageCode/pack PagePaginate [
+	"appspecific",
+	"com.chrome.devtools.json"
+]
+[2026-02-09 15:34:44] LOG.WARN: PageCode/pack not notFound
+[2026-02-09 15:34:45] LOG.INFO: env {
+	"host": "127.0.0.6",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 15:34:46] LOG.INFO: env {
+	"host": "127.0.0.6",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 15:34:46] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202952",
+	"pages": [
+		{
+			"num": "01",
+			"page_size": [
+				{
+					"size": {
+						"extension": "avif",
+						"name": "medium"
+					}
+				}
+			]
+		},
+		{
+			"num": "02",
+			"page_size": []
+		},
+		{
+			"num": "03",
+			"page_size": []
+		},
+		{
+			"num": "04",
+			"page_size": []
+		},
+		{
+			"num": "05",
+			"page_size": []
+		},
+		{
+			"num": "06",
+			"page_size": []
+		},
+		{
+			"num": "07",
+			"page_size": []
+		},
+		{
+			"num": "08",
+			"page_size": []
+		},
+		{
+			"num": "09",
+			"page_size": []
+		},
+		{
+			"num": "10",
+			"page_size": []
+		},
+		{
+			"num": "11",
+			"page_size": []
+		},
+		{
+			"num": "12",
+			"page_size": []
+		},
+		{
+			"num": "13",
+			"page_size": []
+		},
+		{
+			"num": "14",
+			"page_size": []
+		},
+		{
+			"num": "15",
+			"page_size": []
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-09 15:34:46] LOG.INFO: 1
+[2026-02-09 15:34:46] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-09 15:34:46] LOG.INFO: env {
+	"host": "127.0.0.6",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 15:34:49] LOG.INFO: env {
+	"host": "127.0.0.",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 15:34:49] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202952",
+	"pages": [
+		{
+			"num": "01",
+			"page_size": [
+				{
+					"size": {
+						"extension": "avif",
+						"name": "medium"
+					}
+				}
+			]
+		},
+		{
+			"num": "02",
+			"page_size": []
+		},
+		{
+			"num": "03",
+			"page_size": []
+		},
+		{
+			"num": "04",
+			"page_size": []
+		},
+		{
+			"num": "05",
+			"page_size": []
+		},
+		{
+			"num": "06",
+			"page_size": []
+		},
+		{
+			"num": "07",
+			"page_size": []
+		},
+		{
+			"num": "08",
+			"page_size": []
+		},
+		{
+			"num": "09",
+			"page_size": []
+		},
+		{
+			"num": "10",
+			"page_size": []
+		},
+		{
+			"num": "11",
+			"page_size": []
+		},
+		{
+			"num": "12",
+			"page_size": []
+		},
+		{
+			"num": "13",
+			"page_size": []
+		},
+		{
+			"num": "14",
+			"page_size": []
+		},
+		{
+			"num": "15",
+			"page_size": []
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-09 15:34:49] LOG.INFO: 1
+[2026-02-09 15:34:49] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202952",
+	"pages": [
+		{
+			"num": "01",
+			"page_size": [
+				{
+					"size": {
+						"extension": "avif",
+						"name": "medium"
+					}
+				}
+			]
+		},
+		{
+			"num": "02",
+			"page_size": []
+		},
+		{
+			"num": "03",
+			"page_size": []
+		},
+		{
+			"num": "04",
+			"page_size": []
+		},
+		{
+			"num": "05",
+			"page_size": []
+		},
+		{
+			"num": "06",
+			"page_size": []
+		},
+		{
+			"num": "07",
+			"page_size": []
+		},
+		{
+			"num": "08",
+			"page_size": []
+		},
+		{
+			"num": "09",
+			"page_size": []
+		},
+		{
+			"num": "10",
+			"page_size": []
+		},
+		{
+			"num": "11",
+			"page_size": []
+		},
+		{
+			"num": "12",
+			"page_size": []
+		},
+		{
+			"num": "13",
+			"page_size": []
+		},
+		{
+			"num": "14",
+			"page_size": []
+		},
+		{
+			"num": "15",
+			"page_size": []
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-09 15:34:49] LOG.INFO: 1
+[2026-02-09 15:34:49] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-09 15:34:49] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-09 15:34:49] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202952",
+	"pages": [
+		{
+			"num": "01",
+			"page_size": [
+				{
+					"size": {
+						"extension": "avif",
+						"name": "medium"
+					}
+				}
+			]
+		},
+		{
+			"num": "02",
+			"page_size": []
+		},
+		{
+			"num": "03",
+			"page_size": []
+		},
+		{
+			"num": "04",
+			"page_size": []
+		},
+		{
+			"num": "05",
+			"page_size": []
+		},
+		{
+			"num": "06",
+			"page_size": []
+		},
+		{
+			"num": "07",
+			"page_size": []
+		},
+		{
+			"num": "08",
+			"page_size": []
+		},
+		{
+			"num": "09",
+			"page_size": []
+		},
+		{
+			"num": "10",
+			"page_size": []
+		},
+		{
+			"num": "11",
+			"page_size": []
+		},
+		{
+			"num": "12",
+			"page_size": []
+		},
+		{
+			"num": "13",
+			"page_size": []
+		},
+		{
+			"num": "14",
+			"page_size": []
+		},
+		{
+			"num": "15",
+			"page_size": []
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-09 15:34:49] LOG.INFO: 1
+[2026-02-09 15:34:49] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-09 15:34:49] LOG.INFO: env {
+	"host": "127.0.0.",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 15:34:49] LOG.INFO: env {
+	"host": "127.0.0.",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 15:34:49] LOG.INFO: PageCode/pack PagePaginate [
+	"appspecific",
+	"com.chrome.devtools.json"
+]
+[2026-02-09 15:34:49] LOG.WARN: PageCode/pack not notFound
+[2026-02-09 15:34:50] LOG.INFO: env {
+	"host": "127.0.0.",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 15:34:50] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 15:34:50] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202952",
+	"pages": [
+		{
+			"num": "01",
+			"page_size": [
+				{
+					"size": {
+						"extension": "avif",
+						"name": "medium"
+					}
+				}
+			]
+		},
+		{
+			"num": "02",
+			"page_size": []
+		},
+		{
+			"num": "03",
+			"page_size": []
+		},
+		{
+			"num": "04",
+			"page_size": []
+		},
+		{
+			"num": "05",
+			"page_size": []
+		},
+		{
+			"num": "06",
+			"page_size": []
+		},
+		{
+			"num": "07",
+			"page_size": []
+		},
+		{
+			"num": "08",
+			"page_size": []
+		},
+		{
+			"num": "09",
+			"page_size": []
+		},
+		{
+			"num": "10",
+			"page_size": []
+		},
+		{
+			"num": "11",
+			"page_size": []
+		},
+		{
+			"num": "12",
+			"page_size": []
+		},
+		{
+			"num": "13",
+			"page_size": []
+		},
+		{
+			"num": "14",
+			"page_size": []
+		},
+		{
+			"num": "15",
+			"page_size": []
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-09 15:34:50] LOG.INFO: 1
+[2026-02-09 15:34:50] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202952",
+	"pages": [
+		{
+			"num": "01",
+			"page_size": [
+				{
+					"size": {
+						"extension": "avif",
+						"name": "medium"
+					}
+				}
+			]
+		},
+		{
+			"num": "02",
+			"page_size": []
+		},
+		{
+			"num": "03",
+			"page_size": []
+		},
+		{
+			"num": "04",
+			"page_size": []
+		},
+		{
+			"num": "05",
+			"page_size": []
+		},
+		{
+			"num": "06",
+			"page_size": []
+		},
+		{
+			"num": "07",
+			"page_size": []
+		},
+		{
+			"num": "08",
+			"page_size": []
+		},
+		{
+			"num": "09",
+			"page_size": []
+		},
+		{
+			"num": "10",
+			"page_size": []
+		},
+		{
+			"num": "11",
+			"page_size": []
+		},
+		{
+			"num": "12",
+			"page_size": []
+		},
+		{
+			"num": "13",
+			"page_size": []
+		},
+		{
+			"num": "14",
+			"page_size": []
+		},
+		{
+			"num": "15",
+			"page_size": []
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-09 15:34:50] LOG.INFO: 1
+[2026-02-09 15:34:50] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-09 15:34:50] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-09 15:34:50] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202952",
+	"pages": [
+		{
+			"num": "01",
+			"page_size": [
+				{
+					"size": {
+						"extension": "avif",
+						"name": "medium"
+					}
+				}
+			]
+		},
+		{
+			"num": "02",
+			"page_size": []
+		},
+		{
+			"num": "03",
+			"page_size": []
+		},
+		{
+			"num": "04",
+			"page_size": []
+		},
+		{
+			"num": "05",
+			"page_size": []
+		},
+		{
+			"num": "06",
+			"page_size": []
+		},
+		{
+			"num": "07",
+			"page_size": []
+		},
+		{
+			"num": "08",
+			"page_size": []
+		},
+		{
+			"num": "09",
+			"page_size": []
+		},
+		{
+			"num": "10",
+			"page_size": []
+		},
+		{
+			"num": "11",
+			"page_size": []
+		},
+		{
+			"num": "12",
+			"page_size": []
+		},
+		{
+			"num": "13",
+			"page_size": []
+		},
+		{
+			"num": "14",
+			"page_size": []
+		},
+		{
+			"num": "15",
+			"page_size": []
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-09 15:34:50] LOG.INFO: 1
+[2026-02-09 15:34:50] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-09 15:34:50] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 15:34:50] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 15:34:50] LOG.INFO: PageCode/pack PagePaginate [
+	"appspecific",
+	"com.chrome.devtools.json"
+]
+[2026-02-09 15:34:50] LOG.WARN: PageCode/pack not notFound
+[2026-02-09 15:34:51] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 15:34:55] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaaa"
+}
+[2026-02-09 15:34:55] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202952",
+	"pages": [
+		{
+			"num": "01",
+			"page_size": [
+				{
+					"size": {
+						"extension": "avif",
+						"name": "medium"
+					}
+				}
+			]
+		},
+		{
+			"num": "02",
+			"page_size": []
+		},
+		{
+			"num": "03",
+			"page_size": []
+		},
+		{
+			"num": "04",
+			"page_size": []
+		},
+		{
+			"num": "05",
+			"page_size": []
+		},
+		{
+			"num": "06",
+			"page_size": []
+		},
+		{
+			"num": "07",
+			"page_size": []
+		},
+		{
+			"num": "08",
+			"page_size": []
+		},
+		{
+			"num": "09",
+			"page_size": []
+		},
+		{
+			"num": "10",
+			"page_size": []
+		},
+		{
+			"num": "11",
+			"page_size": []
+		},
+		{
+			"num": "12",
+			"page_size": []
+		},
+		{
+			"num": "13",
+			"page_size": []
+		},
+		{
+			"num": "14",
+			"page_size": []
+		},
+		{
+			"num": "15",
+			"page_size": []
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-09 15:34:55] LOG.INFO: 1
+[2026-02-09 15:34:55] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202952",
+	"pages": [
+		{
+			"num": "01",
+			"page_size": [
+				{
+					"size": {
+						"extension": "avif",
+						"name": "medium"
+					}
+				}
+			]
+		},
+		{
+			"num": "02",
+			"page_size": []
+		},
+		{
+			"num": "03",
+			"page_size": []
+		},
+		{
+			"num": "04",
+			"page_size": []
+		},
+		{
+			"num": "05",
+			"page_size": []
+		},
+		{
+			"num": "06",
+			"page_size": []
+		},
+		{
+			"num": "07",
+			"page_size": []
+		},
+		{
+			"num": "08",
+			"page_size": []
+		},
+		{
+			"num": "09",
+			"page_size": []
+		},
+		{
+			"num": "10",
+			"page_size": []
+		},
+		{
+			"num": "11",
+			"page_size": []
+		},
+		{
+			"num": "12",
+			"page_size": []
+		},
+		{
+			"num": "13",
+			"page_size": []
+		},
+		{
+			"num": "14",
+			"page_size": []
+		},
+		{
+			"num": "15",
+			"page_size": []
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-09 15:34:55] LOG.INFO: 1
+[2026-02-09 15:34:55] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-09 15:34:55] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-09 15:34:55] LOG.INFO: PageCode/pack {
+	"name": "regalitos anonimos",
+	"description": "",
+	"pack_id": 1,
+	"code": "20260128202952",
+	"pages": [
+		{
+			"num": "01",
+			"page_size": [
+				{
+					"size": {
+						"extension": "avif",
+						"name": "medium"
+					}
+				}
+			]
+		},
+		{
+			"num": "02",
+			"page_size": []
+		},
+		{
+			"num": "03",
+			"page_size": []
+		},
+		{
+			"num": "04",
+			"page_size": []
+		},
+		{
+			"num": "05",
+			"page_size": []
+		},
+		{
+			"num": "06",
+			"page_size": []
+		},
+		{
+			"num": "07",
+			"page_size": []
+		},
+		{
+			"num": "08",
+			"page_size": []
+		},
+		{
+			"num": "09",
+			"page_size": []
+		},
+		{
+			"num": "10",
+			"page_size": []
+		},
+		{
+			"num": "11",
+			"page_size": []
+		},
+		{
+			"num": "12",
+			"page_size": []
+		},
+		{
+			"num": "13",
+			"page_size": []
+		},
+		{
+			"num": "14",
+			"page_size": []
+		},
+		{
+			"num": "15",
+			"page_size": []
+		}
+	],
+	"pack_serie": [
+		{
+			"serie": {
+				"name": "no record",
+				"serie_id": 1
+			}
+		}
+	],
+	"pack_types": [
+		{
+			"type": {
+				"name": "generator ia",
+				"type_id": 1
+			}
+		}
+	],
+	"pack_character": [
+		{
+			"character": {
+				"name": "mizuki-ia",
+				"character_id": 7
+			}
+		}
+	],
+	"pack_label": [
+		{
+			"label": {
+				"name": "ahegao",
+				"label_id": 1
+			}
+		},
+		{
+			"label": {
+				"name": "loli",
+				"label_id": 2
+			}
+		},
+		{
+			"label": {
+				"name": "no penetration",
+				"label_id": 3
+			}
+		}
+	],
+	"pack_authors": [
+		{
+			"author": {
+				"name": "ia.kyaaa",
+				"author_id": 1
+			}
+		}
+	],
+	"pack_languages": [
+		{
+			"language": {
+				"name": "no language",
+				"language_id": 1
+			}
+		}
+	]
+}
+[2026-02-09 15:34:55] LOG.INFO: 1
+[2026-02-09 15:34:55] LOG.WARN: PageCode/ labels [
+	1,
+	2,
+	3
+]
+[2026-02-09 15:34:55] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaaa"
+}
+[2026-02-09 15:34:55] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaaa"
+}
+[2026-02-09 15:34:55] LOG.INFO: PageCode/pack PagePaginate [
+	"appspecific",
+	"com.chrome.devtools.json"
+]
+[2026-02-09 15:34:55] LOG.WARN: PageCode/pack not notFound
+[2026-02-09 15:34:56] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaaa"
+}
+[2026-02-09 15:34:57] LOG.INFO: PageCode/pack PagePaginate [
+	"serie",
+	"no%20record"
+]
+[2026-02-09 15:34:57] LOG.WARN: PageCode/pack not notFound
+[2026-02-09 15:34:58] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaaa"
+}
+[2026-02-09 15:35:00] LOG.INFO: PageCode/pack PagePaginate [
+	"20260128202952",
+	"01"
+]
+[2026-02-09 15:35:00] LOG.INFO: PageCode/pack PagePaginate [
+	{
+		"name": "regalitos anonimos",
+		"description": "",
+		"pack_id": 1,
+		"code": "20260128202952",
+		"pages": [
+			{
+				"num": "01",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "02",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "03",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "04",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "05",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "06",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "07",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "08",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "09",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "10",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "11",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "12",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "13",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "14",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "15",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			}
+		]
+	}
+]
+[2026-02-09 15:35:00] LOG.WARN: PageCode/pack PagePaginate [
+	1,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 15:35:00] LOG.WARN: PageCode/pack PagePaginate [
+	1,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 15:35:00] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	1,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"02",
+	"15"
+]
+[2026-02-09 15:35:00] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	1,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"02",
+	"15"
+]
+[2026-02-09 15:35:00] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaaa"
+}
+[2026-02-09 15:35:10] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaaa"
+}
+[2026-02-09 15:35:10] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaaa"
+}
+[2026-02-09 15:35:10] LOG.INFO: PageCode/pack PagePaginate [
+	"20260128202952",
+	"01"
+]
+[2026-02-09 15:35:30] LOG.INFO: PageCode/pack PagePaginate [
+	"appspecific",
+	"com.chrome.devtools.json"
+]
+[2026-02-09 15:35:31] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaaa"
+}
+[2026-02-09 15:35:43] LOG.INFO: PageCode/pack PagePaginate [
+	"20260128202952",
+	"01"
+]
+[2026-02-09 15:35:44] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaaa"
+}
+[2026-02-09 15:36:01] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 15:36:02] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 15:36:02] LOG.INFO: PageCode/pack PagePaginate [
+	"20260128202952",
+	"01"
+]
+[2026-02-09 15:36:02] LOG.INFO: PageCode/pack PagePaginate [
+	{
+		"name": "regalitos anonimos",
+		"description": "",
+		"pack_id": 1,
+		"code": "20260128202952",
+		"pages": [
+			{
+				"num": "01",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "02",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "03",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "04",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "05",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "06",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "07",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "08",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "09",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "10",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "11",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "12",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "13",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "14",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "15",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			}
+		]
+	}
+]
+[2026-02-09 15:36:02] LOG.WARN: PageCode/pack PagePaginate [
+	1,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 15:36:02] LOG.WARN: PageCode/pack PagePaginate [
+	1,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 15:36:02] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	1,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"02",
+	"15"
+]
+[2026-02-09 15:36:02] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	1,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"02",
+	"15"
+]
+[2026-02-09 15:36:02] LOG.INFO: PageCode/pack PagePaginate [
+	"appspecific",
+	"com.chrome.devtools.json"
+]
+[2026-02-09 15:36:02] LOG.WARN: PageCode/pack not notFound
+[2026-02-09 15:36:02] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 15:36:18] LOG.INFO: PageCode/pack PagePaginate [
+	"20260128202952",
+	"02"
+]
+[2026-02-09 15:36:18] LOG.INFO: PageCode/pack PagePaginate [
+	{
+		"name": "regalitos anonimos",
+		"description": "",
+		"pack_id": 1,
+		"code": "20260128202952",
+		"pages": [
+			{
+				"num": "01",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "02",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "03",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "04",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "05",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "06",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "07",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "08",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "09",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "10",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "11",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "12",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "13",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "14",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "15",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			}
+		]
+	}
+]
+[2026-02-09 15:36:18] LOG.WARN: PageCode/pack PagePaginate [
+	2,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 15:36:18] LOG.WARN: PageCode/pack PagePaginate [
+	2,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 15:36:18] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	2,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"03",
+	"15"
+]
+[2026-02-09 15:36:18] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	2,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"03",
+	"15"
+]
+[2026-02-09 15:36:19] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 15:36:20] LOG.INFO: PageCode/pack PagePaginate [
+	"20260128202952",
+	"01"
+]
+[2026-02-09 15:36:20] LOG.INFO: PageCode/pack PagePaginate [
+	{
+		"name": "regalitos anonimos",
+		"description": "",
+		"pack_id": 1,
+		"code": "20260128202952",
+		"pages": [
+			{
+				"num": "01",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "02",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "03",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "04",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "05",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "06",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "07",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "08",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "09",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "10",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "11",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "12",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "13",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "14",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "15",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			}
+		]
+	}
+]
+[2026-02-09 15:36:20] LOG.WARN: PageCode/pack PagePaginate [
+	1,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 15:36:20] LOG.WARN: PageCode/pack PagePaginate [
+	1,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 15:36:20] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	1,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"02",
+	"15"
+]
+[2026-02-09 15:36:20] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	1,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"02",
+	"15"
+]
+[2026-02-09 15:36:21] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 15:36:22] LOG.INFO: PageCode/pack PagePaginate [
+	"20260128202952",
+	"02"
+]
+[2026-02-09 15:36:22] LOG.INFO: PageCode/pack PagePaginate [
+	{
+		"name": "regalitos anonimos",
+		"description": "",
+		"pack_id": 1,
+		"code": "20260128202952",
+		"pages": [
+			{
+				"num": "01",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "02",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "03",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "04",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "05",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "06",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "07",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "08",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "09",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "10",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "11",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "12",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "13",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "14",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "15",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			}
+		]
+	}
+]
+[2026-02-09 15:36:22] LOG.WARN: PageCode/pack PagePaginate [
+	2,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 15:36:22] LOG.WARN: PageCode/pack PagePaginate [
+	2,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 15:36:22] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	2,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"03",
+	"15"
+]
+[2026-02-09 15:36:22] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	2,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"03",
+	"15"
+]
+[2026-02-09 15:36:23] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 15:36:23] LOG.INFO: PageCode/pack PagePaginate [
+	"20260128202952",
+	"03"
+]
+[2026-02-09 15:36:23] LOG.INFO: PageCode/pack PagePaginate [
+	{
+		"name": "regalitos anonimos",
+		"description": "",
+		"pack_id": 1,
+		"code": "20260128202952",
+		"pages": [
+			{
+				"num": "01",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "02",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "03",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "04",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "05",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "06",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "07",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "08",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "09",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "10",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "11",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "12",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "13",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "14",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "15",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			}
+		]
+	}
+]
+[2026-02-09 15:36:23] LOG.WARN: PageCode/pack PagePaginate [
+	3,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 15:36:23] LOG.WARN: PageCode/pack PagePaginate [
+	3,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 15:36:23] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	3,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"04",
+	"15"
+]
+[2026-02-09 15:36:23] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	3,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"04",
+	"15"
+]
+[2026-02-09 15:36:23] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 15:36:24] LOG.INFO: PageCode/pack PagePaginate [
+	"20260128202952",
+	"04"
+]
+[2026-02-09 15:36:24] LOG.INFO: PageCode/pack PagePaginate [
+	{
+		"name": "regalitos anonimos",
+		"description": "",
+		"pack_id": 1,
+		"code": "20260128202952",
+		"pages": [
+			{
+				"num": "01",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "02",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "03",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "04",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "05",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "06",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "07",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "08",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "09",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "10",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "11",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "12",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "13",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "14",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "15",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			}
+		]
+	}
+]
+[2026-02-09 15:36:24] LOG.WARN: PageCode/pack PagePaginate [
+	4,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 15:36:24] LOG.WARN: PageCode/pack PagePaginate [
+	4,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 15:36:24] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	4,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"05",
+	"15"
+]
+[2026-02-09 15:36:24] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	4,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"05",
+	"15"
+]
+[2026-02-09 15:36:24] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 15:36:24] LOG.INFO: PageCode/pack PagePaginate [
+	"20260128202952",
+	"15"
+]
+[2026-02-09 15:36:24] LOG.INFO: PageCode/pack PagePaginate [
+	{
+		"name": "regalitos anonimos",
+		"description": "",
+		"pack_id": 1,
+		"code": "20260128202952",
+		"pages": [
+			{
+				"num": "01",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "02",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "03",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "04",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "05",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "06",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "07",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "08",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "09",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "10",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "11",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "12",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "13",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "14",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "15",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			}
+		]
+	}
+]
+[2026-02-09 15:36:24] LOG.WARN: PageCode/pack PagePaginate [
+	15,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 15:36:24] LOG.WARN: PageCode/pack PagePaginate [
+	15,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 15:36:24] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	15,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"16",
+	"15"
+]
+[2026-02-09 15:36:24] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	15,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"16",
+	"15"
+]
+[2026-02-09 15:36:25] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 15:36:27] LOG.INFO: PageCode/pack PagePaginate [
+	"20260128202952",
+	"14"
+]
+[2026-02-09 15:36:27] LOG.INFO: PageCode/pack PagePaginate [
+	{
+		"name": "regalitos anonimos",
+		"description": "",
+		"pack_id": 1,
+		"code": "20260128202952",
+		"pages": [
+			{
+				"num": "01",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "02",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "03",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "04",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "05",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "06",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "07",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "08",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "09",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "10",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "11",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "12",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "13",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "14",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "15",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			}
+		]
+	}
+]
+[2026-02-09 15:36:27] LOG.WARN: PageCode/pack PagePaginate [
+	14,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 15:36:27] LOG.WARN: PageCode/pack PagePaginate [
+	14,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 15:36:27] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	14,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"15",
+	"15"
+]
+[2026-02-09 15:36:27] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	14,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"15",
+	"15"
+]
+[2026-02-09 15:36:28] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 15:36:28] LOG.INFO: PageCode/pack PagePaginate [
+	"20260128202952",
+	"13"
+]
+[2026-02-09 15:36:28] LOG.INFO: PageCode/pack PagePaginate [
+	{
+		"name": "regalitos anonimos",
+		"description": "",
+		"pack_id": 1,
+		"code": "20260128202952",
+		"pages": [
+			{
+				"num": "01",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "02",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "03",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "04",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "05",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "06",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "07",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "08",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "09",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "10",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "11",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "12",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "13",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "14",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "15",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			}
+		]
+	}
+]
+[2026-02-09 15:36:28] LOG.WARN: PageCode/pack PagePaginate [
+	13,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 15:36:28] LOG.WARN: PageCode/pack PagePaginate [
+	13,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 15:36:28] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	13,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"14",
+	"15"
+]
+[2026-02-09 15:36:28] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	13,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"14",
+	"15"
+]
+[2026-02-09 15:36:28] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 16:09:00] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
+[2026-02-09 16:09:00] LOG.INFO: PageCode/pack PagePaginate [
+	"20260128202952",
+	"13"
+]
+[2026-02-09 16:09:00] LOG.INFO: PageCode/pack PagePaginate [
+	{
+		"name": "regalitos anonimos",
+		"description": "",
+		"pack_id": 1,
+		"code": "20260128202952",
+		"pages": [
+			{
+				"num": "01",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "02",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "03",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "04",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "05",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "06",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "07",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "08",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "09",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "10",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "11",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "12",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "13",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "14",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			},
+			{
+				"num": "15",
+				"page_size": [
+					{
+						"size": {
+							"extension": "avif"
+						}
+					}
+				]
+			}
+		]
+	}
+]
+[2026-02-09 16:09:00] LOG.WARN: PageCode/pack PagePaginate [
+	13,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 16:09:00] LOG.WARN: PageCode/pack PagePaginate [
+	13,
+	[
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	],
+	"20260128202952"
+]
+[2026-02-09 16:09:01] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	13,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"14",
+	"15"
+]
+[2026-02-09 16:09:01] LOG.WARN: PageCode/pack SectionPaginationFinalize [
+	15,
+	13,
+	{
+		"prefix": "fas",
+		"iconName": "angles-right",
+		"icon": [
+			448,
+			512,
+			[
+				187,
+				"angle-double-right"
+			],
+			"f101",
+			"M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+		]
+	},
+	{
+		"prefix": "fas",
+		"iconName": "angle-right",
+		"icon": [
+			256,
+			512,
+			[
+				8250
+			],
+			"f105",
+			"M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+		]
+	},
+	"14",
+	"15"
+]
+[2026-02-09 16:09:01] LOG.INFO: PageCode/pack PagePaginate [
+	"appspecific",
+	"com.chrome.devtools.json"
+]
+[2026-02-09 16:09:01] LOG.WARN: PageCode/pack not notFound
+[2026-02-09 16:09:01] LOG.INFO: env {
+	"host": "127.0.0.1",
+	"port": 3306,
+	"connectionLimit": 20,
+	"user": "root",
+	"password": "",
+	"database": "ia_kyaaa"
+}
