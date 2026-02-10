@@ -40,6 +40,7 @@ export default async function LocaleLayout({
         notFound();
     }
     logger.info(`env LocaleLayout ${jsonLog({
+        DATABASE_URL:process.env.DATABASE_URL,
         host: process.env.DB_HOST,
         port: parseInt(process.env.DB_PORT!),
         connectionLimit: parseInt(process.env.DB_CONECTION_LIMIT!),
