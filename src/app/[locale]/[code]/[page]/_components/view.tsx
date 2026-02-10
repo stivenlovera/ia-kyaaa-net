@@ -47,7 +47,7 @@ export const View = ({ image, numPage, allPage }: ViewProps) => {
                     height={1700}
                     fetchPriority="high"
                     className=''
-                    alt={``}
+                    alt={`pagina ${numberToString(numPage, allPage)}`}
                     unoptimized
                     src={image}
                 />
