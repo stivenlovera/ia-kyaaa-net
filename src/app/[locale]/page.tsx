@@ -57,7 +57,7 @@ export default async function Home() {
                   className="items-start justify-center"
                   href={`/${pack.code}`}
                 >
-                  <Image
+                  <img
                     width={400}
                     height={500}
                     alt={`Preview ${pack.name}`}
