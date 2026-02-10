@@ -11,9 +11,11 @@ logger.info(`env ${jsonLog({
   password: process.env.DB_PASS,
   database: process.env.DB_DATABASE,
 })}`)
+
+const databaseUrl = process.env.DATABASE_URL;
 const adapter = new PrismaMariaDb({
   host: process.env.DB_HOST,
-  //port: parseInt(process.env.DB_PORT!),
+  port: parseInt(process.env.DB_PORT!),
   connectionLimit: parseInt(process.env.DB_CONECTION_LIMIT!),
   user: process.env.DB_USER,
   password: process.env.DB_PASS,
