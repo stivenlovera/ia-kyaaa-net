@@ -46,8 +46,8 @@ COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/node_modules ./node_modules
 
-EXPOSE 3000
-ENV PORT 3000
+EXPOSE 4000
+ENV PORT 4000
 
 # Next.js 16 requires 'npm start' for this configuration
 CMD ["npm", "start"]
