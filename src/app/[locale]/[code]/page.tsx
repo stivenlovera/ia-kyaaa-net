@@ -93,6 +93,7 @@ export default async function PagePage({ params }: { params: Promise<{ code: str
                             className='h-3/4 w-3/4 p-1'
                             alt={`Preview ${pack.name}`}
                             fetchPriority="high"
+                            unoptimized
                             src={`${process.env.URL_S3}/${pack?.code}/${pack?.pages[0].page_size[0].size.name}/${pack?.pages[0].num}.${pack?.pages[0].page_size[0].size.extension}`}
                         />
                     </Link>
@@ -175,6 +176,7 @@ export default async function PagePage({ params }: { params: Promise<{ code: str
                                             alt={`pagina ${page.num}`}
                                             width={270}
                                             height={347}
+                                            unoptimized
                                         />
                                     </Link>
                                 </div>

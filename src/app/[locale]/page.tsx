@@ -57,12 +57,13 @@ export default async function Home() {
                   className="items-start justify-center"
                   href={`/${pack.code}`}
                 >
-                  <img
+                  <Image
                     width={400}
                     height={500}
                     alt={`Preview ${pack.name}`}
                     fetchPriority="high"
                     className="w-full"
+                    unoptimized
                     src={`${process.env.URL_S3}/${pack.code}/${pack.pages[0].page_size[0].size.name}/${pack.pages[0].num}.${pack.pages[0].page_size[0].size.extension}`}
                   />
                   <div className=''>

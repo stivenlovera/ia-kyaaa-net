@@ -48,6 +48,7 @@ export const View = ({ image, numPage, allPage }: ViewProps) => {
                     fetchPriority="high"
                     className=''
                     alt={``}
+                    unoptimized
                     src={image}
                 />
             </button>
