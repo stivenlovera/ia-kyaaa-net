@@ -139,7 +139,7 @@ model Page_size {
   update_at DateTime?
 
   @@id([size_id, page_id])
-  @@map(name: "Page_size")
+  @@map(name: "page_size")
 }
 
 model Pack_type {
