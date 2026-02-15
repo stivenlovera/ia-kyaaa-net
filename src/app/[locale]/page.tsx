@@ -1,6 +1,5 @@
 
 import Link from "next/link";
-import logger, { jsonLog } from "../utils/logger";
 import { Metadata } from "next";
 import Image from "next/image";
 import { prisma } from "../utils/prisma";
@@ -10,7 +9,14 @@ export const metadata: Metadata = {
   description: 'Nuevas entradas del mes de febrero',
 }
 
-export default async function Home() {
+interface PageHomeProps {
+  params: Promise<{
+    locale: string
+  }>
+}
+
+export default async function Home({ params }: PageHomeProps) {
+  const { locale } = await params;
 
   const packs = await prisma.pack.findMany({
     select: {

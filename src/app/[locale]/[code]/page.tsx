@@ -135,23 +135,23 @@ export default async function PagePage({ params }: { params: Promise<{ code: str
                         nameSection={('tipo')}
                         route='type'
                     />
-                    <div className="p-1">
+                    <div className="">
                         <div className="flex mx-auto flex-wrap">
                             <div className="m-1">
-                                <h5 className="text-md">{/* t('pages') */}</h5>
+                                <h5 className="text-md">Paginas:</h5>
                             </div>
-                            <div className="m-2">
-                                <h5 className="text-sm text-md">{pack?.pages.length}</h5>
+                            <div className="mt-2">
+                                <h5 className="text-sm mx-1">{pack?.pages.length}</h5>
                             </div>
                         </div>
                     </div>
-                    <div className="p-1">
+                    <div className="">
                         <div className="flex mx-auto flex-wrap">
                             <div className="m-1">
                                 <h5 className="text-md">{/* t('update') */} Actualizado:</h5>
                             </div>
-                            <div className="m-2">
-                                <h5 className="text-sm ">{moment().format('DD/MM/yyyy hh:mm')}</h5>
+                            <div className="mt-2">
+                                <h5 className="text-sm mx-1">{moment().format('DD/MM/yyyy hh:mm')}</h5>
                             </div>
                         </div>
                     </div>

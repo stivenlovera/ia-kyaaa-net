@@ -13,7 +13,7 @@ export const TagInformation = ({ quantity, value, url }: TagInformationProps) =>
             className='flex'
             href={url}
         >
-            <div className='rounded-l bg-gray-700 p-1  text-sm'>
+            <div className='rounded-l bg-gray-700 p-1 text-sm'>
                 {value}
             </div>
             <div className='border-l-2 border-transparent rounded-r bg-gray-800 p-1 text-sm'>
