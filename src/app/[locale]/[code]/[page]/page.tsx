@@ -43,9 +43,6 @@ export default async function PaginatePage({ params }: PagePaginateProps) {
         logger.warn(`PageCode/pack not notFound`)
         return notFound();
     }
-
-    logger.info(`PageCode/pack PagePaginate ${jsonLog([pack])}`)
-
     const pageIsvalid = pack?.pages.find((p) => p.num === page)
 
     if (pageIsvalid === undefined) {
@@ -53,7 +50,8 @@ export default async function PaginatePage({ params }: PagePaginateProps) {
         return notFound();
     }
     const currentPage = stringToInt(pageIsvalid!.num);
-
+    logger.info(`PageCode/pack curretPage => ${jsonLog(currentPage)}`)
+    //const intValue = parseInt(page, 10)
     const pages = pack?.pages.map((page) => { return parseInt(page.num, 100) });
 
     return (

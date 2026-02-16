@@ -19,7 +19,7 @@ export interface PaginationProps {
 }
 
 export const PaginationView = async ({ page, allPages, code }: PaginationProps) => {
-    logger.warn(`PageCode/pack PagePaginate ${jsonLog([page, allPages, code])}`)
+    //logger.warn(`PageCode/pack PaginationView ${jsonLog([page, allPages, code])}`)
     //const t = await getTranslations('View');
     return (<>
         <div className='flex mx-auto flex-wrap items-center justify-center p-2'>
@@ -34,7 +34,7 @@ export const PaginationView = async ({ page, allPages, code }: PaginationProps) 
             <div
                 className={`flex items-center justify-center px-2 m-1 rounded-full`}
             >
-                <p className='text-center pr-3'>{page}</p> pagina {/* {t('paginate')} */} <p className='text-center pl-3'>{allPages.length}</p>
+                <p className='text-center pr-3'>{page}</p> pagina de {/* {t('paginate')} */} <p className='text-center pl-3'>{allPages.length}</p>
             </div>
             <SectionPaginationFinalize
                 pageFirst={`${numberToString(page + 1, allPages.length)}`}
@@ -80,7 +80,7 @@ export const SectionPaginationInit = ({ limit, page, iconFirst, iconSecond, page
 }
 export const SectionPaginationFinalize = ({ limit, page, iconFirst, iconSecond, pageFirst, pageSecond }: SectionPaginationProps) => {
 
-    logger.warn(`PageCode/pack SectionPaginationFinalize ${jsonLog([limit, page, iconFirst, iconSecond, pageFirst, pageSecond])}`)
+    logger.warn(`PageCode/pack SectionPaginationFinalize ${jsonLog([page])}`)
     //const t = await getTranslations('View');
     if (page >= limit) {
         return (null)

@@ -1,9 +1,7 @@
 import logger, { jsonLog } from "./logger";
 
 export function stringToInt(num: string): number {
-    const radix = (10) ** (num.length - 1);
-
-    return parseInt(num, radix)
+    return parseInt(num)
 }
 
 export function numberToString(num: number, length: number): string {
