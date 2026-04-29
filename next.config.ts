@@ -18,6 +18,7 @@ const nextConfig: NextConfig = {
         pathname: "/**",
       },
     ], */
+    minimumCacheTTL: 120,
     remotePatterns: [{
       protocol: 'https',
       hostname: 'usc1.contabostorage.com',
@@ -25,7 +26,15 @@ const nextConfig: NextConfig = {
       pathname: '/698352ccd113428cb40866703a92c514:kyaaa.net/**',
     }],
   },
-
+  async rewrites() {
+    return [
+      {
+        source: '/api/proxy/:path*',
+        destination: 'https://usc1.contabostorage.com*',
+      },
+    ];
+  },
+  
 };
 
 export default withNextIntl(nextConfig);

@@ -1,21 +1,40 @@
+'use client'
+
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 type ModalLoginProps = {
     onClose: (modal: boolean) => void;
     isOpen: boolean
-    children: React.ReactNode;
+    children: React.ReactNode
 };
 const ModalLogin = ({ isOpen, onClose, children }: ModalLoginProps) => {
     if (!isOpen) return null;
 
     return (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-            <div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full relative">
+        <div
+            className="fixed inset-0 w-screen h-screen bg-dark-600/50 flex items-center justify-center backdrop-blur-sm p-5"
+            onClick={() => { onClose(false) }}
+        >
+            <div className="bg-slate-950 p-4 rounded-lg shadow-lg items-center relative" >
                 <button
                     onClick={() => { onClose(false) }}
-                    className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+
+                    className="btn-primary absolute top-4 right-4 px-1"
                 >
-                    &times;
+                    <FontAwesomeIcon
+                        className=''
+                        icon={faXmark}
+                        size='sm'
+                    />
                 </button>
-                {children}
+                <div
+                    onClick={((event) => {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    })}>
+                    {children}
+                </div>
             </div>
         </div>
     );

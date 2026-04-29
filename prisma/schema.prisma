@@ -13,28 +13,40 @@ datasource db {
   provider = "mysql"
 }
 
-
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 // Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
+model Pack_State {
+  pack_state_id Int       @id @default(autoincrement())
+  name          String
+  create_at     DateTime?
+  update_at     DateTime?
+  packs         Pack[]
+
+  @@map(name: "pack_state")
+}
+
 model Pack {
-  pack_id        Int              @id @default(autoincrement())
-  name           String
-  description    String
-  code           String
-  state          Int
-  create_at      DateTime?
-  update_at      DateTime?
-  pages          Page[]
-  pack_types     Pack_type[]
-  pack_character Pack_character[]
-  pack_label     Pack_label[]
-  pack_serie     Pack_serie[]
-  pack_authors   Pack_author[]
-  pack_languages Pack_language[]
+  pack_id           Int                @id @default(autoincrement())
+  name              String
+  description       String
+  code              String
+  active            Int
+  create_at         DateTime?
+  update_at         DateTime?
+  pages             Page[]
+  pack_types        Pack_type[]
+  pack_character    Pack_character[]
+  pack_label        Pack_label[]
+  pack_serie        Pack_serie[]
+  pack_authors      Pack_author[]
+  pack_languages    Pack_language[]
+  participate_packs Participate_Pack[]
+  pack_state        Pack_State         @relation(fields: [pack_state_id], references: [pack_state_id])
+  pack_state_id     Int
 
   @@map(name: "pack")
 }
@@ -212,4 +224,94 @@ model Pack_language {
 
   @@id([language_id, pack_id])
   @@map(name: "pack_language")
+}
+
+model User {
+  user_id   Int        @default(autoincrement())
+  email     String     @unique
+  name      String
+  nick      String
+  password  String
+  create_at DateTime   @default(now())
+  update_at DateTime   @updatedAt
+  votes     Vote[]
+  user_rols User_Rol[]
+
+  @@id([user_id])
+  @@map(name: "user")
+}
+
+model Rol {
+  rol_id    Int        @default(autoincrement())
+  name      String
+  create_at DateTime   @default(now())
+  update_at DateTime   @updatedAt
+  user_rols User_Rol[]
+
+  @@id([rol_id])
+  @@map(name: "rol")
+}
+
+model User_Rol {
+  rol       Rol      @relation(fields: [rol_id], references: [rol_id])
+  rol_id    Int
+  user      User     @relation(fields: [user_id], references: [user_id])
+  user_id   Int
+  create_at DateTime @default(now())
+  update_at DateTime @updatedAt
+
+  @@id([rol_id, user_id])
+  @@map(name: "user_rol")
+}
+
+model State_Participate {
+  state_participate_id Int           @default(autoincrement())
+  name                 String
+  create_at            DateTime      @default(now())
+  update_at            DateTime      @updatedAt
+  participates         Participate[]
+
+  @@id([state_participate_id])
+  @@map(name: "state_participate")
+}
+
+model Participate {
+  participate_id       Int                @default(autoincrement())
+  state_participate    State_Participate  @relation(fields: [state_participate_id], references: [state_participate_id])
+  state_participate_id Int
+  name                 String
+  start_date           DateTime
+  start_end            DateTime
+  create_at            DateTime           @default(now())
+  update_at            DateTime           @updatedAt
+  participate_packs    Participate_Pack[]
+
+  @@id([participate_id])
+  @@map(name: "participate")
+}
+
+model Participate_Pack {
+  participate_pack_id Int         @default(autoincrement())
+  pack                Pack        @relation(fields: [pack_id], references: [pack_id])
+  pack_id             Int
+  participate         Participate @relation(fields: [participate_id], references: [participate_id])
+  participate_id      Int
+  create_at           DateTime    @default(now())
+  update_at           DateTime    @updatedAt
+  votes               Vote[]
+
+  @@id([participate_pack_id])
+  @@map(name: "participate_pack")
+}
+
+model Vote {
+  participate_pack    Participate_Pack @relation(fields: [participate_pack_id], references: [participate_pack_id])
+  participate_pack_id Int
+  user                User             @relation(fields: [user_id], references: [user_id])
+  user_id             Int
+  create_at           DateTime         @default(now())
+  update_at           DateTime         @updatedAt
+
+  @@id([participate_pack_id, user_id])
+  @@map(name: "vote")
 }

@@ -12,7 +12,7 @@ export const initialStateMenu: ListMenu[] = [
         url: '/galery'
     },
     {
-        name: 'Vota y participa',
+        name: 'Participa',
         url: '/participate'
     },
    

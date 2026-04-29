@@ -3,10 +3,11 @@ import { Locale, hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Inter } from 'next/font/google';
 import "../globals.css";
-import Header from '../layout/components/header';
+import Header from '../layout/components/navigate/header';
 import { routing } from '@/src/i18n/routing';
-import logger, { jsonLog } from '../utils/logger';
-
+import { AuthProvider } from '@/src/providers/AuthProvider';
+import AxiosInterceptorProvider from '@/src/providers/AxiosInterceptorProvider';
+//import logger, { jsonLog } from '../utils/logger';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -39,15 +40,6 @@ export default async function LocaleLayout({
     if (!hasLocale(routing.locales, locale)) {
         notFound();
     }
-    logger.info(`env LocaleLayout ${jsonLog({
-        DATABASE_URL:process.env.DATABASE_URL,
-        host: process.env.DB_HOST,
-        port: parseInt(process.env.DB_PORT!),
-        connectionLimit: parseInt(process.env.DB_CONECTION_LIMIT!),
-        user: process.env.DB_USER,
-        password: process.env.DB_PASS,
-        database: process.env.DB_DATABASE,
-    })}`)
     // Enable static rendering
     setRequestLocale(locale);
 
@@ -55,13 +47,17 @@ export default async function LocaleLayout({
         <html className=" text-white" lang={locale}>
             <body className={`${inter.className} bg-neutral-900`}>
                 <NextIntlClientProvider>
-                    <Header></Header>
-                    <div className='h-full'>
-                        <div className="px-2 py-2 md:px-10 lg:px-20 xl:px-64 2xl:px-72 md:py-5 lg:py-10 xl:py-14">
-                            {children}
-                        </div>
-                    </div>
-                    <div className='bg-slate-950 p-2'></div>
+                    <AuthProvider>
+                        <AxiosInterceptorProvider>
+                            <Header></Header>
+                            <div className='h-full'>
+                                {children}
+                            </div>
+                            <div className='bg-slate-950 p-2'>
+                                Footer 2026
+                            </div>
+                        </AxiosInterceptorProvider>
+                    </AuthProvider>
                 </NextIntlClientProvider>
             </body>
         </html>

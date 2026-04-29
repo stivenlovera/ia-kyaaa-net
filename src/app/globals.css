@@ -1,28 +1,39 @@
-@config "../../tailwind.config.js";
+@config "../../tailwind.config.ts";
 @import "tailwindcss";
+@tailwind utilities;
+
+/* @layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css"; */
 
 @font-face {
-  font-family: "wild words roman";
-  src: url("./assets/fonts/New_Wild_Words.TTF") format("truetype");
-  font-weight: 400 600; /* Define weights for semibold */
+  font-family: "WildWordsRoman";
+  src: url("/../fonts/New_Wild_Words.TTF") format("truetype");
+  font-weight: 900;
   font-style: normal;
-}
-@theme {
-  --color-darkmode: oklch(20.5% 0 0);
-  --color-SlateBlueText: "#547593";
-  --color-MidnightNavyText: "#102D47";
-  --color-dark_border: "#224767", --text-17: "1.0625rem";
-  --text-17--line-height: "1.4875rem";
-  --text-53: "3.3125rem";
-  --text-53--line-height: "3.875rem";
-  --text-40: "2.5rem";
-  --text-40--line-height: "3.4375rem";
-  --text-28: "1.75rem";
-  --text-28--line-height: "2.25rem";
-  --color-primary: oklch(97% 0 0);
-  --transition-duration-0: "0ms";
-  --transition-duration-04s: "0.4s";
-  --transition-duration-2000: "2000ms";
-  --font-wild-words-roman: "wild words roman";
+  font-display: swap;
 }
 
+@theme {
+  --color-darkmode: oklch(20.5% 0 0);
+  --font-wild-words-roman: "WildWordsRoman", sans-serif;
+}
+
+@layer base {}
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-800 hover:bg-blue-400 cursor-pointer rounded;
+  }
+
+  .card {
+    @apply bg-neutral-800 items-center justify-center p-2 md:p-5 lg:p-10 xl:p-10
+  }
+
+  .login-form {
+     background-image: url(../../public/img/img-login.png);
+     background-position: center center;
+     background-attachment: fixed;
+  }
+}

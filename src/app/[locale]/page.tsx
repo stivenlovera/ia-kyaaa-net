@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import { prisma } from "../utils/prisma";
 import { Card } from "./_components/card";
+import { Welcome } from "./_components/welcome";
+import { ListNew } from "./_components/list-new";
 
 export const dynamic = 'force-dynamic';
 
@@ -43,23 +45,28 @@ export default async function Home({ params }: PageHomeProps) {
         }
       },
     },
-    where: {
+  /*   where: {
       state: 1,
-    }
+    } */
   });
 
   //logger.info(`PageCode/pack ${jsonLog(packs)}`)
 
   return (
-    <div>
-      <div className="bg-neutral-800 items-center justify-center p-2 md:p-5 lg:p-10 xl:p-10 ">
+    <div className="px-2 py-2 md:px-10 lg:px-20 xl:px-64 2xl:px-72 md:py-5 lg:py-10 xl:py-14">
+      <div>
+        <Welcome></Welcome>
+      </div>
+      <ListNew></ListNew>
+      <div className="card">
         <div className="p-3 pt-0" >
           <p className="text-center text-3xl">Nuevas entradas</p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-2 lg:gap-3 xl:gap-4">
-          {
+          {/*  {
             packs.map((pack, i) => {
-              const urlImage = `${process.env.URL_S3}/${pack.code}/${pack.pages[0].page_size[0].size.name}/${pack.pages[0].num}.${pack.pages[0].page_size[0].size.extension}`
+              const urlImage = `/api/image-proxy?url=${process.env.URL_S3}/${pack.code}/${pack.pages[0].page_size[0].size.name}/${pack.pages[0].num}.${pack.pages[0].page_size[0].size.extension}`
+              //const urlImage = `${process.env.URL_S3}/${pack.code}/${pack.pages[0].page_size[0].size.name}/${pack.pages[0].num}.${pack.pages[0].page_size[0].size.extension}`
               return (
                 <Card
                   code={pack.code}
@@ -69,7 +76,7 @@ export default async function Home({ params }: PageHomeProps) {
                 ></Card>
               )
             })
-          }
+          } */}
         </div>
       </div>
 

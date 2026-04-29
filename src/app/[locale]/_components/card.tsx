@@ -3,7 +3,7 @@ import Link from "next/link"
 interface ICard {
     code: string
     name: string
-    urlImage:string
+    urlImage: string
 }
 export const Card = ({
     code,

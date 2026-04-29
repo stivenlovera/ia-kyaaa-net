@@ -6,10 +6,11 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/app.css",
   ],
   theme: {
     extend: {
-      maxWidth: {
+      /* maxWidth: {
         '219': '13.6875rem',
         '266': '16.625rem',
         '286': '17.875rem',
@@ -220,9 +221,11 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+      }, */
     },
   },
-  plugins: [],
+  plugins: [
+
+  ],
 };
 export default config;

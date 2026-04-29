@@ -77,8 +77,10 @@ export default async function PagePage({ params }: { params: Promise<{ code: str
 
     const pages = await packPages(code);
 
+    //const imageDescription = `${process.env.URL_S3}/${pack?.code}/${pack?.pages[0].page_size[0].size.name}/${pack?.pages[0].num}.${pack?.pages[0].page_size[0].size.extension}`
+    const imageDescription = `/api/image-proxy?url=${process.env.URL_S3}/${pack?.code}/${pack?.pages[0].page_size[0].size.name}/${pack?.pages[0].num}.${pack?.pages[0].page_size[0].size.extension}`
     return (
-        <div>
+        <div className='px-2 py-2 md:px-10 lg:px-20 xl:px-64 2xl:px-72 md:py-5 lg:py-10 xl:py-14'>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 pb-2">
                 <div
                     className="border-2 border-neutral-700"
@@ -94,7 +96,7 @@ export default async function PagePage({ params }: { params: Promise<{ code: str
                             alt={`Preview ${pack.name}`}
                             fetchPriority="high"
                             unoptimized
-                            src={`${process.env.URL_S3}/${pack?.code}/${pack?.pages[0].page_size[0].size.name}/${pack?.pages[0].num}.${pack?.pages[0].page_size[0].size.extension}`}
+                            src={imageDescription}
                         />
                     </Link>
                 </div>
@@ -161,6 +163,9 @@ export default async function PagePage({ params }: { params: Promise<{ code: str
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5">
                     {
                         pages!.pages.map((page, i) => {
+
+                            //const imagePage = `${process.env.URL_S3}/${pack?.code}/${page.page_size[0].size.name}/${page.num}.${page.page_size[0].size.extension}`
+                            const imagePage = `/api/image-proxy?url=${process.env.URL_S3}/${pack?.code}/${page.page_size[0].size.name}/${page.num}.${page.page_size[0].size.extension}`
                             return (
                                 <div
                                     className="flex p-1 sm:p-1 md:p-1 lg:p-2 xl:p-2 justify-center w-full"
@@ -172,7 +177,7 @@ export default async function PagePage({ params }: { params: Promise<{ code: str
                                     >
                                         <Image
                                             fetchPriority="high"
-                                            src={`${process.env.URL_S3}/${pack?.code}/${page.page_size[0].size.name}/${page.num}.${page.page_size[0].size.extension}`}
+                                            src={imagePage}
                                             alt={`pagina ${page.num}`}
                                             width={270}
                                             height={347}

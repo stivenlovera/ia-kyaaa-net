@@ -1,10 +1,15 @@
 export interface IPack {
     name: string;
+    code: string;
     pack_id: number;
     description: string;
-    code: string;
     pages: {
-        url_tumb: string;
-        url_premium: string;
+        page_size: {
+            size: {
+                name: string;
+                extension: string;
+            };
+        }[];
+        num: string;
     }[];
-} 
+}
