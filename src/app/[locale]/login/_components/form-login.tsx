@@ -2,10 +2,10 @@
 import { useAuth } from "@/src/providers/AuthContext";
 import { useRouter } from "next/navigation";
 import { useActionState, useState } from "react";
-import { IFormLogin, initialStateFormLogin } from "../../types/user.type";
-import { actionFormLogin } from "../../actions/actionFormLogin";
 import Form from "next/form";
-import { DialogResetPassword } from "../../[locale]/login/_components/dialog-reset-password";
+import { IFormLogin, initialStateFormLogin } from "@/src/app/types/user.type";
+import { DialogResetPassword } from "./dialog-reset-password";
+import { actionFormLogin } from "@/src/app/actions/actionFormLogin";
 
 export const FormLogin = () => {
 
