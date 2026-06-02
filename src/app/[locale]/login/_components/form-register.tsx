@@ -1,10 +1,10 @@
 'use client'
 import Form from 'next/form'
 import { useActionState } from 'react';
-import { actionFormRegister } from '../../actions/actionFormRegister';
 import { useRouter } from 'next/navigation';
-import { IFormRegister, initialStateFormRegister } from '../../types/user.type';
 import { useAuth } from '@/src/providers/AuthContext';
+import { IFormRegister, initialStateFormRegister } from '@/src/app/types/user.type';
+import { actionFormRegister } from '@/src/app/actions/actionFormRegister';
 
 export const FormRegister = () => {
     const router = useRouter();
