@@ -1,4 +1,4 @@
-import { TabAuth } from "../../components/auth/tab-auth";
+import { TabAuth } from "@/src/app/components/auth/tab-auth";
 
 export default async function Page() {
     return (

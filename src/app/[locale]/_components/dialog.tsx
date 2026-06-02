@@ -1,7 +1,5 @@
 'use client'
 
-import { FaTimes } from "react-icons/fa";
-
 type ModalDialogProps = {
     onClose: (modal: boolean) => void;
     isOpen: boolean
