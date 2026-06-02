@@ -84,7 +84,14 @@ export async function verifyAccessToken(token: string): Promise<JWTPayload | nul
 export async function verifyRefreshToken(token: string): Promise<JWTPayload | null> {
     try {
         const verified = await jwtVerify(token, refreshKey);
-        return verified.payload as JWTPayload;
+        
+        const payload: JWTPayload = {
+            user_id: Number(verified.payload.user_id),
+            email: String(verified.payload.email),
+            name: String(verified.payload.name),
+            role: 'user'
+        };
+        return payload;
     } catch (error) {
         return null;
     }

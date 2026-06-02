@@ -14,6 +14,7 @@ export const db = {
         password: true,
         create_at: true,
         update_at: true,
+        nick: true
       },
       where: {
         email: email
@@ -38,7 +39,7 @@ export const db = {
   },
 
   // Create new user
-  createUser: async (name: string, email: string, password: string): Promise<User> => {
+  /* createUser: async (name: string, email: string, password: string): Promise<User> => {
     const hashedPassword = await bcrypt.hash(password, 10);
     const nuevoUsuario = await prisma.user.create({
       data: {
@@ -50,7 +51,7 @@ export const db = {
       },
     });
     return nuevoUsuario;
-  },
+  }, */
 
   // Verify password
   verifyPassword: async (plainPassword: string, hashedPassword: string): Promise<boolean> => {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { IResponse } from "../../types/response";
-import { IAuthUser } from "../../types/user.type";
+import { IUserAuth } from "../../types/user.type";
 
 export function usePack() {
     const [packs, setPack] = useState<any | null>(null);
@@ -13,7 +13,7 @@ export function usePack() {
     const getNewPosts = async () => {
         try {
             const response = await fetch('/api/auth/protected');
-            const data: IResponse<IAuthUser> = await response.json();
+            const data: IResponse<IUserAuth> = await response.json();
             if (data.success) {
                 setPack(data.data.user);
             } else {
