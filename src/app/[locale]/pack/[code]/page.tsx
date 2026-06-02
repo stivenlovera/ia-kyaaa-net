@@ -12,6 +12,8 @@ import { repositoryPage } from '@/src/app/repositories/repository-pages';
 import { PreviewPack } from './_components/preview-pack';
 import { isNumber } from '@/src/app/utils/other';
 
+export const dynamic = "force-dynamic";
+
 interface PagePaginateProps {
     params: Promise<{
         code: string
