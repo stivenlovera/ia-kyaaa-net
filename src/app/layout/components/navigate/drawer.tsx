@@ -8,10 +8,9 @@ import { useAuth } from '@/src/providers/AuthContext'
 interface DrawerProps {
     openDrawer: boolean
     onDrawerClose: () => void
-    onLogin: () => void
     user: IAuth
 }
-const Drawer = ({ openDrawer, onDrawerClose, onLogin, user }: DrawerProps) => {
+const Drawer = ({ openDrawer, onDrawerClose, user }: DrawerProps) => {
     const router = useRouter();
     const { signOut } = useAuth()
     const [menu] = useState<ListMenu[]>(initialStateMenu);

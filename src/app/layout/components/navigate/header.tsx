@@ -6,14 +6,11 @@ import Image from 'next/image';
 import { FaAlignJustify, FaAngleRight } from "react-icons/fa";
 import { initialStateMenu, ListMenu } from '../../layout.type';
 import Drawer from './drawer';
-import ModalLogin from '@/src/app/[locale]/_components/dialog';
-import { TabAuth } from '@/src/app/components/auth/tab-auth';
 import { useAuth } from '@/src/providers/AuthContext'; import ButtonUser from './button-user';
 import { ButtonLogin } from './button-login';
 
 export const Header = () => {
     const [openDrawer, setDrawer] = useState<boolean>(false)
-    const [openLogin, setLogin] = useState<boolean>(false)
 
     const { user } = useAuth()
 
@@ -111,18 +108,8 @@ export const Header = () => {
             <Drawer
                 openDrawer={openDrawer}
                 onDrawerClose={() => { setDrawer(false); console.log('close Navigate') }}
-                onLogin={(() => { setLogin(true) })}
                 user={user!}
             ></Drawer>
-
-            <ModalLogin
-                isOpen={openLogin}
-                onClose={(() => { setLogin(false) })}
-            >
-                <div className="items-center justify-center p-10">
-                    <TabAuth></TabAuth>
-                </div>
-            </ModalLogin>
         </nav >
     )
 }

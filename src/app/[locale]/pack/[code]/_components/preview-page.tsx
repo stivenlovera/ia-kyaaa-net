@@ -4,9 +4,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import { PaginationView } from './paginate-view'
 import { numberToString, View } from './view'
 import { IPagePack } from '@/src/app/types/page.types'
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { usePathname, useSearchParams } from 'next/navigation'
 import { preload, } from 'react-dom';
-import { esNumber } from '@/src/app/utils/other'
 
 interface PreviewPageProps {
     code: string
