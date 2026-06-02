@@ -7,7 +7,6 @@ import { useAuth } from '../common/useAuth';
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     const { user, login, logout, checkAuth } = useAuth();
-
     const signIn = async (email: string, password: string) => {
         return await login(email, password)
     }
@@ -17,7 +16,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     }
 
     useEffect(() => {
-        console.log('AuthProvider ', user)
     }, [user])
 
     return (

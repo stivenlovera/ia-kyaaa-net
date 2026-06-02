@@ -1,19 +1,13 @@
 "use client";
 import Link from 'next/link'
 import { useEffect, useState } from 'react';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import axios from 'axios';
+
 import Image from 'next/image';
-
-import {
-    faCircleUser,
-    faBars
-
-} from "@fortawesome/free-solid-svg-icons";
+import { FaAlignJustify, FaAngleRight } from "react-icons/fa";
 import { initialStateMenu, ListMenu } from '../../layout.type';
 import Drawer from './drawer';
-import ModalLogin from '@/src/app/components/Auth/modalLogin';
-import { TabAuth } from '@/src/app/components/Auth/tab-auth';
+import ModalLogin from '@/src/app/[locale]/_components/dialog';
+import { TabAuth } from '@/src/app/components/auth/tab-auth';
 import { useAuth } from '@/src/providers/AuthContext'; import ButtonUser from './button-user';
 import { ButtonLogin } from './button-login';
 
@@ -23,15 +17,14 @@ export const Header = () => {
 
     const { user } = useAuth()
 
-    const [menu, setMenu] = useState<ListMenu[]>(initialStateMenu);
+    const [menu] = useState<ListMenu[]>(initialStateMenu);
 
     useEffect(() => {
-        console.log('reiniciar', user)
     }, [user]);
 
     //console.log(menu)
     return (
-        <nav className="sticky top-0 bg-slate-950 md:px-10 xl:px-10 2xl:px-10" >
+        <nav className="sticky top-0 bg-neutral-800 md:px-10 xl:px-10 2xl:px-10" >
             <div className='flex justify-between'>
                 <Link href={"/"} className='flex justify-start p-3'>
                     <Image
@@ -63,7 +56,7 @@ export const Header = () => {
                                         <li key={i}>
                                             <Link
                                                 href={menu.url}
-                                                className="block p-2 hover:text-blue-400 hover:bg-blue-950"
+                                                className="block p-2 hover:text-neutral-100 hover:bg-neutral-700"
                                             >
                                                 {menu.name}
                                             </Link>
@@ -90,11 +83,22 @@ export const Header = () => {
                     className='md:hidden lg:hidden xl:hidden p-3 rounded-lg bg-grayl-300 hover:bg-grayl-400 '
                     onClick={() => { setDrawer(true) }}
                 >
-                    <FontAwesomeIcon
-                        className='btn-primary p-2'
-                        icon={faBars}
-                        size='xl'
-                    />
+                    {user?.image ? (
+                        <div className='btn-primary p-0 border-2 rounded-full flex flex-row'>
+                            <div className='content-center'>
+                                <div className="w-9 h-9 rounded-full object-cover p-1">
+                                    <FaAngleRight size={30} color="white" className='' />
+                                </div>
+                            </div>
+                            <img
+                                src={`${user?.image}` || "/img/default-profile.png"}
+                                alt="Perfil"
+                                className="w-9 h-9 rounded-full object-cover p-1"
+                            />
+                        </div>
+                    ) : (
+                        <FaAlignJustify size={30} color="white" />
+                    )}
                 </button>
             </div>
             {/* <div className="xl:hidden font-medium flex space-x-4 p-2">
@@ -108,6 +112,7 @@ export const Header = () => {
                 openDrawer={openDrawer}
                 onDrawerClose={() => { setDrawer(false); console.log('close Navigate') }}
                 onLogin={(() => { setLogin(true) })}
+                user={user!}
             ></Drawer>
 
             <ModalLogin

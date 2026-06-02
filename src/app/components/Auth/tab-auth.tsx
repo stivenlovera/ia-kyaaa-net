@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react";
 import { FormLogin } from "./form-login";
-import FormRegister from "./form-register";
+import { FormRegister } from "./form-register";
 
 export const TabAuth = () => {
 

@@ -227,15 +227,18 @@ model Pack_language {
 }
 
 model User {
-  user_id   Int        @default(autoincrement())
-  email     String     @unique
-  name      String
-  nick      String
-  password  String
-  create_at DateTime   @default(now())
-  update_at DateTime   @updatedAt
-  votes     Vote[]
-  user_rols User_Rol[]
+  user_id        Int        @default(autoincrement())
+  email          String     @unique
+  name           String
+  nick           String
+  password       String
+  verified_email DateTime?
+  state          Int @default(1)
+  image          String
+  create_at      DateTime   @default(now())
+  update_at      DateTime   @updatedAt
+  votes          Vote[]
+  user_rols      User_Rol[]
 
   @@id([user_id])
   @@map(name: "user")

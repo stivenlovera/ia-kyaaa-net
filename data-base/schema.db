@@ -173,12 +173,16 @@ DROP TABLE IF EXISTS `user` ;
 CREATE TABLE `user` (
   `user_id` int NOT NULL auto_increment primary KEY,
   `email` varchar(150) NOT NULL,
+  `verified_email` datetime NULL,
   `name` varchar(250) NOT NULL,
   `nick` varchar(100) NOT NULL,
+  `image` varchar(250) NULL,
   `password` text NOT NULL,
+  `state` tinyint(1) default 1 NOT NULL,
   `create_at` datetime DEFAULT CURRENT_TIMESTAMP,
   `update_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
+
 
 DROP TABLE IF EXISTS `rol` ;
 CREATE TABLE `rol` (

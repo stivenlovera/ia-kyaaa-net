@@ -3,10 +3,10 @@ import Form from 'next/form'
 import { useActionState } from 'react';
 import { actionFormRegister } from '../../actions/actionFormRegister';
 import { useRouter } from 'next/navigation';
-import { IFormRegister, initialStateFormRegister } from '../../_types/user.type';
+import { IFormRegister, initialStateFormRegister } from '../../types/user.type';
 import { useAuth } from '@/src/providers/AuthContext';
 
-export default function FormRegister() {
+export const FormRegister = () => {
     const router = useRouter();
     const { checkAuth } = useAuth()
 
@@ -35,7 +35,7 @@ export default function FormRegister() {
                     </label>
                     <input
                         id="nick"
-                        className='w-full bg-amber-50 placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow'
+                        className='w-full'
                         placeholder='Nombre completo'
                         name="name"
                         defaultValue={state?.fields?.name}
@@ -53,7 +53,7 @@ export default function FormRegister() {
                     </label>
                     <input
                         id="email"
-                        className='w-full bg-amber-50 placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow'
+                        className='w-full'
                         placeholder='Email'
                         type="email"
                         name="email"
@@ -72,7 +72,7 @@ export default function FormRegister() {
                     </label>
                     <input
                         id="password"
-                        className='w-full bg-amber-50 placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow'
+                        className="w-full"
                         placeholder='Contraseña'
                         type="password"
                         name="password"
@@ -91,7 +91,7 @@ export default function FormRegister() {
                     </label>
                     <input
                         id="confirm_password"
-                        className='w-full bg-amber-50 placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow'
+                        className="w-full"
                         placeholder=' Confirma tu contraseña'
                         type="password"
                         name="confirm_password"
@@ -102,12 +102,11 @@ export default function FormRegister() {
                     />
                     {state?.errors?.confirm_password && <p className="text-red-500 text-xs pt-1">{state.errors.confirm_password}</p>}
                 </div>
-                <div>
+                <div className="">
                     <div className='flex'>
                         <input
                             id="term_use"
-                            className='bg-amber-50 placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow'
-                            placeholder=' Confirma tu contraseña'
+                            placeholder='Confirma tu contraseña'
                             type="checkbox"
                             name="term_use"
                             defaultChecked={state?.fields?.term_use}
@@ -124,14 +123,14 @@ export default function FormRegister() {
                     {state?.errors?.term_use && <p className="text-red-500 text-xs pt-1">{state.errors.term_use}</p>}
                 </div>
             </div>
-            <div className='text-center pt-4'>
+            <div className='text-left pt-4'>
                 <button
-                    className='btn-primary p-2'
+                    className='btn-primary w-full'
                     type="submit"
                     disabled={isPending}
                 >
                     <div className='flex flex-row'>
-                        <p className='px-2'>Crear mi cuenta {isPending ? 'true' : 'false'}</p>
+                        <p className='px-2'>Crear mi cuenta</p>
                     </div>
                 </button>
             </div>

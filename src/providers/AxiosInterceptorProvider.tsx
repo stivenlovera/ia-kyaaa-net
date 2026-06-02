@@ -5,7 +5,6 @@ import { useAuth } from "./AuthContext";
 import API from "./api";
 import axios from "axios";
 
-
 const AxiosInterceptorProvider = ({ children }) => {
     const { user, signOut } = useAuth(); // Access current context values
 
@@ -23,25 +22,21 @@ const AxiosInterceptorProvider = ({ children }) => {
 
         // Response Interceptor: Handles global errors (e.g., 401 Unauthorized)
         const responseInterceptor = API.interceptors.response.use(
-            (response) => response,
+            (response) => {return response },
             async (error) => {
                 const originalRequest = error.config;
                 // Check for 401 error and ensure it's not a retry attempt or the refresh call itself
                 if (error.response.status === 401 && !originalRequest._retry) {
-                    console.log('Ejecutar Refresh')
                     originalRequest._retry = true; // Mark as retry attempt to prevent infinite loops
-
                     try {
                         // Attempt to refresh the token using a separate, non-intercepted axios instance or the main one with a flag
-                        const response = await axios.post('api/auth/refresh', {}); // Use a separate axios instance if necessary
-
-                        console.log('Ejecutar Refresh response ', response)
+                        const response = await axios.post('/api/auth/refresh', {}); // Use a separate axios instance if necessary
                         // Retry the original request with the new token
                         //originalRequest.headers.Authorization = `Bearer ${newAccessToken}`;
                         return API(originalRequest);
 
                     } catch (refreshError) {
-                        console.log('Ejecutar refreshError  ',refreshError)
+                        console.log('Ejecutar refreshError  ', refreshError)
                         // Refresh failed, force logout
                         signOut();
                         // Redirect to login page if desired (can use navigate hook here)

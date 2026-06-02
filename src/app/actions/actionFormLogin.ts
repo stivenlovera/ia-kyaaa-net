@@ -1,9 +1,8 @@
 'use server';
 import { z } from "zod";
-import { db } from '../api/auth/_types/db';
 import { generateAccessToken, generateRefreshToken, setAuthCookies } from '../utils/auth';
-import { IFieldsFormLogin, IFormLogin, JWTPayload } from '../_types/user.type';
-import logger, { jsonLog } from "../utils/logger";
+import { IFieldsFormLogin, IFormLogin, JWTPayload } from '../types/user.type';
+import { repositoryAuth } from "../repositories/repository-auth";
 
 export async function actionFormLogin(prevState: IFormLogin, formData: FormData): Promise<IFormLogin> {
     const email = formData.get('email');
@@ -41,7 +40,6 @@ export async function actionFormLogin(prevState: IFormLogin, formData: FormData)
         .min(5, "Contraseña debe ser mayor a 5 characteres")
         .max(100, "Contraseña debe ser menor a 100 characteres");
     const validPassword = passwordSchema.safeParse(password.toString());
-    logger.info(`validPassword  ${jsonLog(validPassword)}`)
     if (!validPassword.success) {
         return {
             success: false,
@@ -52,26 +50,22 @@ export async function actionFormLogin(prevState: IFormLogin, formData: FormData)
         };
     }
 
-    const user = await db.findUserByEmail(email.toString());
-    logger.info(`user ${jsonLog(user)}`)
+    const user = await repositoryAuth.findUserByEmail(email.toString());
     if (user === null) {
         return {
             success: false,
             errors: {
-                email: "Credenciales invalidas",
-                password: "Credenciales invalidas"
+                email: "Email no registrada",
             },
             fields: fields
         };
     }
-    const validUser = await db.verifyPassword(password?.toString(), user!.password!);
-    logger.info(`validUser ${jsonLog(validUser)}`)
+    const validUser = await repositoryAuth.verifyPassword(password?.toString(), user!.password!);
     if (!validUser) {
         return {
             success: false,
             errors: {
-                email: "Credenciales invalidas",
-                password: "Credenciales invalidas"
+                password: "Contraseña invalida"
             },
             fields: fields
         };

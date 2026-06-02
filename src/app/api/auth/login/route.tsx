@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { JWTPayload, LoginCredentials } from '../_types/login';
-import { db } from '../_types/db';
+import { LoginCredentials } from '../_types/login';
 import { generateAccessToken, generateRefreshToken, setAuthCookies } from '@/src/app/utils/auth';
+import { JWTPayload } from '@/src/app/types/user.type';
+import { repositoryAuth } from '@/src/app/repositories/repository-auth';
 
 export async function POST(request: NextRequest) {
   try {
@@ -17,7 +18,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Find user
-    const user = await db.findUserByEmail(email);
+    const user = await repositoryAuth.findUserByEmail(email);
     if (!user) {
       return NextResponse.json(
         { success: false, message: 'Invalid credentials' },
@@ -26,7 +27,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Verify password
-    const isValidPassword = await db.verifyPassword(password, user.password!);
+    const isValidPassword = await repositoryAuth.verifyPassword(password, user.password!);
     if (!isValidPassword) {
       return NextResponse.json(
         { success: false, message: 'Invalid credentials' },
@@ -36,7 +37,7 @@ export async function POST(request: NextRequest) {
 
     // Generate tokens
     const payload: JWTPayload = {
-      user_id: user.user_id.toString(),
+      user_id: user.user_id,
       email: user.email,
       name: user.name,
       role: 'user'
@@ -48,7 +49,7 @@ export async function POST(request: NextRequest) {
     // Set cookies
     await setAuthCookies(accessToken, refreshToken);
 
-    const sanitizedUser = db.sanitizeUser(user);
+    const sanitizedUser = repositoryAuth.sanitizeUser(user);
 
     return NextResponse.json(
       {

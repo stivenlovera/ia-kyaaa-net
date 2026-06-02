@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.1045.0",
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
     "@fortawesome/free-regular-svg-icons": "^7.1.0",
     "@fortawesome/free-solid-svg-icons": "^7.1.0",
@@ -16,6 +17,7 @@
     "@prisma/adapter-mariadb": "^7.1.0",
     "@prisma/client": "^7.1.0",
     "@rooks/use-window-size": "^4.11.2",
+    "@smithy/node-http-handler": "^4.6.1",
     "@types/cookie": "^0.6.0",
     "axios": "^1.13.6",
     "bcryptjs": "^3.0.3",
@@ -28,9 +30,12 @@
     "next-i18next": "^15.4.3",
     "next-intl": "^4.8.1",
     "node-cache": "^5.1.2",
+    "nodemailer": "^8.0.7",
     "postcss": "^8.5.8",
     "react": "19.2.0",
     "react-dom": "19.2.0",
+    "react-icons": "^5.6.0",
+    "sharp": "^0.34.5",
     "winston": "^3.19.0",
     "winston-daily-rotate-file": "^5.0.0"
   },
@@ -39,6 +44,7 @@
     "@types/bcryptjs": "^2.4.6",
     "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^20",
+    "@types/nodemailer": "^8.0.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "baseline-browser-mapping": "^2.9.19",

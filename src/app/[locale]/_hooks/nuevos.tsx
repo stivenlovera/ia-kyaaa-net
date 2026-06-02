@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { IResponse } from "../../types/response";
-import { IAuthUser } from "../../_types/user.type";
+import { IAuthUser } from "../../types/user.type";
 
 export function usePack() {
     const [packs, setPack] = useState<any | null>(null);

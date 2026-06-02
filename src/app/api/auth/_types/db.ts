@@ -1,7 +1,6 @@
 import bcrypt from 'bcryptjs';
 import { User } from './login';
 import { prisma } from '@/src/app/utils/prisma';
-import { IUser } from '@/src/app/_types/user.type';
 
 // In production, use a real database (PostgreSQL, MongoDB, etc.)
 export const db = {
@@ -40,21 +39,15 @@ export const db = {
 
   // Create new user
   createUser: async (name: string, email: string, password: string): Promise<User> => {
-    /* const existingUser = await db.findUserByEmail(email);
-    if (existingUser) {
-      throw new Error('User already exists');
-    } */
-
     const hashedPassword = await bcrypt.hash(password, 10);
-    const user: IUser = {
-      name,
-      email,
-      password: hashedPassword,
-      user_id: 0,
-      nick: name.replace(/\s/g, '')
-    };
     const nuevoUsuario = await prisma.user.create({
-      data: user,
+      data: {
+        name,
+        email,
+        password: hashedPassword,
+        user_id: 0,
+        nick: name.replace(/\s/g, ''),
+      },
     });
     return nuevoUsuario;
   },

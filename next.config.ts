@@ -8,6 +8,11 @@ const withNextIntl = createNextIntlPlugin({
 });
 
 const nextConfig: NextConfig = {
+  experimental: {
+    serverActions: {
+      bodySizeLimit: '10mb', // Set your desired limit (e.g., '2mb', '10mb', '1gb')
+    },
+  },
   output: 'standalone',
   images: {
     /* remotePatterns: [
@@ -25,13 +30,14 @@ const nextConfig: NextConfig = {
       port: '',
       pathname: '/698352ccd113428cb40866703a92c514:kyaaa.net/**',
     }],
+
   },
   async rewrites() {
     return [
-      {
+      /* {
         source: '/api/proxy/:path*',
         destination: 'https://usc1.contabostorage.com*',
-      },
+      }, */
     ];
   },
   

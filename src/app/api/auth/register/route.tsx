@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { RegisterData } from '../_types/login';
-import { db } from '../_types/db';
+import { repositoryAuth } from '@/src/app/repositories/repository-auth';
 
 export async function POST(request: NextRequest) {
     try {
@@ -23,8 +23,8 @@ export async function POST(request: NextRequest) {
     }
 
     // Create user
-    const user = await db.createUser(name, email, password);
-    const sanitizedUser = db.sanitizeUser(user);
+    const user = await repositoryAuth.createUser(name, email, password);
+    const sanitizedUser = repositoryAuth.sanitizeUser(user);
 
     return NextResponse.json(
       {

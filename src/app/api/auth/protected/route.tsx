@@ -1,29 +1,28 @@
-import { db } from '@/src/app/repositories/auth';
-import { clearAuthCookies, getCurrentUser } from '@/src/app/utils/auth';
+import { IUserAuth } from '@/src/app/types/user.type';
+import { repositoryAuth } from '@/src/app/repositories/repository-auth';
+import { IResponse } from '@/src/app/types/response';
+import { getCurrentUser } from '@/src/app/utils/auth';
 import logger, { jsonLog } from '@/src/app/utils/logger';
 import { NextRequest, NextResponse } from 'next/server';
 
-
 export async function GET(request: NextRequest) {
+  logger.info(`protected GET `)
   try {
-    const user = await getCurrentUser(request);
+    const user = await getCurrentUser();
 
     if (!user) {
-      //await clearAuthCookies();
       return NextResponse.json(
         { success: false, message: 'Unauthorized' },
         { status: 401 }
       );
     }
-    logger.info(`getCurrentUser ${jsonLog(user)}`)
-    const userValid = await db.findUserById(user.user_id)
-    logger.info(`findUserById userValid ${jsonLog(userValid)}`)
-    return NextResponse.json(
+    const userValid = await repositoryAuth.findUserAuth(user.user_id)
+    return NextResponse.json<IResponse<IUserAuth>>(
       {
         success: true,
         message: 'This is protected data',
         data: {
-          user: userValid,
+          user: { ...userValid!, image: `${process.env.NEXT_PUBLIC_STATIC_URL_S3}/img/${userValid?.image}`},
           secretInfo: 'Only authenticated users can see this',
           timestamp: new Date().toISOString(),
         },

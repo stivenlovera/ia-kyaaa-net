@@ -1,11 +1,11 @@
 'use client';
 
 import { createContext, useContext } from 'react';
-import { User } from '../app/api/auth/_types/login';
+import { IAuth } from '../app/types/user.type';
 
 // Define the shape of your context data
 interface AuthContextType {
-    user: User | null;
+    user: IAuth | null;
     signIn: (email: string, password: string) => Promise<{ success: boolean, message: string }>
     signOut: () => void;
     checkAuth: () => void;

@@ -7,7 +7,20 @@ import Header from '../layout/components/navigate/header';
 import { routing } from '@/src/i18n/routing';
 import { AuthProvider } from '@/src/providers/AuthProvider';
 import AxiosInterceptorProvider from '@/src/providers/AxiosInterceptorProvider';
+import { Suspense } from 'react';
+import { Splashscreen } from '../layout/components/splashcreen/splashscreen';
+import logger, { jsonLog } from '../utils/logger';
+import ToastProvider from '@/src/providers/toastProvider';
+import AlertProvider from '@/src/providers/alertProvider';
+import { getCurrentUser } from '../utils/auth';
 //import logger, { jsonLog } from '../utils/logger';
+
+export interface PageHomeProps {
+    params: Promise<{
+        locale: string
+    }>
+}
+
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -42,25 +55,33 @@ export default async function LocaleLayout({
     }
     // Enable static rendering
     setRequestLocale(locale);
+    const user = getCurrentUser();
+    logger.info(`LocaleLayout ${jsonLog(user)}`)
 
     return (
         <html className=" text-white" lang={locale}>
             <body className={`${inter.className} bg-neutral-900`}>
-                <NextIntlClientProvider>
-                    <AuthProvider>
-                        <AxiosInterceptorProvider>
-                            <Header></Header>
-                            <div className='h-full'>
-                                {children}
-                            </div>
-                            <div className='bg-slate-950 p-2'>
-                                Footer 2026
-                            </div>
-                        </AxiosInterceptorProvider>
-                    </AuthProvider>
-                </NextIntlClientProvider>
+                <Suspense fallback={<Splashscreen></Splashscreen>}>
+                    <NextIntlClientProvider>
+                        <AuthProvider>
+                            <AxiosInterceptorProvider>
+                                <AlertProvider>
+                                    <Header></Header>
+                                    <ToastProvider>
+                                        <div className='h-full'>
+                                            {children}
+                                        </div>
+                                        <div className='bg-neutral-800 p-2'>
+                                            Footer 2026
+                                        </div>
+                                    </ToastProvider>
+                                </AlertProvider>
+                            </AxiosInterceptorProvider>
+                        </AuthProvider>
+                    </NextIntlClientProvider>
+                </Suspense>
             </body>
-        </html>
+        </html >
 
     );
 }

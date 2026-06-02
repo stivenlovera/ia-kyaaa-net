@@ -13,7 +13,7 @@ export const Card = ({
     return (<div className="border-slate-900 border-2">
         <Link
             className="items-start justify-center"
-            href={`/${code}`}
+            href={`/pack/${code}`}
         >
             <Image
                 width={400}

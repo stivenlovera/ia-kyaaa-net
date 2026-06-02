@@ -1,8 +1,11 @@
 'use server';
 import { z } from "zod";
-import { db } from '../api/auth/_types/db';
+import { repositoryAuth } from "../repositories/repository-auth";
 import { generateAccessToken, generateRefreshToken, setAuthCookies } from '../utils/auth';
-import { IFieldsFormRegister, IFormRegister, JWTPayload } from '../_types/user.type';
+import { IFieldsFormRegister, IFormRegister, JWTPayload } from '../types/user.type';
+import logger, { jsonLog } from "../utils/logger";
+import { sendEmail } from "../utils/mail";
+import { welcomeEmailHtml } from "../utils/template-mails/notification-welcome-html";
 
 export async function actionFormRegister(prevState: IFormRegister, formData: FormData): Promise<IFormRegister> {
     const name = formData.get('name');
@@ -76,7 +79,7 @@ export async function actionFormRegister(prevState: IFormRegister, formData: For
         };
     }
 
-    const valid = await db.findUserByEmail(email.toString());
+    const valid = await repositoryAuth.findUserByEmail(email.toString());
     if (valid !== null) {
         return {
             success: false,
@@ -87,7 +90,7 @@ export async function actionFormRegister(prevState: IFormRegister, formData: For
         };
     }
 
-    const user = await db.createUser(name.toString(), email.toString(), password.toString());
+    const user = await repositoryAuth.createUser(name.toString(), email.toString(), password.toString());
 
     const payload: JWTPayload = {
         user_id: user.user_id,
@@ -98,6 +101,10 @@ export async function actionFormRegister(prevState: IFormRegister, formData: For
 
     const accessToken = await generateAccessToken(payload);
     const refreshToken = await generateRefreshToken(payload);
+
+    // Set mail
+    const infoEmail = await sendEmail(user!.email!, 'Bienvenido a la aplicación', user!.name, welcomeEmailHtml(user!.name));
+    logger.info(`info sendEmail ${jsonLog(infoEmail)}`)
 
     // Set cookies
     await setAuthCookies(accessToken, refreshToken);

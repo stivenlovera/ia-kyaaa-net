@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { User } from '../app/api/auth/_types/login';
 import { IResponse } from '../app/types/response';
-import { IAuthUser } from '../app/types/user.type';
+import { IUserAuth } from '../app/types/user.type';
+import API from '../providers/api';
 
 export function useAuth() {
     const [user, setUser] = useState<any | null>(null);
@@ -17,11 +17,10 @@ export function useAuth() {
 
     const checkAuth = async () => {
         try {
-            const response = await fetch('/api/auth/protected');
-            const data: IResponse<IAuthUser> = await response.json();
-
-            if (data.success) {
-                setUser(data.data.user);
+            const response = await API.get<IResponse<IUserAuth>>('/api/auth/protected');
+            //const data:  = await response.json();
+            if (response.data.success) {
+                setUser(response.data.data.user);
             } else {
                 setUser(null);
                 //signOut()

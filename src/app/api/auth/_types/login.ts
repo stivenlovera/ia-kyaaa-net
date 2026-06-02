@@ -2,6 +2,7 @@ export interface User {
   user_id: number
   email: string
   name: string
+  nick: string 
   password?: string
   create_at?: Date
   update_at?: Date
@@ -31,3 +32,4 @@ export interface AuthResponse {
   user?: Omit<User, 'password'>;
   accessToken?: string;
 }
+

@@ -1,7 +1,9 @@
 import { SignJWT, jwtVerify } from 'jose';
 import { cookies } from 'next/headers';
 import { NextRequest } from 'next/server';
-import { JWTPayload } from '../_types/user.type';
+import { IUser, JWTPayload } from '../types/user.type';
+import { repositoryAuth } from '../repositories/repository-auth';
+import logger, { jsonLog } from './logger';
 
 const secretKey = process.env.JWT_SECRET!;
 const refreshSecretKey = process.env.JWT_REFRESH_SECRET!;
@@ -36,11 +38,35 @@ export async function generateRefreshToken(payload: JWTPayload): Promise<string>
         .sign(refreshKey);
 }
 
+// Generate Access Token temporal
+export async function generateAccessTokenTemp(payload: { email: string }): Promise<string> {
+    return await new SignJWT({
+        email: payload.email
+    })
+        .setProtectedHeader({ alg: 'HS256' })
+        .setIssuedAt()
+        .setExpirationTime(process.env.VERIFIED_COOKIES_EXPIRES_IN!)
+        .sign(key);
+}
+
+// Verify Access Token temporal
+export async function verifyAccessTokenTemp(token: string): Promise<{ email: string } | null> {
+    try {
+        const verified = await jwtVerify(token, key);
+
+        const payload: { email: string } = {
+            email: String(verified.payload.email),
+        };
+        return payload;
+    } catch (error) {
+        return null;
+    }
+}
+
 // Verify Access Token
 export async function verifyAccessToken(token: string): Promise<JWTPayload | null> {
     try {
         const verified = await jwtVerify(token, key);
-        console.log('verifyAccessToken ', verified.payload)
 
         const payload: JWTPayload = {
             user_id: Number(verified.payload.user_id),
@@ -81,7 +107,7 @@ export function getTokenFromHeaders(request: NextRequest): string | null {
 }
 
 // Get current user from token
-export async function getCurrentUser(request: NextRequest): Promise<JWTPayload | null> {
+export async function getCurrentUserCookie(request: NextRequest): Promise<JWTPayload | null> {
     const cookieStore = await cookies();
     const token = cookieStore.get('accessToken')?.value || getTokenFromHeaders(request);
 
@@ -90,17 +116,25 @@ export async function getCurrentUser(request: NextRequest): Promise<JWTPayload |
     return user;
 }
 
+export async function getCurrentUser(): Promise<IUser | null> {
+    const cookieStore = await cookies();
+    const token = cookieStore.get('accessToken')?.value;
+    if (!token) return null;
+    const userCookie = await verifyAccessToken(token);
+    const user = repositoryAuth.findUserById(userCookie!.user_id);
+    return user;
+}
+
 // Set auth cookies
 export async function setAuthCookies(accessToken: string, refreshToken: string) {
 
-    console.log('AUTH_COOKIES_EXPIRES_IN', parseInt(process.env.AUTH_COOKIES_EXPIRES_IN!))
     const cookieStore = await cookies();
 
     cookieStore.set('accessToken', accessToken, {
         httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
         sameSite: 'lax',
-        maxAge: 60 * 60 * 1 * parseInt(process.env.AUTH_COOKIES_EXPIRES_IN!), // 1h
+        maxAge: 60 * 60 * parseInt(process.env.AUTH_COOKIES_EXPIRES_IN!), // 1h
         path: '/',
     });
 

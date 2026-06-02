@@ -1,20 +1,14 @@
 import { Metadata } from "next";
 import { prisma } from "../utils/prisma";
-import { Card } from "./_components/card";
 import { Welcome } from "./_components/welcome";
 import { ListNew } from "./_components/list-new";
+import { PageHomeProps } from "./layout";
 
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
   title: 'Nuevas entradas',
   description: 'Nuevas entradas del mes de febrero',
-}
-
-interface PageHomeProps {
-  params: Promise<{
-    locale: string
-  }>
 }
 
 export default async function Home({ params }: PageHomeProps) {

@@ -20,20 +20,51 @@
   --font-wild-words-roman: "WildWordsRoman", sans-serif;
 }
 
-@layer base {}
+@layer base {
+}
+
+@utility card {
+  @apply items-center justify-center p-2 md:p-5 lg:p-7 xl:p-7 border border-neutral-700 rounded-lg shadow-md;
+}
+
+@utility btn-primary {
+  @apply bg-neutral-800 hover:text-neutral-100 border-2 border-neutral-600 hover:bg-neutral-700 inline-flex justify-center rounded-md shadow-sm px-2 py-2 font-medium focus:outline-none cursor-pointer disabled:border-neutral-700 disabled:cursor-not-allowed disabled:bg-neutral-950;
+}
+
+@utility btn-primary-icon {
+  @apply bg-neutral-800 hover:text-neutral-100 border-2 border-neutral-600 hover:bg-neutral-700 inline-flex justify-center rounded-md shadow-sm p-2 font-medium focus:outline-none cursor-pointer disabled:border-neutral-700 disabled:cursor-not-allowed disabled:bg-neutral-900;
+}
+
+/* @utility input {
+  @apply w-full bg-amber-50 placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow;
+} */
 
 @layer components {
-  .btn-primary {
-    @apply bg-blue-800 hover:bg-blue-400 cursor-pointer rounded;
+  .btn-warning {
+    @apply bg-yellow-500 hover:bg-yellow-400 cursor-pointer rounded;
   }
 
-  .card {
-    @apply bg-neutral-800 items-center justify-center p-2 md:p-5 lg:p-10 xl:p-10
+  .btn-danger {
+    @apply bg-red-500 hover:bg-red-400 cursor-pointer rounded;
   }
 
-  .login-form {
-     background-image: url(../../public/img/img-login.png);
-     background-position: center center;
-     background-attachment: fixed;
+  input {
+    @apply bg-neutral-100 hover:bg-neutral-50 placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow;
+  }
+
+  input[type="checkbox"] {
+    @apply bg-neutral-100 hover:text-neutral-100;
+  }
+
+  p {
+    @apply text-neutral-100;
+  }
+
+  select {
+    @apply block p-1 border border-neutral-500 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-neutral-500 focus:border-neutral-500 text-sm text-white;
+  }
+
+  option {
+    @apply hover:text-white text-black;
   }
 }

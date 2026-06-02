@@ -1,8 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
 import { generateAccessToken, generateRefreshToken, setAuthCookies, verifyRefreshToken } from '@/src/app/utils/auth';
+import logger from '@/src/app/utils/logger';
 
 export async function POST(request: NextRequest) {
+  logger.info(`refresh POST `)
   try {
     const cookieStore = await cookies();
     const refreshToken = cookieStore.get('refreshToken')?.value;

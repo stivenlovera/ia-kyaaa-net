@@ -1,11 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
-import { clearAuthCookies, verifyAccessToken } from "../app/utils/auth";
+import { verifyAccessToken } from "../app/utils/auth";
+import logger, { jsonLog } from "../app/utils/logger";
 
 export async function withAuth(request: NextRequest) {
+  logger.info(`proxy/withAuth pathname ${jsonLog(request.nextUrl.pathname)}`)
+  logger.info(`proxy/withAuth url ${jsonLog(request.url)}`)
   const token = request.cookies.get('accessToken')?.value;
-  console.log('activacion de withAuth')
   // Protected routes
-  const protectedPaths = ['/profile'];
+  const protectedPaths = ['/my-purchases', '/favorites', '/my-account'];
   const isProtectedPath = protectedPaths.some(path =>
     request.nextUrl.pathname.startsWith(path)
   );
@@ -15,45 +17,27 @@ export async function withAuth(request: NextRequest) {
   const isAuthPath = noProtectedPaths.some(path =>
     request.nextUrl.pathname.startsWith(path)
   );
-  const user = await verifyAccessToken(token!);
-  console.log('user', user)
-  console.log('isProtectedPath', isProtectedPath)
-  /* if (user === null) {
-    console.log('IF user', user)
-    return NextResponse.redirect(new URL('/', request.url));
-  } */
-  if (user === null) {
-    console.log('redirect login')
-    //await //()
-    //return NextResponse.redirect(new URL('/login', request.url));
-  }
 
   if (isProtectedPath) {
     if (!token) {
       return NextResponse.redirect(new URL('/login', request.url));
     }
-
     const user = await verifyAccessToken(token);
+    logger.info(`proxy/withAuth user ${user}`)
     if (user === null) {
-      console.log('logout')
       const response = NextResponse.redirect(new URL('/login', request.url));
-      //response.cookies.delete('accessToken');
-      //response.cookies.delete('refreshToken');
       return response;
     }
   } else {
 
   }
-
-  console.log('isAuthPath && token', isAuthPath && token)
-
   if (isAuthPath && token) {
     const user = await verifyAccessToken(token);
     if (user) {
-      return NextResponse.redirect(new URL('/dashboard', request.url));
+      return NextResponse.redirect(new URL('/', request.url));
     }
   }
-
+  
   return NextResponse.next();
 }
 
@@ -64,5 +48,6 @@ export const config = {
     '/settings/:path*',
     '/login',
     '/register',
+    ['/((?!api|_next/static|_next/image|favicon.ico).*)']
   ],
 };
