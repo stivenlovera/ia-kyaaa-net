@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default async function Home({ params }: PageHomeProps) {
   const { locale } = await params;
 
-  const packs = await prisma.pack.findMany({
+  /* const packs = await prisma.pack.findMany({
     select: {
       name: true,
       description: true,
@@ -39,10 +39,10 @@ export default async function Home({ params }: PageHomeProps) {
         }
       },
     },
-  /*   where: {
+    where: {
       state: 1,
-    } */
-  });
+    }
+  }); */
 
   //logger.info(`PageCode/pack ${jsonLog(packs)}`)
 
