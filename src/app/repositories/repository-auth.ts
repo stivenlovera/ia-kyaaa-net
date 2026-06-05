@@ -18,7 +18,6 @@ export const repositoryAuth = {
     },
 
     findUserAuth: async (user_id: number): Promise<IAuth | null> => {
-        logger.info(`repositoryAuth/findUserAuth ${jsonLog(user_id)}`)
         const user = await prisma.user.findFirst({
             where: {
                 user_id: user_id
@@ -34,7 +33,6 @@ export const repositoryAuth = {
     },
 
     findUserNick: async (nick: string, user_id: number): Promise<IAuth | null> => {
-        logger.info(`repositoryAuth/findUserAuth ${jsonLog(nick)}`)
         const user = await prisma.user.findFirst({
             where: {
                 nick: nick,

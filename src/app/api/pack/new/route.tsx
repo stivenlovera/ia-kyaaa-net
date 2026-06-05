@@ -1,42 +1,47 @@
 import { IResponse } from '@/src/app/types/response';
-import { prisma } from '@/src/app/utils/prisma';
 import { NextRequest, NextResponse } from 'next/server';
-import { IPack } from '../_types/pack';
+import logger, { jsonLog } from '@/src/app/utils/logger';
+import { getCurrentUser } from '@/src/app/utils/auth';
+import { repositoryPack } from '@/src/app/repositories/repository-pack';
+import { INewPacksAuth } from '@/src/app/types/pack.types';
+import { repositoryLikePack } from '@/src/app/repositories/repository-like-pack';
+import { ILikePack } from '@/src/app/types/like-pack.types';
+import { IBuyPack } from '@/src/app/types/buy_pack.types';
+import { IFavoritePack } from '@/src/app/types/favorite-pack.types';
+import { repositoryBuyPack } from '@/src/app/repositories/repository-buy-pack';
+import { repositoryFavoritePack } from '@/src/app/repositories/repository-favorite-pack';
 
 export async function GET(request: NextRequest) {
+
+    logger.info(`api/packs/new GET ${jsonLog([])}`)
     try {
-        const packs = await prisma.pack.findMany({
-            select: {
-                name: true,
-                description: true,
-                pack_id: true,
-                code: true,
-                pages: {
-                    select: {
-                        num: true,
-                        page_size: {
-                            where: {
-                                size_id: 1
-                            },
-                            select: {
-                                size: {
-                                    select: {
-                                        extension: true,
-                                        name: true
-                                    }
-                                }
-                            }
-                        }
-                    }
-                },
-            },
-           /*  where: {
-                state: 1,
-            } */
+        const packs = await repositoryPack.findPacksNew();
+        const user = await getCurrentUser();
+        let likes: ILikePack[] = []
+        let buys: IBuyPack[] = []
+        let favorites: IFavoritePack[] = []
+
+        if (user !== null) {
+            likes = await repositoryLikePack.findLikePerUser(user!.user_id);
+            buys = await repositoryBuyPack.findBuyPerUser(user!.user_id);
+            favorites = await repositoryFavoritePack.findFavoritePerUser(user!.user_id);
+        }
+
+        const lista = packs!.map((pack) => {
+            const isLike = likes!.find((like) => like.pack_id === pack.pack_id);
+            const isBuy = buys!.find((like) => like.pack_id === pack.pack_id);
+            const isFavorite = favorites!.find((like) => like.pack_id === pack.pack_id);
+            const newPack: INewPacksAuth = {
+                ...pack,
+                buy: isBuy !== undefined ? true : false,
+                like: isLike !== undefined ? true : false,
+                favorite: isFavorite !== undefined ? true : false,
+            }
+            return newPack
         });
 
-        const resp: IResponse<IPack[]> = {
-            data: packs,
+        const resp: IResponse<INewPacksAuth[]> = {
+            data: lista,
             message: 'Lista de packs',
             success: true
         }
@@ -44,6 +49,7 @@ export async function GET(request: NextRequest) {
             { status: 200 }
         );
     } catch (error: any) {
+        logger.error(`api/packs/new error=> ${jsonLog(error.message )}`)
         return NextResponse.json(
             { success: false, message: error.message || 'Login failed' },
             { status: 500 }

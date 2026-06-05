@@ -6,7 +6,8 @@ import Image from 'next/image';
 import { FaAlignJustify, FaAngleRight } from "react-icons/fa";
 import { initialStateMenu, ListMenu } from '../../layout.type';
 import Drawer from './drawer';
-import { useAuth } from '@/src/providers/AuthContext'; import ButtonUser from './button-user';
+import { useAuth } from '@/src/providers/AuthContext';
+import ButtonUser from './button-user';
 import { ButtonLogin } from './button-login';
 
 export const Header = () => {
@@ -28,10 +29,9 @@ export const Header = () => {
                         className=''
                         src="/img/logo_white.png"
                         alt="logo"
-                        width={40}
+                        width={45}
                         height={40}
                     />
-
                     <h5 className={`font-wild-words-roman self-center text-2xl font-bold px-2`} >ia.kyaaa</h5>
                 </Link>
                 <div className='justify-end space-x-2 py-3'>

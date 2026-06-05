@@ -1,19 +1,22 @@
 'use client';
-
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import { IResponse } from '../app/types/response';
-import { IUserAuth } from '../app/types/user.type';
+import { IAuth, IUserAuth } from '../app/types/user.type';
 import API from '../providers/api';
 
-export function useAuth() {
-    const [user, setUser] = useState<any | null>(null);
+export function useAuth(auth: IAuth | null) {
+    const [user, setUser] = useState<IAuth | null>(null);
     const [loading, setLoading] = useState(true);
-    const router = useRouter();
 
     useEffect(() => {
-        checkAuth();
-    }, []);
+        if (auth !== null) {
+            setUser(auth);
+        }
+    }, [auth]);
+
+    const setAuth = async (auth: IAuth | null) => {
+        setUser(auth)
+    };
 
     const checkAuth = async () => {
         try {
@@ -51,6 +54,7 @@ export function useAuth() {
     const logout = async () => {
         await fetch('/api/auth/logout', { method: 'POST' });
         setUser(null);
+        console.log('logout', user)
         //router.push('/login');
     };
 
@@ -81,5 +85,5 @@ export function useAuth() {
     };
 
 
-    return { user, loading, login, logout, refreshToken, checkAuth };
+    return { user, loading, login, logout, refreshToken, checkAuth, setAuth };
 }

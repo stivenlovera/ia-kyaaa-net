@@ -47,6 +47,9 @@ model Pack {
   participate_packs Participate_Pack[]
   pack_state        Pack_State         @relation(fields: [pack_state_id], references: [pack_state_id])
   pack_state_id     Int
+  buyPacks          Buy_Pack[]
+  favoritePacks     Favorite_Pack[]
+  likePacks         Like_Pack[]
 
   @@map(name: "pack")
 }
@@ -227,18 +230,21 @@ model Pack_language {
 }
 
 model User {
-  user_id        Int        @default(autoincrement())
-  email          String     @unique
+  user_id        Int             @default(autoincrement())
+  email          String          @unique
   name           String
   nick           String
   password       String
   verified_email DateTime?
-  state          Int @default(1)
+  state          Int             @default(1)
   image          String
-  create_at      DateTime   @default(now())
-  update_at      DateTime   @updatedAt
+  create_at      DateTime        @default(now())
+  update_at      DateTime        @updatedAt
   votes          Vote[]
   user_rols      User_Rol[]
+  likePacks      Like_Pack[]
+  favoritePacks  Favorite_Pack[]
+  buyPacks       Buy_Pack[]
 
   @@id([user_id])
   @@map(name: "user")
@@ -317,4 +323,40 @@ model Vote {
 
   @@id([participate_pack_id, user_id])
   @@map(name: "vote")
+}
+
+model Buy_Pack {
+  user      User     @relation(fields: [user_id], references: [user_id])
+  user_id   Int
+  pack      Pack     @relation(fields: [pack_id], references: [pack_id])
+  pack_id   Int
+  create_at DateTime @default(now())
+  update_at DateTime @updatedAt
+
+  @@id([user_id, pack_id])
+  @@map(name: "buy_pack")
+}
+
+model Favorite_Pack {
+  user      User     @relation(fields: [user_id], references: [user_id])
+  user_id   Int
+  pack      Pack     @relation(fields: [pack_id], references: [pack_id])
+  pack_id   Int
+  create_at DateTime @default(now())
+  update_at DateTime @updatedAt
+
+  @@id([user_id, pack_id])
+  @@map(name: "favorite_pack")
+}
+
+model Like_Pack {
+  user      User     @relation(fields: [user_id], references: [user_id])
+  user_id   Int
+  pack      Pack     @relation(fields: [pack_id], references: [pack_id])
+  pack_id   Int
+  create_at DateTime @default(now())
+  update_at DateTime @updatedAt
+
+  @@id([user_id, pack_id])
+  @@map(name: "like_pack")
 }

@@ -243,6 +243,37 @@ CREATE TABLE `vote` (
   FOREIGN KEY(`user_id`) REFERENCES `user`(`user_id`)
 );
 
+DROP TABLE IF EXISTS `buy_pack` ;
+CREATE TABLE `buy_pack` (
+  `pack_id` int NOT NULL,
+  `user_id` int NOT NULL,
+  `create_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  `update_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY(`user_id`) REFERENCES `user`(`user_id`),
+  FOREIGN KEY(`pack_id`) REFERENCES `pack`(`pack_id`)
+);
+
+DROP TABLE IF EXISTS `favorite_pack` ;
+CREATE TABLE `favorite_pack` (
+  `pack_id` int NOT NULL,
+  `user_id` int NOT NULL,
+  `create_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  `update_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY(`user_id`) REFERENCES `user`(`user_id`),
+  FOREIGN KEY(`pack_id`) REFERENCES `pack`(`pack_id`)
+);
+
+DROP TABLE IF EXISTS `like_pack` ;
+CREATE TABLE `like_pack` (
+  `pack_id` int NOT NULL,
+  `user_id` int NOT NULL,
+  `create_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  `update_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY(`user_id`) REFERENCES `user`(`user_id`),
+  FOREIGN KEY(`pack_id`) REFERENCES `pack`(`pack_id`),
+  PRIMARY KEY (pack_id, user_id)
+);
+
 #POBLACION
 insert into `type` (type_id,name) values (1,'de pago');
 insert into `type` (type_id,name) values (2,'gratis');

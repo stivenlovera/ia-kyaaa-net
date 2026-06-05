@@ -1,10 +1,8 @@
-export interface IPack {
+export interface INewPacks {
     name: string;
     code: string;
     pack_id: number;
     description: string;
-    like: boolean
-    favorite: boolean
     pages: {
         page_size: {
             size: {
@@ -14,4 +12,10 @@ export interface IPack {
         }[];
         num: string;
     }[];
+}
+
+export interface INewPacksAuth extends INewPacks {
+    buy: boolean
+    like: boolean
+    favorite: boolean
 }

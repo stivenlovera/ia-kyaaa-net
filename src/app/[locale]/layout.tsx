@@ -21,7 +21,6 @@ export interface PageHomeProps {
     }>
 }
 
-
 const inter = Inter({ subsets: ['latin'] });
 
 export function generateStaticParams() {
@@ -55,15 +54,19 @@ export default async function LocaleLayout({
     }
     // Enable static rendering
     setRequestLocale(locale);
-    const user = getCurrentUser();
-    logger.info(`LocaleLayout ${jsonLog(user)}`)
+    const user = await getCurrentUser();
 
     return (
         <html className=" text-white" lang={locale}>
             <body className={`${inter.className} bg-neutral-900`}>
                 <Suspense fallback={<Splashscreen></Splashscreen>}>
                     <NextIntlClientProvider>
-                        <AuthProvider>
+                        <AuthProvider auth={user === null ? user : {
+                            email: user!.email,
+                            name: user!.name,
+                            nick: user!.nick,
+                            image: `${process.env.NEXT_PUBLIC_STATIC_URL_S3}/img/${user!.image}`,
+                        }}>
                             <AxiosInterceptorProvider>
                                 <AlertProvider>
                                     <Header></Header>

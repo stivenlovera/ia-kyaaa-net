@@ -1,50 +1,35 @@
 import { Metadata } from "next";
-import { prisma } from "../utils/prisma";
 import { Welcome } from "./_components/welcome";
 import { ListNew } from "./_components/list-new";
 import { PageHomeProps } from "./layout";
 
 export const dynamic = 'force-dynamic';
 
-export const metadata: Metadata = {
+/* export const metadata: Metadata = {
   title: 'Nuevas entradas',
   description: 'Nuevas entradas del mes de febrero',
+} */
+
+type Props = {
+  params: Promise<{ id: string }>;
+};
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  return {
+    title: 'Nuevas entradas',
+    description: 'Nuevas entradas del mes de febrero',
+    openGraph: {
+      images: [
+        {
+          url: 'https://usc1.contabostorage.com/698352ccd113428cb40866703a92c514:kyaaa.net/20260128202951/tumb/002.avif',
+          alt: 'Nuevas entradas',
+        },
+      ],
+    },
+  };
 }
 
 export default async function Home({ params }: PageHomeProps) {
   const { locale } = await params;
-
-  /* const packs = await prisma.pack.findMany({
-    select: {
-      name: true,
-      description: true,
-      pack_id: true,
-      code: true,
-      pages: {
-        select: {
-          num: true,
-          page_size: {
-            where: {
-              size_id: 1
-            },
-            select: {
-              size: {
-                select: {
-                  extension: true,
-                  name: true
-                }
-              }
-            }
-          }
-        }
-      },
-    },
-    where: {
-      state: 1,
-    }
-  }); */
-
-  //logger.info(`PageCode/pack ${jsonLog(packs)}`)
 
   return (
     <div className="px-2 py-2 md:px-10 lg:px-20 xl:px-64 2xl:px-72 md:py-5 lg:py-10 xl:py-14">

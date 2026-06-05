@@ -12,7 +12,7 @@ interface ButtonUserProps {
 const ButtonUser = ({ user }: ButtonUserProps) => {
     const [openMenu, setOpenMenu] = useState(false)
     const router = useRouter();
-    const { signOut, } = useAuth()
+    const { signOut } = useAuth()
 
     return (
         <div className='flex flex-row gap-2'>

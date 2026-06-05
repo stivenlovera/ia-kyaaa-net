@@ -1,20 +1,32 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import { IResponse } from '../../types/response';
-import { IPack } from '../pack/_types/code.type';
 import { Card } from './card';
+import { INewPacksAuth } from '../../types/pack.types';
+import API from '@/src/providers/api';
 
 export const ListNew = () => {
-    const [packs, setPacks] = useState<IPack[]>([])
+    const [packs, setPacks] = useState<INewPacksAuth[]>([])
 
-    //const urlImage = `/api/image-proxy?url=${process.env.URL_S3}/${pack.code}/${pack.pages[0].page_size[0].size.name}/${pack.pages[0].num}.${pack.pages[0].page_size[0].size.extension}`
-    //const urlImage = `${process.env.URL_S3}/${pack.code}/${pack.pages[0].page_size[0].size.name}/${pack.pages[0].num}.${pack.pages[0].page_size[0].size.extension}`
+    const fetchLike = async (pack_id: number) => {
+        await fetchChangeLike(pack_id)
+        await fetchNewList()
+    }
 
-    const fetchProtectedData = async () => {
+    const fetchFavorite = async (pack_id: number) => {
+        await fetchChangeFavorite(pack_id)
+        await fetchNewList()
+    }
+
+    const fetchBuy = async (pack_id: number) => {
+        await fetchChangeBuy(pack_id)
+        await fetchNewList()
+    }
+
+    const fetchNewList = async () => {
         try {
             const response = await fetch('/api/pack/new');
-            const data: IResponse<IPack[]> = await response.json();
-            console.log('fetchProtectedData', data)
+            const data: IResponse<INewPacksAuth[]> = await response.json();
             setPacks(data.data)
         } catch (error) {
             console.error('Error fetching protected data:', error);
@@ -22,8 +34,35 @@ export const ListNew = () => {
         }
     };
 
+    const fetchChangeLike = async (pack_id: number) => {
+        try {
+            const response = await API.post<IResponse<INewPacksAuth[]>>('/api/like-pack', { pack_id });
+        } catch (error) {
+            console.error('Error fetching protected data:', error);
+        } finally {
+        }
+    };
+
+    const fetchChangeFavorite = async (pack_id: number) => {
+        try {
+            const response = await API.post<IResponse<INewPacksAuth[]>>('/api/favorite-pack', { pack_id });
+        } catch (error) {
+            console.error('Error fetching protected data:', error);
+        } finally {
+        }
+    };
+
+        const fetchChangeBuy = async (pack_id: number) => {
+        try {
+            const response = await API.post<IResponse<INewPacksAuth[]>>('/api/buy-pack', { pack_id });
+        } catch (error) {
+            console.error('Error fetching protected data:', error);
+        } finally {
+        }
+    };
+
     useEffect(() => {
-        fetchProtectedData()
+        fetchNewList()
     }, [])
 
     return (
@@ -38,10 +77,17 @@ export const ListNew = () => {
                         //const urlImage = `${process.env.URL_S3}/${pack.code}/${pack.pages[0].page_size[0].size.name}/${pack.pages[0].num}.${pack.pages[0].page_size[0].size.extension}`
                         return (
                             <Card
+                                pack_id={pack.pack_id}
                                 code={pack.code}
                                 name={pack.name}
                                 urlImage={urlImage}
                                 key={i}
+                                like={pack.like}
+                                onLike={fetchLike}
+                                favorite={pack.favorite}
+                                onFavorite={fetchFavorite}
+                                buy={pack.buy}
+                                onBuy={fetchBuy}
                             ></Card>
                         )
                     })
