@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { LoginCredentials } from '../_types/login';
 import { generateAccessToken, generateRefreshToken, setAuthCookies } from '@/src/app/utils/auth';
 import { JWTPayload } from '@/src/app/types/user.type';
-import { repositoryAuth } from '@/src/app/repositories/repository-auth';
+import { repositoryAuth } from '@/src/app/repositories/auth.repository';
 
 export async function POST(request: NextRequest) {
   try {

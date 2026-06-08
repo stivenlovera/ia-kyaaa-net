@@ -7,6 +7,7 @@ DROP TABLE IF EXISTS type;
 CREATE TABLE `type` (
   `type_id` int NOT NULL auto_increment primary KEY,
   `name` varchar(512) NOT NULL,
+  `slug` varchar(512) NOT NULL,
   `state` tinyint(1) default 1 NOT NULL,
   `create_at` datetime DEFAULT CURRENT_TIMESTAMP,
   `update_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
@@ -16,6 +17,7 @@ DROP TABLE IF EXISTS `label`;
 CREATE TABLE `label` (
   `label_id` int NOT NULL auto_increment primary KEY,
   `name` varchar(512) NOT NULL,
+  `slug` varchar(512) NOT NULL,
   `state` tinyint(1) default 1 NOT NULL,
   `create_at` datetime DEFAULT CURRENT_TIMESTAMP,
   `update_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
@@ -25,6 +27,7 @@ DROP TABLE IF EXISTS serie;
 CREATE TABLE `serie` (
   `serie_id` int NOT NULL auto_increment primary KEY,
   `name` varchar(512) NOT NULL,
+  `slug` varchar(512) NOT NULL,
   `state` tinyint(1) default 1 NOT NULL,
   `create_at` datetime DEFAULT CURRENT_TIMESTAMP,
   `update_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
@@ -34,6 +37,7 @@ DROP TABLE IF EXISTS `character` ;
 CREATE TABLE `character` (
   `character_id` int NOT NULL auto_increment primary KEY,
   `name` varchar(512) NOT NULL,
+  `slug` varchar(512) NOT NULL,
   `state` tinyint(1) default 1 NOT NULL,
   `create_at` datetime DEFAULT CURRENT_TIMESTAMP,
   `update_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
@@ -43,6 +47,7 @@ DROP TABLE IF EXISTS `author` ;
 CREATE TABLE `author` (
   `author_id` int NOT NULL auto_increment primary KEY,
   `name` varchar(512) NOT NULL,
+  `slug` varchar(512) NOT NULL,
   `state` tinyint(1) default 1 NOT NULL,
   `create_at` datetime DEFAULT CURRENT_TIMESTAMP,
   `update_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
@@ -52,6 +57,7 @@ DROP TABLE IF EXISTS `language` ;
 CREATE TABLE `language` (
   `language_id` int NOT NULL auto_increment primary KEY,
   `name` varchar(512) NOT NULL,
+  `slug` varchar(512) NOT NULL,
   `state` tinyint(1) default 1 NOT NULL,
   `create_at` datetime DEFAULT CURRENT_TIMESTAMP,
   `update_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
@@ -81,6 +87,9 @@ CREATE TABLE `pack` (
   `name` varchar(255) NOT NULL,
   `description` varchar(4500) default '' NOT NULL,
   `code` varchar(20) default '' NOT NULL,
+  `code_free` varchar(20) default '' NOT NULL,
+  `code_pay` varchar(20) default '' NOT NULL,
+  `price_list` decimal(10,2) default NOT NULL,
   `pack_state_id` int NOT NULL,
   `active` tinyint(1) default 1 NOT NULL,
   `create_at` datetime DEFAULT CURRENT_TIMESTAMP,
@@ -183,7 +192,6 @@ CREATE TABLE `user` (
   `update_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
-
 DROP TABLE IF EXISTS `rol` ;
 CREATE TABLE `rol` (
   `rol_id` int NOT NULL auto_increment primary KEY,
@@ -243,14 +251,27 @@ CREATE TABLE `vote` (
   FOREIGN KEY(`user_id`) REFERENCES `user`(`user_id`)
 );
 
+DROP TABLE IF EXISTS `method_buy` ;
+CREATE TABLE `method_buy` (
+  `method_buy_id` int NOT NULL auto_increment,
+  `name` varchar(20) default '' NOT NULL,
+  `create_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  `update_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`method_buy_id`)
+);
+
 DROP TABLE IF EXISTS `buy_pack` ;
 CREATE TABLE `buy_pack` (
   `pack_id` int NOT NULL,
   `user_id` int NOT NULL,
+  `method_buy_id` int NOT NULL,
+  `price` decimal(10,2) NOT NULL,
   `create_at` datetime DEFAULT CURRENT_TIMESTAMP,
   `update_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   FOREIGN KEY(`user_id`) REFERENCES `user`(`user_id`),
-  FOREIGN KEY(`pack_id`) REFERENCES `pack`(`pack_id`)
+  FOREIGN KEY(`pack_id`) REFERENCES `pack`(`pack_id`),
+  FOREIGN KEY(`method_buy_id`) REFERENCES `method_buy`(`method_buy_id`),
+  PRIMARY KEY (`pack_id`,`user_id`,`method_buy_id`)
 );
 
 DROP TABLE IF EXISTS `favorite_pack` ;
@@ -260,7 +281,8 @@ CREATE TABLE `favorite_pack` (
   `create_at` datetime DEFAULT CURRENT_TIMESTAMP,
   `update_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   FOREIGN KEY(`user_id`) REFERENCES `user`(`user_id`),
-  FOREIGN KEY(`pack_id`) REFERENCES `pack`(`pack_id`)
+  FOREIGN KEY(`pack_id`) REFERENCES `pack`(`pack_id`),
+  PRIMARY KEY (`pack_id`,`user_id`)
 );
 
 DROP TABLE IF EXISTS `like_pack` ;

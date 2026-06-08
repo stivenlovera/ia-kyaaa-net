@@ -2,7 +2,7 @@
 import { z } from "zod";
 import { generateAccessToken, generateRefreshToken, setAuthCookies } from '../utils/auth';
 import { IFieldsFormLogin, IFormLogin, JWTPayload } from '../types/user.type';
-import { repositoryAuth } from "../repositories/repository-auth";
+import { repositoryAuth } from "../repositories/auth.repository";
 
 export async function actionFormLogin(prevState: IFormLogin, formData: FormData): Promise<IFormLogin> {
     const email = formData.get('email');

@@ -1,19 +1,47 @@
 'use client'
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { initialStateMenu, ListMenu } from '../../layout.type'
+import { ListMenu } from '../../layout.type'
 import { IAuth } from '@/src/app/types/user.type'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/src/providers/AuthContext'
+import { useTranslations } from 'next-intl'
 interface DrawerProps {
     openDrawer: boolean
     onDrawerClose: () => void
     user: IAuth
 }
 const Drawer = ({ openDrawer, onDrawerClose, user }: DrawerProps) => {
+    const t = useTranslations('header.menu');
+    const ta = useTranslations('header.menu.auth');
     const router = useRouter();
     const { signOut } = useAuth()
-    const [menu] = useState<ListMenu[]>(initialStateMenu);
+    const [menu] = useState<ListMenu[]>([
+        {
+            name: t('nuevo'),
+            url: '/'
+        },
+        {
+            name: t('participa'),
+            url: '/participate'
+        },
+        {
+            name: t('serie'),
+            url: '/serie'
+        },
+        {
+            name: t('personaje'),
+            url: '/character'
+        },
+        {
+            name: t('etiqueta'),
+            url: '/label'
+        },
+        {
+            name: t('autor'),
+            url: '/author'
+        }
+    ]);
     return (
         <>
             <div className={`${!openDrawer && "hidden"} bg-dark-600/50 min-h-screen w-full fixed top-0 left-0 right-0 backdrop-blur-sm`} onClick={() => onDrawerClose()}></div>
@@ -43,21 +71,21 @@ const Drawer = ({ openDrawer, onDrawerClose, user }: DrawerProps) => {
                                     className="block p-3 hover:text-blue-400 hover:bg-blue-950"
                                     onClick={() => { onDrawerClose() }}
                                 >
-                                    Mis compras
+                                    {ta('mis_compra')}
                                 </Link>
                                 <Link
                                     href={'/favorites'}
                                     className="block p-3 hover:text-blue-400 hover:bg-blue-950"
                                     onClick={() => { onDrawerClose() }}
                                 >
-                                    Favoritos
+                                    {ta('favorito')}
                                 </Link>
                                 <Link
                                     href={'/my-account'}
                                     className="block p-3 hover:text-blue-400 hover:bg-blue-950"
                                     onClick={() => { onDrawerClose() }}
                                 >
-                                    Mi cuenta
+                                    {ta('mi_cuenta')}
                                 </Link>
                                 <button
                                     className="block p-3 hover:text-blue-400 hover:bg-blue-950  w-full"
@@ -67,7 +95,7 @@ const Drawer = ({ openDrawer, onDrawerClose, user }: DrawerProps) => {
                                         onDrawerClose()
                                     }}
                                 >
-                                    Cerrar sesion
+                                    {ta('cerrar_sesion')}
                                 </button>
                             </div>
                         ) : (
@@ -77,7 +105,7 @@ const Drawer = ({ openDrawer, onDrawerClose, user }: DrawerProps) => {
                                     className="block p-3 hover:text-blue-400 hover:bg-blue-950"
                                     onClick={() => { onDrawerClose() }}
                                 >
-                                    Inicia sesion
+                                    {t('inciar_sesion')}
                                 </Link>
                             </div>
                         )}

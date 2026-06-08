@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { RegisterData } from '../_types/login';
-import { repositoryAuth } from '@/src/app/repositories/repository-auth';
+import { repositoryAuth } from '@/src/app/repositories/auth.repository';
 
 export async function POST(request: NextRequest) {
     try {

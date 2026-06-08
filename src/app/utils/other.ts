@@ -14,3 +14,9 @@ export function isNumber(valor: string): boolean {
   // Convierte el string a número y verifica que sea un número válido y no esté vacío
   return !isNaN(Number(valor)) && valor.trim() !== '';
 }
+
+export const divideInBLocks = <T>(arr: T[], tamaño: number): T[][] => {
+  return Array.from({ length: Math.ceil(arr.length / tamaño) }, (_, i) =>
+    arr.slice(i * tamaño, i * tamaño + tamaño)
+  );
+};

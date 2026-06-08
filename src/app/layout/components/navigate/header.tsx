@@ -1,23 +1,65 @@
 "use client";
 import Link from 'next/link'
 import { useEffect, useState } from 'react';
-
 import Image from 'next/image';
 import { FaAlignJustify, FaAngleRight } from "react-icons/fa";
-import { initialStateMenu, ListMenu } from '../../layout.type';
+import { ListMenu } from '../../layout.type';
 import Drawer from './drawer';
 import { useAuth } from '@/src/providers/AuthContext';
 import ButtonUser from './button-user';
 import { ButtonLogin } from './button-login';
+import { useTranslations } from 'next-intl';
+import { usePathname } from '@/src/i18n/navigation';
 
 export const Header = () => {
+    const t = useTranslations('header.menu');
     const [openDrawer, setDrawer] = useState<boolean>(false)
+    const pathname = usePathname()
 
     const { user } = useAuth()
 
-    const [menu] = useState<ListMenu[]>(initialStateMenu);
+    const [menu] = useState<ListMenu[]>([
+        {
+            name: t('nuevo'),
+            url: '/'
+        },
+        {
+            name: t('participa'),
+            url: '/participate'
+        },
+        {
+            name: t('serie'),
+            url: '/serie'
+        },
+        {
+            name: t('personaje'),
+            url: '/character'
+        },
+        {
+            name: t('etiqueta'),
+            url: '/label'
+        },
+        {
+            name: t('autor'),
+            url: '/author'
+        }
+    ]);
+
+    const selectedRoute = (url: string) => {
+
+        const firstPathname = pathname.split("/")[1];
+        console.log(firstPathname)
+        console.log(url)
+        if (firstPathname === url.replace(/[/]/g, "")) {
+            return ` bg-neutral-700 `
+        } else {
+            return ``
+        }
+    }
 
     useEffect(() => {
+        console.log('pathname', pathname)
+
     }, [user]);
 
     //console.log(menu)
@@ -53,7 +95,7 @@ export const Header = () => {
                                         <li key={i}>
                                             <Link
                                                 href={menu.url}
-                                                className="block p-2 hover:text-neutral-100 hover:bg-neutral-700"
+                                                className={"block p-2 hover:text-neutral-100 hover:bg-neutral-700" + selectedRoute(menu.url)}
                                             >
                                                 {menu.name}
                                             </Link>

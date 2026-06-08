@@ -1,5 +1,6 @@
 import { IAuth } from '@/src/app/types/user.type'
 import { useAuth } from '@/src/providers/AuthContext'
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import React, { useState } from 'react'
@@ -10,6 +11,7 @@ interface ButtonUserProps {
 }
 
 const ButtonUser = ({ user }: ButtonUserProps) => {
+    const t = useTranslations('header.menu.auth')
     const [openMenu, setOpenMenu] = useState(false)
     const router = useRouter();
     const { signOut } = useAuth()
@@ -61,22 +63,22 @@ const ButtonUser = ({ user }: ButtonUserProps) => {
 
                     <div className="py-1">
                         <Link
-                            href={'my-purchases'}
+                            href={'/my-purchases'}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                         >
-                            Mis compras
+                            {t('mis_compra')}
                         </Link>
                         <Link
-                            href={'favorites'}
+                            href={'/favorites'}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                         >
-                            Favoritos
+                            {t('favorito')}
                         </Link>
                         <Link
-                            href={'my-account'}
+                            href={'/my-account'}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                         >
-                            Mi cuenta
+                            {t('mi_cuenta')}
                         </Link>
                         <button
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left cursor-pointer"
@@ -85,7 +87,7 @@ const ButtonUser = ({ user }: ButtonUserProps) => {
                                 router.push('/login');
                             }}
                         >
-                            Cerrar sesion
+                            {t('cerrar_sesion')}
                         </button>
                     </div>
                 </div>

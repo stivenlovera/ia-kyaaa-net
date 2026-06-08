@@ -4,7 +4,7 @@ import { IFieldsFormUpdateEmail, IFormUpdateEmail } from "../types/user.type";
 import { getCurrentUser } from "../utils/auth";
 import logger, { jsonLog } from "../utils/logger";
 import { sendEmail } from "../utils/mail";
-import { repositoryAuth } from "../repositories/repository-auth";
+import { repositoryAuth } from "../repositories/auth.repository";
 import { notificationNewEmailHtml } from "../utils/template-mails/notification-new-email.html";
 import { notificationBeforeEmailHtml } from "../utils/template-mails/notification-before-email.html";
 

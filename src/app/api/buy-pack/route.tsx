@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getCurrentUser } from "../../utils/auth";
 import logger, { jsonLog } from "../../utils/logger";
-import { repositoryBuyPack } from "../../repositories/repository-buy-pack";
+import { repositoryBuyPack } from "../../repositories/buy-pack.repository";
 
 export async function POST(request: NextRequest) {
     logger.info(`api/like POST `)

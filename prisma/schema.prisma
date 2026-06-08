@@ -34,6 +34,9 @@ model Pack {
   name              String
   description       String
   code              String
+  code_free         String
+  code_pay          String
+  price_list        Decimal
   active            Int
   create_at         DateTime?
   update_at         DateTime?
@@ -70,6 +73,7 @@ model Page {
 model Type {
   type_id    Int         @id @default(autoincrement())
   name       String
+  slug       String
   state      Int
   pack_types Pack_type[]
   create_at  DateTime?
@@ -81,6 +85,7 @@ model Type {
 model Label {
   label_id    Int          @id @default(autoincrement())
   name        String
+  slug        String
   state       Int
   create_at   DateTime?
   update_at   DateTime?
@@ -92,6 +97,7 @@ model Label {
 model Character {
   character_id    Int              @id @default(autoincrement())
   name            String
+  slug            String
   state           Int
   create_at       DateTime?
   update_at       DateTime?
@@ -103,6 +109,7 @@ model Character {
 model Serie {
   serie_id    Int          @id @default(autoincrement())
   name        String
+  slug        String
   pack_series Pack_serie[]
   state       Int
   create_at   DateTime?
@@ -114,6 +121,7 @@ model Serie {
 model Author {
   author_id    Int           @id @default(autoincrement())
   name         String
+  slug         String
   pack_authors Pack_author[]
   state        Int
   create_at    DateTime?
@@ -125,6 +133,7 @@ model Author {
 model Language {
   language_id    Int             @id @default(autoincrement())
   name           String
+  slug           String
   pack_languages Pack_language[]
   state          Int
   create_at      DateTime?
@@ -325,15 +334,29 @@ model Vote {
   @@map(name: "vote")
 }
 
-model Buy_Pack {
-  user      User     @relation(fields: [user_id], references: [user_id])
-  user_id   Int
-  pack      Pack     @relation(fields: [pack_id], references: [pack_id])
-  pack_id   Int
-  create_at DateTime @default(now())
-  update_at DateTime @updatedAt
+model Method_Buy {
+  method_buy_id Int
+  name          String
+  create_at     DateTime   @default(now())
+  update_at     DateTime   @updatedAt
+  buyPacks      Buy_Pack[]
 
-  @@id([user_id, pack_id])
+  @@id([method_buy_id])
+  @@map(name: "method_buy")
+}
+
+model Buy_Pack {
+  user          User       @relation(fields: [user_id], references: [user_id])
+  user_id       Int
+  pack          Pack       @relation(fields: [pack_id], references: [pack_id])
+  pack_id       Int
+  method_buy    Method_Buy @relation(fields: [method_buy_id], references: [method_buy_id])
+  method_buy_id Int
+  price         Decimal
+  create_at     DateTime   @default(now())
+  update_at     DateTime   @updatedAt
+
+  @@id([user_id, pack_id, method_buy_id])
   @@map(name: "buy_pack")
 }
 

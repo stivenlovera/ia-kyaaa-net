@@ -1,14 +1,9 @@
-import Link from 'next/link';
-import React from 'react'
-import { packInfo, packPages, totalAuthor, totalCharacter, totalLabel, totalLanguage, totalSerie, totalType } from '../_service/code.service';
-import moment from 'moment';
-import { CardSection } from '../_components/card-section';
-import { notFound, redirect } from 'next/navigation';
-import Image from 'next/image';
+import { packInfo} from '../_service/code.service';
+import { redirect } from 'next/navigation';
 import { Metadata } from 'next';
 import logger, { jsonLog } from '@/src/app/utils/logger';
-import { PreviewPage } from './_components/preview-page';
-import { repositoryPage } from '@/src/app/repositories/repository-pages';
+import { ViewPage } from './_components/preview-page';
+import { repositoryPage } from '@/src/app/repositories/pages.repository';
 import { PreviewPack } from './_components/preview-pack';
 import { isNumber } from '@/src/app/utils/other';
 
@@ -56,12 +51,12 @@ export default async function Page({ params, searchParams }: PagePaginateProps) 
             redirect('/pack/' + code)
         }
         return (
-            <PreviewPage
+            <ViewPage
                 pack={pack!}
                 code={code}
                 currentPage={page}
             >
-            </PreviewPage>
+            </ViewPage>
         )
     } else {
         return (

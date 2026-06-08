@@ -5,7 +5,7 @@ import { z } from "zod";
 import { getCurrentUser } from '../utils/auth';
 import { IFieldsChangeProfile, IFormChangeProfile } from '../types/user.type';
 import logger, { jsonLog } from "../utils/logger";
-import { repositoryAuth } from "../repositories/repository-auth";
+import { repositoryAuth } from "../repositories/auth.repository";
 import { resizeImage } from "../utils/sharp";
 import { deleteMultipleObjects, getBufferFile, uploadMultipleObjects } from "../utils/uploadS3";
 import { sleep } from "../utils/other";

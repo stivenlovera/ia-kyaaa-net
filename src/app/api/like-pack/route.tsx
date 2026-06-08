@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getCurrentUser } from "../../utils/auth";
 import logger, { jsonLog } from "../../utils/logger";
-import { repositoryLikePack } from "../../repositories/repository-like-pack";
+import { repositoryLikePack } from "../../repositories/like-pack.repository";
 
 export async function POST(request: NextRequest) {
     logger.info(`api/like POST `)
@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
             {
                 success: true,
                 message: "Added successfully",
-                data: null
+                data: verified === null ? true : false
             },
             { status: 200 }
         );

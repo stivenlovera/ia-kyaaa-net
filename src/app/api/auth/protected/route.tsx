@@ -1,5 +1,5 @@
 import { IUserAuth } from '@/src/app/types/user.type';
-import { repositoryAuth } from '@/src/app/repositories/repository-auth';
+import { repositoryAuth } from '@/src/app/repositories/auth.repository';
 import { IResponse } from '@/src/app/types/response';
 import { getCurrentUser } from '@/src/app/utils/auth';
 import logger, { jsonLog } from '@/src/app/utils/logger';

@@ -1,42 +1,59 @@
+'use client'
 import { useAuth } from "@/src/providers/AuthContext"
 import Image from "next/image"
 import Link from "next/link"
 import { FaBookmark, FaCartArrowDown, FaHeart } from "react-icons/fa6"
+import { IResponse } from "../../types/response"
+import { INewPacksAuth } from "../../types/pack.types"
+import API from "@/src/providers/api"
+import { useState } from "react"
 interface ICard {
-    pack_id: number
-    code: string
-    name: string
+    pack: INewPacksAuth
     urlImage: string
-    like: boolean
-    onLike: (pack_id: number) => void
-    favorite: boolean
-    onFavorite: (pack_id: number) => void
-    buy: boolean
-    onBuy: (pack_id: number) => void
 }
 export const Card = ({
-    pack_id,
-    code,
-    name,
-    urlImage,
-    like,
-    onLike,
-    favorite,
-    onFavorite,
-    buy,
-    onBuy
+    pack,
+    urlImage
 }: ICard) => {
     const { user } = useAuth()
+    const [like, setLike] = useState<boolean>(pack.like)
+    const [favorite, setFavorite] = useState<boolean>(pack.favorite)
+    const [buy, setBuy] = useState<boolean>(pack.buy)
+
+    const fetchChangeLike = async (pack_id: number) => {
+        try {
+            const { data } = await API.post<IResponse<boolean>>('/api/like-pack', { pack_id });
+            if (data.success) {
+                setLike(data.data)
+            }
+        } catch (error) {
+            console.error('Error fetching protected data:', error);
+        } finally {
+        }
+    };
+
+    const fetchChangeFavorite = async (pack_id: number) => {
+        try {
+            const { data } = await API.post<IResponse<boolean>>('/api/favorite-pack', { pack_id });
+            if (data.success) {
+                setFavorite(data.data)
+            }
+        } catch (error) {
+            console.error('Error fetching protected data:', error);
+        } finally {
+        }
+    };
+
     return (<div className="border-slate-900 border-2">
         <Link
             className="items-start justify-center"
-            href={`/pack/${code}`}
+            href={`/pack/${pack.code}`}
         >
             <div className="grid place-items-end">
                 <Image
                     width={400}
                     height={500}
-                    alt={`Preview ${name}`}
+                    alt={`Preview ${pack.name}`}
                     fetchPriority="high"
                     className="w-full col-start-1 row-start-1"
                     unoptimized
@@ -53,11 +70,11 @@ export const Card = ({
                                     onClick={(event) => {
                                         event.stopPropagation();
                                         event.preventDefault();
-                                        onBuy(pack_id);
+                                        //onBuy(pack_id);
                                     }}
                                 >
                                     <FaCartArrowDown
-                                        className={'text-xl ' + (buy === true ? ' text-blue-500' : 'text-white')}
+                                        className={'text-xl ' + (buy === true ? ' text-blue-600' : 'text-white')}
                                     />
                                 </button>
                             ) : (<></>)
@@ -67,11 +84,11 @@ export const Card = ({
                             onClick={(event) => {
                                 event.stopPropagation();
                                 event.preventDefault();
-                                onFavorite(pack_id);
+                                fetchChangeFavorite(pack.pack_id);
                             }}
                         >
                             <FaBookmark
-                                className={'text-xl ' + (favorite === true ? ' text-yellow-600' : 'text-white')}
+                                className={'text-xl ' + (favorite === true ? ' text-yellow-400' : 'text-white')}
                             />
                         </button>
                         <button
@@ -79,7 +96,7 @@ export const Card = ({
                             onClick={(event) => {
                                 event.stopPropagation();
                                 event.preventDefault();
-                                onLike(pack_id);
+                                fetchChangeLike(pack.pack_id);
                             }}
                         >
                             <FaHeart
@@ -93,7 +110,7 @@ export const Card = ({
             <div className=''>
                 <div className='flex justify-between basis-full bg-gray-800 p-1'>
                     <div className='line-clamp-2 hover:line-clamp-none sm:text-10 xl:text-12'>
-                        {name.toLocaleLowerCase()}
+                        {pack.name.toLocaleLowerCase()}
                     </div>
                 </div>
             </div>

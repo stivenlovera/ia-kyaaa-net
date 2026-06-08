@@ -192,8 +192,8 @@ export const repositoryAuth = {
 
     createUser: async (name: string, email: string, password: string): Promise<IUser> => {
         const hashedPassword = await bcrypt.hash(password, 10);
-        const atIndex = email.indexOf("@");
-        const username = email.substring(0, atIndex);
+        /* const atIndex = email.indexOf("@");
+        const username = email.substring(0, atIndex); */
         const uniqueTimestamp: string = new Date().getTime().toString();
         const nuevoUsuario = await prisma.user.create({
             data: {

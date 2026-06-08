@@ -1,34 +1,13 @@
 'use client'
-import React, { useEffect, useState } from 'react'
-import { IResponse } from '../../types/response';
-import API from '@/src/providers/api';
-import { IUserAuth } from '../../types/user.type';
 import { useAuth } from '@/src/providers/AuthContext';
-
+import { useTranslations } from 'next-intl';
 export const Welcome = () => {
-    const [name, setName] = useState<string | null>(null);
+    const t = useTranslations('home');
     const { user } = useAuth()
 
-    const fetchProtectedData = async () => {
-        try {
-            const response = await API.get<IResponse<IUserAuth>>('/api/auth/protected')
-            if (response.status === 200) {
-                setName(response.data.data.user.name);
-            }
-        } catch (error) {
-
-        } finally {
-        }
-    };
-
-    useEffect(() => {
-        console.log('useEffect welcome',user)
-        if (user !== null) {
-            fetchProtectedData();
-        }
-    }, [user]);
-
     return (
-        <div>welcome {name}</div>
+        user !== null ? (
+            <div className='text-lg md:text-xl font-bold py-3'>{t('bienvenida.title', { nick: user?.nick })} </div>
+        ) : (<></>)
     )
 }

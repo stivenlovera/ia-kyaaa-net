@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import React, { useEffect, useRef, useState } from 'react'
-import { PaginationView } from './paginate-view'
+import { PaginationView } from './view-image'
 import { numberToString, View } from './view'
 import { IPagePack } from '@/src/app/types/page.types'
 import { usePathname, useSearchParams } from 'next/navigation'
@@ -17,7 +17,7 @@ export interface ImagesProps {
     img: string
 }
 
-export const PreviewPage = ({ code, currentPage, pack }: PreviewPageProps) => {
+export const ViewPage = ({ code, currentPage, pack }: PreviewPageProps) => {
     const searchParams = useSearchParams()
     const historyStack = useRef<string[]>([]);
     const numPage = searchParams.get('page')
@@ -29,7 +29,7 @@ export const PreviewPage = ({ code, currentPage, pack }: PreviewPageProps) => {
         }
         return img
     })
-    const img = images.find((p) => p.num === (numPage! ?? '001'))!.img
+    const img = images.find((p) => p.num === (numPage! ?? numberToString(1, images.length)))!.img
     const [urlImage, setUrlImage] = useState<string>(img)
     const pathname = usePathname();
 
@@ -80,7 +80,7 @@ export const PreviewPage = ({ code, currentPage, pack }: PreviewPageProps) => {
             }
         }
         const previewImagesUniques: string[] = [...new Set(preLoadImage)];
-        console.log(previewImagesUniques)
+
         setPreLoadImage([...previewImagesUniques])
         preLoadImage.map(img => {
             preload(img, { as: "image" })
@@ -139,7 +139,9 @@ export const PreviewPage = ({ code, currentPage, pack }: PreviewPageProps) => {
                     changePage={(page) => updateQueryParam({ page: page })}
                 />
                 <div className='flex mx-auto flex-wrap items-center justify-center pb-1'>
-                    <Link href={`/${code}`} className='flex items-center justify-center hover:bg-gray-800 rounded-full'>Volver a la galeria</Link>
+                    <Link href={`/pack/${code}`} className='flex items-center justify-center hover:bg-gray-800 rounded-full'>
+                        Volver a la galeria
+                    </Link>
                 </div>
             </div>
         </div>

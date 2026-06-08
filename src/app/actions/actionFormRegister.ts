@@ -1,6 +1,6 @@
 'use server';
 import { z } from "zod";
-import { repositoryAuth } from "../repositories/repository-auth";
+import { repositoryAuth } from "../repositories/auth.repository";
 import { generateAccessToken, generateRefreshToken, setAuthCookies } from '../utils/auth';
 import { IFieldsFormRegister, IFormRegister, JWTPayload } from '../types/user.type';
 import logger, { jsonLog } from "../utils/logger";

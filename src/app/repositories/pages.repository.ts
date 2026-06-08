@@ -1,4 +1,4 @@
-import { IPagePack, Size } from "../types/page.types";
+import { IPagePack } from "../types/page.types";
 import logger from "../utils/logger";
 import { prisma } from "../utils/prisma";
 

@@ -52,7 +52,7 @@ export const ListNew = () => {
         }
     };
 
-        const fetchChangeBuy = async (pack_id: number) => {
+    const fetchChangeBuy = async (pack_id: number) => {
         try {
             const response = await API.post<IResponse<INewPacksAuth[]>>('/api/buy-pack', { pack_id });
         } catch (error) {
@@ -68,7 +68,7 @@ export const ListNew = () => {
     return (
         <div className="card">
             <div className="p-3 pt-0" >
-                <p className="text-center text-3xl">Nuevas entradas</p>
+                <h1 className="text-center text-2xl md:text-3xl font-bold">Nuevas entradas</h1>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-2 lg:gap-3 xl:gap-4">
                 {

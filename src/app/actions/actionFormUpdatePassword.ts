@@ -4,7 +4,7 @@ import { IFieldsFormUpdatePassword, IFormUpdatePassword } from "../types/user.ty
 import { getCurrentUser } from "../utils/auth";
 import logger, { jsonLog } from "../utils/logger";
 import { sendEmail } from "../utils/mail";
-import { repositoryAuth } from "../repositories/repository-auth";
+import { repositoryAuth } from "../repositories/auth.repository";
 import { notificationUpdatePasswordHtml } from "../utils/template-mails/notification-new-password-html";
 
 export async function actionFormUpdatePassword(prevState: IFormUpdatePassword, formData: FormData): Promise<IFormUpdatePassword> {

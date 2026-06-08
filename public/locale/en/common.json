@@ -1,77 +1,62 @@
 {
-    "Index": {
-        "title": "NEWS:",
-        "description": "All news"
-    },
-    "Tag": {
-        "title": "ALL TAGS:",
-        "description": "All tags"
-    },
-    "TagName": {
-        "title": "TAG: ",
-        "description": "Tag: "
-    },
-    "Serie": {
-        "title": "ALL SERIES:",
-        "description": "All series"
-    },
-    "SerieName": {
-        "title": "SERIE: ",
-        "description": "Serie "
-    },
-    "Artist": {
-        "title": "ALL ARTISTS:",
-        "description": "All artists"
-    },
-    "ArtistName": {
-        "title": "ARTIST: ",
-        "description": "Artist "
-    },
-    "Character": {
-        "title": "ALL CHARACTERS:",
-        "description": "All characters"
-    },
-    "CharacterName": {
-        "title": "CHARACTER: ",
-        "description": "character "
-    },
-    "Group": {
-        "title": "ALL GROUPS:",
-        "description": "All groups"
-    },
-    "GroupName": {
-        "title": "GROUP: ",
-        "description": "Group "
-    },
-    "Language": {
-        "title": "ALL LANGUAGES:",
-        "description": "All language"
-    },
-    "LanguageName": {
-        "title": "LANGUAGE: ",
-        "description": "language "
-    },
-    "Category": {
-        "title": "ALL CATEGORIES:",
-        "description": "All categories"
-    },
-    "CategoryName": {
-        "title": "CATEGORY: ",
-        "description": "category "
-    },
-    "Code": {
-        "series": "Series",
-        "characters": "Characters",
-        "tags": "Tags",
-        "artists": "Artists",
-        "group": "Group",
-        "language": "Language",
-        "category": "Category",
-        "pages": "Pages",
-        "update": "Update"
-    },
-    "View": {
-        "backGalery": "Return to gallery",
-        "paginate": "of"
+  "header": {
+    "menu": {
+      "nuevo": "New entries",
+      "participa": "Participate",
+      "serie": "Series",
+      "personaje": "Characters",
+      "etiqueta": "Tags",
+      "autor": "Authors",
+      "inciar_sesion": "Log in",
+      "auth": {
+        "mis_compra": "My purchases",
+        "favorito": "Favorites",
+        "mi_cuenta": "My account",
+        "cerrar_sesion": "Log out"
+      }
     }
+  },
+  "home": {
+    "bienvenida": {
+      "title": "¡Hi, {nick}! 👋 So glad to have you here!"
+    }
+  },
+  "pack-info": {
+    "serie": "Series",
+    "personaje": "Characters",
+    "etiqueta": "Tags",
+    "autor": "Authors",
+    "paginas": "Images",
+    "paginas_gratis": "Free images",
+    "actualizado": "Updated",
+    "extra-pack": {
+      "descarga": "Donwload",
+      "comprar": "Buy now!",
+      "ver_compras": "See purchases",
+      "dialogo_descargar": {
+        "titulo": "Register now!",
+        "mensaje": "Log in with your email and password or register to download or purchase, click here.",
+        "inicia_sesion": "Log in",
+        "cancelar": "Cancel"
+      }
+    }
+  },
+  "buy": {
+    "titulo": "Confirm your purchase"
+  },
+  "personaje": {
+    "titulo": "Characters"
+  },
+  "serie": {
+    "titulo": "Serie"
+  },
+  "etiqueta": {
+    "titulo": "Tag"
+  },
+  "autor": {
+    "titulo": "Authors"
+  },
+  "dialogo": {
+    "cancelar": "Cancel"
+  }
 }

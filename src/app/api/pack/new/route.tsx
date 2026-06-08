@@ -2,14 +2,14 @@ import { IResponse } from '@/src/app/types/response';
 import { NextRequest, NextResponse } from 'next/server';
 import logger, { jsonLog } from '@/src/app/utils/logger';
 import { getCurrentUser } from '@/src/app/utils/auth';
-import { repositoryPack } from '@/src/app/repositories/repository-pack';
+import { repositoryPack } from '@/src/app/repositories/pack.repository';
 import { INewPacksAuth } from '@/src/app/types/pack.types';
-import { repositoryLikePack } from '@/src/app/repositories/repository-like-pack';
+import { repositoryLikePack } from '@/src/app/repositories/like-pack.repository';
 import { ILikePack } from '@/src/app/types/like-pack.types';
 import { IBuyPack } from '@/src/app/types/buy_pack.types';
 import { IFavoritePack } from '@/src/app/types/favorite-pack.types';
-import { repositoryBuyPack } from '@/src/app/repositories/repository-buy-pack';
-import { repositoryFavoritePack } from '@/src/app/repositories/repository-favorite-pack';
+import { repositoryBuyPack } from '@/src/app/repositories/buy-pack.repository';
+import { repositoryFavoritePack } from '@/src/app/repositories/favorite-pack.repository';
 
 export async function GET(request: NextRequest) {
 

@@ -2,7 +2,7 @@ import { SignJWT, jwtVerify } from 'jose';
 import { cookies } from 'next/headers';
 import { NextRequest } from 'next/server';
 import { IUser, JWTPayload } from '../types/user.type';
-import { repositoryAuth } from '../repositories/repository-auth';
+import { repositoryAuth } from '../repositories/auth.repository';
 import logger, { jsonLog } from './logger';
 
 const secretKey = process.env.JWT_SECRET!;

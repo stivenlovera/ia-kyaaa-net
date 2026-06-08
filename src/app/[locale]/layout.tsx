@@ -9,7 +9,6 @@ import { AuthProvider } from '@/src/providers/AuthProvider';
 import AxiosInterceptorProvider from '@/src/providers/AxiosInterceptorProvider';
 import { Suspense } from 'react';
 import { Splashscreen } from '../layout/components/splashcreen/splashscreen';
-import logger, { jsonLog } from '../utils/logger';
 import ToastProvider from '@/src/providers/toastProvider';
 import AlertProvider from '@/src/providers/alertProvider';
 import { getCurrentUser } from '../utils/auth';
