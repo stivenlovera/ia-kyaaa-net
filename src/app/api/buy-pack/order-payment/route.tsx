@@ -1,4 +1,4 @@
-import { IPayPalToken } from "@/src/app/types/buy_pack.types";
+import { IPayPalCheckOrder, IPayPalToken } from "@/src/app/types/buy_pack.types";
 import { getCurrentUser } from "@/src/app/utils/auth";
 import logger, { jsonLog } from "@/src/app/utils/logger";
 import API from "@/src/providers/api";
