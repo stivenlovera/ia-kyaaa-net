@@ -136,12 +136,12 @@ export const PreviewPack = async ({ code }: PreviewPackProps) => {
                     <CardSection
                         datos={packInfo!.total_labels!}
                         nameSection={t('etiqueta')}
-                        route='tag'
+                        route='label'
                     />
                     <CardSection
                         datos={packInfo!.total_authors!}
                         nameSection={t('autor')}
-                        route='artist'
+                        route='author'
                     />
                     {/*  <CardSection
                             datos={tagLanguages}

@@ -25,8 +25,6 @@ export interface IPackInfo {
     description: string
     pack_id: number
     code: string
-    code_free: string
-    code_pay: string
     price_list: number
     update_at: Date | null
     portada: {

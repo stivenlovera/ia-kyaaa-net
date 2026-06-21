@@ -54,7 +54,7 @@ export default async function LocaleLayout({
     // Enable static rendering
     setRequestLocale(locale);
     const user = await getCurrentUser();
-
+    
     return (
         <html className=" text-white" lang={locale}>
             <body className={`${inter.className} bg-neutral-900`}>

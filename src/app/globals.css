@@ -67,4 +67,11 @@
   option {
     @apply hover:text-white text-black;
   }
+
+  iframe {
+    position: initial !important;
+  }
+  .paypal-buttons {
+    position: initial !important;
+  }
 }

@@ -1,10 +1,10 @@
 import Link from "next/link"
-import { TagInformation } from "./tag-information"
 import { skeleton } from "@/src/app/utils/skeleton"
 
 export interface ICountTag {
     name: string
     count: number
+    slug: string
 }
 interface CardSectionProps {
     datos: ICountTag[]
@@ -33,7 +33,7 @@ export const CardSection = ({ datos, nameSection, route }: CardSectionProps) => 
                                         /> */}
                                 <Link
                                     className='flex'
-                                    href={`/${route}/${val.name}`}
+                                    href={`/${route}/${val.slug}`}
                                 >
                                     <div className='rounded-l bg-gray-700 px-2'>
                                         {val.name}

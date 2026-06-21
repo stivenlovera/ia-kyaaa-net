@@ -64,8 +64,6 @@ export const repositoryPack = {
                 description: true,
                 pack_id: true,
                 code: true,
-                code_free: true,
-                code_pay: true,
                 price_list: true,
                 update_at: true,
                 pages: {

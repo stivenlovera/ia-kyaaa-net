@@ -6,15 +6,17 @@ import { prisma } from "../utils/prisma";
 export const repositorySerie = {
 
     findTotal: async (serie_id: number[]): Promise<ICountTag[] | null> => {
-        const result = await prisma.$queryRaw<ICountTag[]>`
-        select count(pack.pack_id) as count, serie.name from pack 
+        const query = `
+        select count(pack.pack_id) as count, serie.name, serie.slug from pack 
         inner join pack_serie on pack_serie.pack_id = pack.pack_id 
         inner join serie on serie.serie_id = pack_serie.serie_id
         where serie.serie_id in (${serie_id})
-        group by serie.serie_id; `;
+        group by serie.serie_id; `
+        const result = await prisma.$queryRawUnsafe<ICountTag[]>(query);
 
         const serializedResults = result.map(row => ({
-            name: (row.name),         // Converts 1n to 1
+            name: (row.name),
+            slug: (row.slug),       // Converts 1n to 1
             count: Number(row.count)    // Converts 2n to 2
         }));
         return serializedResults;

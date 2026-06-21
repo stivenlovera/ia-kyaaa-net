@@ -6,15 +6,17 @@ import { prisma } from "../utils/prisma";
 export const repositoryAuthor = {
 
     findTotal: async (author_id: number[]): Promise<ICountTag[] | null> => {
-        const result = await prisma.$queryRaw<ICountTag[]>`
-         select count(pack.pack_id) as count, author.name from pack 
+        const query = `
+         select count(pack.pack_id) as count, author.name, author.slug from pack 
         inner join pack_author on pack_author.pack_id = pack.pack_id 
         inner join author on author.author_id = pack_author.author_id
         where author.author_id in (${author_id})
-        group by author.author_id; `;
+        group by author.author_id; `
+        const result = await prisma.$queryRawUnsafe<ICountTag[]>(query);
 
         const serializedResults = result.map(row => ({
-            name: (row.name),         // Converts 1n to 1
+            name: (row.name), 
+            slug: (row.slug),         // Converts 1n to 1
             count: Number(row.count)    // Converts 2n to 2
         }));
         return serializedResults;

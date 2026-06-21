@@ -7,15 +7,17 @@ import { prisma } from "../utils/prisma";
 export const repositoryLabel = {
 
     findTotal: async (label_id: number[]): Promise<ICountTag[] | null> => {
-        const result = await prisma.$queryRaw<ICountTag[]>`
-        select count(pack.pack_id) as count, label.name from pack 
+        const query = `
+        select count(pack.pack_id) as count, label.name, label.slug from pack 
         inner join pack_label on pack_label.pack_id = pack.pack_id 
         inner join label on label.label_id = pack_label.label_id
         where label.label_id in (${label_id})
-        group by label.label_id; `;
+        group by label.label_id; `
+        const result = await prisma.$queryRawUnsafe<ICountTag[]>(query);
 
         const serializedResults = result.map(row => ({
-            name: (row.name),         // Converts 1n to 1
+            name: (row.name),
+            slug: (row.slug),          // Converts 1n to 1
             count: Number(row.count)    // Converts 2n to 2
         }));
         return serializedResults;

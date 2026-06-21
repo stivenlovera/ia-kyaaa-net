@@ -48,8 +48,6 @@ export const Header = () => {
     const selectedRoute = (url: string) => {
 
         const firstPathname = pathname.split("/")[1];
-        console.log(firstPathname)
-        console.log(url)
         if (firstPathname === url.replace(/[/]/g, "")) {
             return ` bg-neutral-700 `
         } else {
@@ -58,8 +56,6 @@ export const Header = () => {
     }
 
     useEffect(() => {
-        console.log('pathname', pathname)
-
     }, [user]);
 
     //console.log(menu)

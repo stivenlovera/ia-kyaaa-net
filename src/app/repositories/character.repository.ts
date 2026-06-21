@@ -6,15 +6,17 @@ import { prisma } from "../utils/prisma";
 export const repositoryCharacter = {
 
     findTotal: async (character_id: number[]): Promise<ICountTag[] | null> => {
-        const result = await prisma.$queryRaw<ICountTag[]>`
-        select count(pack.pack_id) as count, \`character\`.name from pack 
+        const query = `
+        select count(pack.pack_id) as count, \`character\`.name, \`character\`.slug  from pack 
         inner join pack_character on pack_character.pack_id = pack.pack_id 
         inner join \`character\` on \`character\`.character_id = pack_character.character_id
         where \`character\`.character_id in (${character_id})
-        group by \`character\`.character_id; `;
+        group by \`character\`.character_id; `
+        const result = await prisma.$queryRawUnsafe<ICountTag[]>(query);
 
         const serializedResults = result.map(row => ({
-            name: (row.name),         // Converts 1n to 1
+            name: (row.name),
+            slug: (row.slug),        // Converts 1n to 1
             count: Number(row.count)    // Converts 2n to 2
         }));
         return serializedResults;
@@ -64,10 +66,10 @@ export const repositoryCharacter = {
                     }
                 },
             },
-            where:{
-                pack_character:{
-                    some:{
-                        character:{
+            where: {
+                pack_character: {
+                    some: {
+                        character: {
                             slug: slug
                         }
                     }

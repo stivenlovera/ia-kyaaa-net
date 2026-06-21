@@ -87,8 +87,6 @@ CREATE TABLE `pack` (
   `name` varchar(255) NOT NULL,
   `description` varchar(4500) default '' NOT NULL,
   `code` varchar(20) default '' NOT NULL,
-  `code_free` varchar(20) default '' NOT NULL,
-  `code_pay` varchar(20) default '' NOT NULL,
   `price_list` decimal(10,2) default NOT NULL,
   `pack_state_id` int NOT NULL,
   `active` tinyint(1) default 1 NOT NULL,
@@ -157,14 +155,26 @@ CREATE TABLE `pack_language` (
   FOREIGN KEY(`pack_id`) REFERENCES `pack`(`pack_id`)
 );
 
+DROP TABLE IF EXISTS page_type;
+CREATE TABLE `page_type` (
+  `page_type_id` int NOT NULL auto_increment primary KEY,
+  `name` varchar(20) default '' NOT NULL,
+  `state` tinyint NOT NULL DEFAULT 1,
+  `create_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  `update_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
 DROP TABLE IF EXISTS page;
 CREATE TABLE `page` (
   `page_id` int NOT NULL auto_increment primary KEY,
   `pack_id` int NOT NULL,
+  `code` varchar(100) default '' NOT NULL,
   `num` varchar(5) NOT NULL,
   `state` tinyint NOT NULL DEFAULT 1,
+  `page_type_id` int NOT NULL
   `create_at` datetime DEFAULT CURRENT_TIMESTAMP,
   `update_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY(`page_type_id`) REFERENCES `page_type`(`page_type_id`)
   FOREIGN KEY(`pack_id`) REFERENCES `pack`(`pack_id`)
 );
 
