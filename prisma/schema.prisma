@@ -56,28 +56,28 @@ model Pack {
 }
 
 model Page {
-  page_id   Int         @id @default(autoincrement())
-  pack      Pack        @relation(fields: [pack_id], references: [pack_id])
-  page_size Page_size[]
-  pack_id   Int
-  page_type Page_Type[]
-  page_type_id   Int
-  num       String
-  code       String
-  state     Int
-  create_at DateTime?
-  update_at DateTime?
+  page_id      Int         @id @default(autoincrement())
+  pack         Pack        @relation(fields: [pack_id], references: [pack_id])
+  page_size    Page_size[]
+  pack_id      Int
+  page_type    Page_Type[]
+  page_type_id Int
+  num          String
+  code         String
+  state        Int
+  create_at    DateTime?
+  update_at    DateTime?
 
   @@map(name: "page")
 }
 
 model Page_Type {
-  page_type_id   Int         @id @default(autoincrement())
-  name       String
-  state     Int
-  create_at DateTime?
-  update_at DateTime?
-  pages Page[]
+  page_type_id Int       @id @default(autoincrement())
+  name         String
+  state        Int
+  create_at    DateTime?
+  update_at    DateTime?
+  pages        Page[]
 
   @@map(name: "page_type")
 }
@@ -365,6 +365,8 @@ model Buy_Pack {
   method_buy    Method_Buy @relation(fields: [method_buy_id], references: [method_buy_id])
   method_buy_id Int
   price         Decimal
+  transaction   String
+  content       String
   create_at     DateTime   @default(now())
   update_at     DateTime   @updatedAt
 

@@ -3,7 +3,6 @@ import { getCurrentUser, verifyAccessTokenTemp } from "../../utils/auth";
 import logger, { jsonLog } from "../../utils/logger";
 import Link from "next/link";
 import { repositoryAuth } from "../../repositories/auth.repository";
-import moment from "moment";
 
 interface IVerifiedEmail {
     /*     params: Promise<{

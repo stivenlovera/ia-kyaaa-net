@@ -8,7 +8,7 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(request: NextRequest) {
     logger.info(`api/buy-pack/order-payment POST `)
     try {
-        const { code }: { code: string } = await request.json();
+        const { code, price }: { code: string, price: number } = await request.json();
         logger.info(`/api/buy-pack/order-payment POST code ${jsonLog(code)} `)
 
         const user = await getCurrentUser();
@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
                     {
                         amount: {
                             currency_code: 'USD', // Or your desired currency
-                            value: 5
+                            value: price
                         }
                     }
                 ]

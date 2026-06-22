@@ -1,4 +1,6 @@
-import { IPayPalToken } from "@/src/app/types/buy_pack.types";
+import { repositoryBuyPack } from "@/src/app/repositories/buy-pack.repository";
+import { repositoryPack } from "@/src/app/repositories/pack.repository";
+import { IPayPalConfirm, IPayPalToken } from "@/src/app/types/buy_pack.types";
 import { getCurrentUser } from "@/src/app/utils/auth";
 import logger, { jsonLog } from "@/src/app/utils/logger";
 import API from "@/src/providers/api";
@@ -7,7 +9,7 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(request: NextRequest) {
     logger.info(`/api/buy-pack/order-capture POST `)
     try {
-        const { order_id }: { order_id: string } = await request.json();
+        const { order_id, code }: { order_id: string, code: string } = await request.json();
 
         const user = await getCurrentUser();
         if (user === null) {
@@ -39,7 +41,7 @@ export async function POST(request: NextRequest) {
         }
 
         logger.info(`/api/buy-pack/order-capture POST acessToken ${jsonLog(`${process.env.API_PAYPAL}/v2/checkout/orders/${order_id}/capture`)}`)
-        const { data: dataCapture, status: statusCapture } = await API.post<any>(`${process.env.API_PAYPAL}/v2/checkout/orders/${order_id}/capture`, {}, {
+        const { data: dataCapture, status: statusCapture } = await API.post<IPayPalConfirm>(`${process.env.API_PAYPAL}/v2/checkout/orders/${order_id}/capture`, {}, {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${data.access_token}`,
@@ -49,6 +51,14 @@ export async function POST(request: NextRequest) {
         logger.info(`/api/buy-pack/order-capture POST pago ${jsonLog(dataCapture)}`)
         if (status === 200) {
             logger.info(`/api/buy-pack/order-capture POST pago ${jsonLog(dataCapture)}`)
+            const pack = await repositoryPack.findPackInfo(code)
+            const buy = await repositoryBuyPack.create(
+                pack!.pack_id,
+                user.user_id,
+                dataCapture.purchase_units[0].payments.captures[0].id,
+                dataCapture.purchase_units[0].payments.captures[0].seller_receivable_breakdown.net_amount.value,
+                JSON.stringify(dataCapture)
+            );
         }
 
         return NextResponse.json(

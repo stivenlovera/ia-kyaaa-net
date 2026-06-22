@@ -15,11 +15,15 @@ export const repositoryBuyPack = {
         return buys;
     },
 
-    create: async (pack_id: number, user_id: number): Promise<IBuyPack> => {
+    create: async (pack_id: number, user_id: number, transaction: string, price: string, content: string): Promise<IBuyPack> => {
         const like = await prisma.buy_Pack.create({
             data: {
                 user_id: user_id,
-                pack_id: pack_id
+                pack_id: pack_id,
+                method_buy_id: 1,
+                price: parseFloat(price),
+                transaction: transaction,
+                content: content
             }
         });
         return like;

@@ -4,6 +4,8 @@ import { PayPalScriptProvider, ReactPayPalScriptOptions } from "@paypal/react-pa
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { CheckoutButton } from "./checkout-button";
+import { useState } from "react";
+import { DialogThanks } from "./dialog-thanks";
 
 interface PayPackProps {
     pack: IPackInfo
@@ -11,6 +13,7 @@ interface PayPackProps {
 
 export const PayPack = ({ pack }: PayPackProps) => {
     const t = useTranslations('buy');
+    const [openThanks, setThanks] = useState<boolean>(false)
     const initialOptions: ReactPayPalScriptOptions = {
         clientId: process.env.NEXT_PUBLIC_API_CLIENT_ID!, // Replace with your Sandbox/Live client ID
         currency: "USD",
@@ -44,19 +47,27 @@ export const PayPack = ({ pack }: PayPackProps) => {
                             <div className=" text-neutral-100">{pack.name}</div>
                             <div className=" text-neutral-100">{pack.code}</div>
                             <div className=" text-neutral-100">750 fotos</div>
-                            <div className=" text-neutral-100">7$ USD</div>
+                            <div className=" text-neutral-100">{pack.price_list} USD</div>
                         </div>
                     </div>
                     <div className="py-2">
                         <div className="card text-end p-3">
-                            Total 7 $
+                            Total: {pack.price_list} USD
                         </div>
                     </div>
                     <div className="bg-neutral-200 rounded-sm p-2">
-                        <CheckoutButton code={pack.code}></CheckoutButton>
+                        <CheckoutButton
+                            code={pack.code}
+                            price={pack.price_list}
+                            setThanks={setThanks}
+                        ></CheckoutButton>
                     </div>
                 </div>
-
+                <DialogThanks
+                    openThanks={openThanks}
+                    onChangeThanks={(value) => setThanks(value)}
+                >
+                </DialogThanks>
             </div>
         </PayPalScriptProvider>
     )
