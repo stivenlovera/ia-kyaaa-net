@@ -1,12 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getCurrentUser } from "../../utils/auth";
 import logger, { jsonLog } from "../../utils/logger";
-import { repositoryBuyPack } from "../../repositories/buy-pack.repository";
+/* import { getCurrentUser } from "../../utils/auth";
+import { repositoryBuyPack } from "../../repositories/buy-pack.repository"; */
 
 export async function POST(request: NextRequest) {
     logger.info(`api/like POST `)
     try {
-        const body: { pack_id: number } = await request.json();
+        /* const body: { pack_id: number } = await request.json();
         const user = await getCurrentUser();
         if (user === null) {
             return NextResponse.json(
@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
             await repositoryBuyPack.create(body.pack_id, user.user_id);
         } else {
             await repositoryBuyPack.delete(user.user_id, body.pack_id);
-        }
+        } */
 
         return NextResponse.json(
             {
