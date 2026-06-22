@@ -11,9 +11,9 @@ import { repositoryAuthor } from '@/src/app/repositories/author.repository';
 import { repositoryPage } from '@/src/app/repositories/pages.repository';
 
 export async function POST(request: NextRequest) {
-    logger.info(`api/packs/pack-info POST ${jsonLog([])}`)
+    logger.info(`api/pack/pack-info POST ${jsonLog([])}`)
     try {
-        const { code }: { code: string } = await request.json();
+        /* const { code }: { code: string } = await request.json();
         const pack = await repositoryPack.findPackInfo(code);
 
         const characters: number[] = [];
@@ -58,7 +58,7 @@ export async function POST(request: NextRequest) {
         }
         return NextResponse.json(resp,
             { status: 200 }
-        );
+        ); */
     } catch (error: any) {
         logger.error(`api/packs/new error=> ${jsonLog(error.message)}`)
         return NextResponse.json(
