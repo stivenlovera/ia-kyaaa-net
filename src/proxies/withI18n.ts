@@ -4,6 +4,6 @@ import createIntlMiddleware from 'next-intl/middleware';
 export function withI18n() {
     return createIntlMiddleware({
         locales: ['en', 'es'],
-        defaultLocale: 'en'
+        defaultLocale: 'es'
     });
 };

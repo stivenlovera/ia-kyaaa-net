@@ -1,5 +1,4 @@
 'use client'
-import { numberToString } from '@/src/app/utils/convert';
 import { FaAngleLeft } from 'react-icons/fa';
 import { FaAnglesLeft } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa6";
@@ -34,7 +33,7 @@ export const PaginationView = ({ page, allPages, pages, code, changePage, clickL
             >
                 <div className='text-center pr-3'>
                     <select className='w-full'
-                        value={numberToString(page, allPages)}
+                        value={pages[page - 1]?.num}
                         onChange={(e) => {
                             changePage(e.currentTarget.value)
                         }}

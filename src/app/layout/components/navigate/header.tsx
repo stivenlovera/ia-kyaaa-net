@@ -1,5 +1,5 @@
 "use client";
-import Link from 'next/link'
+
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { FaAlignJustify, FaAngleRight } from "react-icons/fa";
@@ -9,7 +9,7 @@ import { useAuth } from '@/src/providers/AuthContext';
 import ButtonUser from './button-user';
 import { ButtonLogin } from './button-login';
 import { useTranslations } from 'next-intl';
-import { usePathname } from '@/src/i18n/navigation';
+import { Link, usePathname } from '@/src/i18n/navigation';
 
 export const Header = () => {
     const t = useTranslations('header.menu');
@@ -90,7 +90,7 @@ export const Header = () => {
                                     return (
                                         <li key={i}>
                                             <Link
-                                                href={menu.url}
+                                                href={menu.url as Parameters<typeof Link>['0']['href']}
                                                 className={"block p-2 hover:text-neutral-100 hover:bg-neutral-700" + selectedRoute(menu.url)}
                                             >
                                                 {menu.name}

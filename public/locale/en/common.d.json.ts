@@ -31,6 +31,7 @@ declare const messages: {
     "autor": "Authors",
     "paginas": "Images",
     "paginas_gratis": "Free images",
+    "paginas_bloqueadas": "There are {count} more images in this pack",
     "actualizado": "Updated",
     "extra-pack": {
       "descarga": "Donwload",

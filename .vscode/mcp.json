@@ -1,0 +1,10 @@
+{
+  "servers": {
+    "mysql-kyaaa": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["${workspaceFolder}/mcp/mysql-kyaaa/index.mjs"],
+      "envFile": "${workspaceFolder}/.env"
+    }
+  }
+}

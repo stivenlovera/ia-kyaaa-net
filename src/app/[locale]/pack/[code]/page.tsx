@@ -6,6 +6,7 @@ import { ViewPage } from './_components/preview-page';
 import { repositoryPage } from '@/src/app/repositories/pages.repository';
 import { PreviewPack } from './_components/preview-pack';
 import { isNumber } from '@/src/app/utils/other';
+import { getCurrentUser } from '@/src/app/utils/auth';
 
 export const dynamic = "force-dynamic";
 
@@ -40,19 +41,16 @@ export default async function Page({ params, searchParams }: PagePaginateProps) 
     const { page } = await searchParams;
     logger.info(`/pack ${jsonLog(page)}`)
 
-    const pages = await repositoryPage.findPagesPack(code, 1);
-
     if (page !== undefined) {
-        const pack = await repositoryPage.findPagesPack(code, 3);
-        if (!isNumber(page)) {
-            redirect('/pack/' + code)
-        }
-        if (parseInt(page) >= pages!.pages.length + 1) {
+        const user = await getCurrentUser();
+        // Solo trae las páginas que este usuario puede ver: las gratis, o todas si el pack es gratuito o lo compró.
+        const pack = await repositoryPage.findPagesPack(code, 3, user?.user_id);
+        if (pack === null || !isNumber(page) || !pack.pages.some((p) => p.num === page)) {
             redirect('/pack/' + code)
         }
         return (
             <ViewPage
-                pack={pack!}
+                pack={pack}
                 code={code}
                 currentPage={page}
             >

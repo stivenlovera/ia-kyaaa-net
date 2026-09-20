@@ -4,6 +4,14 @@ export interface IPagePack {
     pack_id: number,
     code: string,
     pages: IPage[]
+    /** Total de páginas del pack, incluidas las bloqueadas para este usuario. */
+    total: number
+    /** Páginas gratis del pack (todas si el pack es gratuito). */
+    free: number
+    /** El pack es gratuito (pack_type gratis). */
+    is_free: boolean
+    /** true si el usuario ve todo el pack (pack gratuito o comprado). */
+    full_access: boolean
 }
 
 export interface IPage {

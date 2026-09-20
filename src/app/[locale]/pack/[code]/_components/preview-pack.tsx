@@ -58,9 +58,12 @@ export const PreviewPack = async ({ code }: PreviewPackProps) => {
     })
     const totalAuthor = await repositoryAuthor.findTotal(authors);
 
-    const pack_page = await repositoryPage.findPagesPack(code, 1);
-
     const user = await getCurrentUser();
+    // Solo las páginas que este usuario puede ver (las gratis, o todas si el pack es gratuito o lo compró).
+    const pack_page = await repositoryPage.findPagesPack(code, 1, user?.user_id);
+    if (pack_page === null) {
+        notFound()
+    }
     let likes: ILikePack[] = []
     let buys: IBuyPack[] = []
     let favorites: IFavoritePack[] = []
@@ -78,7 +81,7 @@ export const PreviewPack = async ({ code }: PreviewPackProps) => {
         total_series: totalSeries,
         total_labels: totalLabel,
         total_authors: totalAuthor,
-        pages: pack_page!.pages!,
+        pages: pack_page.pages,
         buy: isBuy !== undefined ? true : false,
         like: isLike !== undefined ? true : false,
         favorite: isFavorite !== undefined ? true : false,
@@ -161,7 +164,7 @@ export const PreviewPack = async ({ code }: PreviewPackProps) => {
                             <div className="mt-2">
                                 <h5 className={"text-sm mx-1 w-full "}>
                                     {
-                                        packInfo?.pages.length === 0 ? ('') : (packInfo?.pages.length)
+                                        pack_page.free === 0 ? ('') : (pack_page.free)
                                     }
                                 </h5>
                             </div>
@@ -175,7 +178,7 @@ export const PreviewPack = async ({ code }: PreviewPackProps) => {
                             <div className="mt-2">
                                 <h5 className={"text-sm mx-1 w-full "}>
                                     {
-                                        packInfo?.pages.length === 0 ? ('') : (packInfo?.pages.length)
+                                        pack_page.total === 0 ? ('') : (pack_page.total)
                                     }
                                 </h5>
                             </div>
@@ -201,6 +204,7 @@ export const PreviewPack = async ({ code }: PreviewPackProps) => {
                         price={packInfo.price_list}
                         pack_id={packInfo.pack_id}
                         user_buy={packInfo.buy}
+                        free={pack_page.is_free}
                         user_favorite={packInfo.favorite}
                         user_like={packInfo.like}
                     ></ExtraPack>
@@ -236,6 +240,11 @@ export const PreviewPack = async ({ code }: PreviewPackProps) => {
                     })
                 }
             </div>
+            {!pack_page.full_access && pack_page.total > pack_page.pages.length && (
+                <div className="flex mx-auto flex-wrap items-center justify-center gap-2 py-4 text-center">
+                    <span>{t('paginas_bloqueadas', { count: pack_page.total - pack_page.pages.length })}</span>
+                </div>
+            )}
             <More
                 code={packInfo.code}
                 pages={morePage}

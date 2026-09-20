@@ -19,23 +19,15 @@ datasource db {
 // Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
-model Pack_State {
-  pack_state_id Int       @id @default(autoincrement())
-  name          String
-  create_at     DateTime?
-  update_at     DateTime?
-  packs         Pack[]
-
-  @@map(name: "pack_state")
-}
-
 model Pack {
   pack_id           Int                @id @default(autoincrement())
   name              String
   description       String
   code              String
+  code_pay          String?
   price_list        Decimal
-  active            Int
+  code_free         String?
+  state             Int                @default(1)
   create_at         DateTime?
   update_at         DateTime?
   pages             Page[]
@@ -46,9 +38,7 @@ model Pack {
   pack_authors      Pack_author[]
   pack_languages    Pack_language[]
   participate_packs Participate_Pack[]
-  pack_state        Pack_State         @relation(fields: [pack_state_id], references: [pack_state_id])
-  pack_state_id     Int
-  buyPacks          Buy_Pack[]
+  buyPacks         Buy_Pack[]
   favoritePacks     Favorite_Pack[]
   likePacks         Like_Pack[]
 
@@ -60,14 +50,14 @@ model Page {
   pack         Pack        @relation(fields: [pack_id], references: [pack_id])
   page_size    Page_size[]
   pack_id      Int
-  page_type    Page_Type[]
-  page_type_id Int
   num          String
-  code         String
+  page_type    Page_Type   @relation(fields: [page_type_id], references: [page_type_id])
+  page_type_id Int         @default(2)
   state        Int
   create_at    DateTime?
   update_at    DateTime?
 
+  @@unique([pack_id, num])
   @@map(name: "page")
 }
 
@@ -258,7 +248,7 @@ model User {
   password       String
   verified_email DateTime?
   state          Int             @default(1)
-  image          String
+  image          String?
   create_at      DateTime        @default(now())
   update_at      DateTime        @updatedAt
   votes          Vote[]
@@ -347,7 +337,7 @@ model Vote {
 }
 
 model Method_Buy {
-  method_buy_id Int
+  method_buy_id Int        @default(autoincrement())
   name          String
   create_at     DateTime   @default(now())
   update_at     DateTime   @updatedAt

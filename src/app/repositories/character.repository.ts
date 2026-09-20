@@ -48,6 +48,9 @@ export const repositoryCharacter = {
                 pack_id: true,
                 code: true,
                 pages: {
+                    // Portada: prefiere una página gratis (page_type 1) y luego la de menor número.
+                    orderBy: [{ page_type_id: 'asc' }, { num: 'asc' }],
+                    take: 1,
                     select: {
                         num: true,
                         page_size: {

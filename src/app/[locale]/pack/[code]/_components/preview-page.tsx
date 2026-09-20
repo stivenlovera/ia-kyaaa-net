@@ -2,10 +2,11 @@
 import Link from 'next/link'
 import React, { useEffect, useRef, useState } from 'react'
 import { PaginationView } from './view-image'
-import { numberToString, View } from './view'
+import { View } from './view'
 import { IPagePack } from '@/src/app/types/page.types'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { preload, } from 'react-dom';
+import { useTranslations } from 'next-intl'
 
 interface PreviewPageProps {
     code: string
@@ -18,10 +19,12 @@ export interface ImagesProps {
 }
 
 export const ViewPage = ({ code, currentPage, pack }: PreviewPageProps) => {
+    const t = useTranslations('pack-info');
     const searchParams = useSearchParams()
     const historyStack = useRef<string[]>([]);
-    const numPage = searchParams.get('page')
-    const [preLoadImage, setPreLoadImage] = useState<string[]>([])
+    const numPage = searchParams.get('page') ?? currentPage
+    // Solo las páginas que el usuario puede ver: los números pueden tener saltos (1, 2, 4, 5…),
+    // por eso se navega por posición en la lista y no sumando o restando al número.
     const images: ImagesProps[] = pack.pages.map((p) => {
         const img: ImagesProps = {
             num: p.num,
@@ -29,69 +32,39 @@ export const ViewPage = ({ code, currentPage, pack }: PreviewPageProps) => {
         }
         return img
     })
-    const img = images.find((p) => p.num === (numPage! ?? numberToString(1, images.length)))!.img
-    const [urlImage, setUrlImage] = useState<string>(img)
+    const index = Math.max(0, images.findIndex((p) => p.num === numPage))
+    const position = index + 1
+    const [urlImage, setUrlImage] = useState<string>(images[index].img)
     const pathname = usePathname();
+    const locked = pack.total - images.length
+
+    const goTo = (target: number) => {
+        const next = images[Math.min(Math.max(target, 0), images.length - 1)]
+        window.history.replaceState(null, '', `${pathname}?page=${next.num}`);
+        setUrlImage(next.img)
+    }
 
     const updateQueryParam = ({
         init = false,
         finish = false,
         next = false,
         preview = false,
-        page = numPage!
+        page = numPage
     }: { init?: boolean, finish?: boolean, next?: boolean, preview?: boolean, page?: string }) => {
-        console.log(page)
-        let pageNumber: string = '';
-        if (init) {
-            pageNumber = numberToString(1, images.length);
-        }
-        if (finish) {
-            pageNumber = numberToString(((images.length) - 1), images.length);
-        }
-        if (next) {
-            pageNumber = numberToString((parseInt(numPage!) + 1), images.length);
-        }
-        if (preview) {
-            pageNumber = numberToString((parseInt(numPage!) - 1), images.length);
-        }
-        if (page !== numPage) {
-            pageNumber = page;
-        }
-
-        const newUrl = `${pathname}?page=${pageNumber}`;
-        window.history.replaceState(null, '', newUrl);
-        setUrlImage(images.find((p) => p.num === pageNumber!)!.img)
+        if (init) return goTo(0)
+        if (finish) return goTo(images.length - 1)
+        if (next) return goTo(index + 1)
+        if (preview) return goTo(index - 1)
+        goTo(images.findIndex((p) => p.num === page))
     };
 
-    const reloadImage = () => {
-        const preview: number = 5;
-        const page = parseInt(numPage!)
-
-        for (let index = (page - 1); index > (page - preview); index--) {
-            const imgNext = images.find(i => i.num === numberToString(index, images.length))
-            if (imgNext !== undefined) {
-                preLoadImage.push(imgNext!.img)
-            }
-        }
-        for (let index = (page + 1); index < (page + preview); index++) {
-            const imgPreview = images.find(i => i.num === numberToString(index, images.length))
-            if (imgPreview !== undefined) {
-                preLoadImage.push(imgPreview!.img)
-            }
-        }
-        const previewImagesUniques: string[] = [...new Set(preLoadImage)];
-
-        setPreLoadImage([...previewImagesUniques])
-        preLoadImage.map(img => {
-            preload(img, { as: "image" })
-        })
-    }
-
     useEffect(() => {
-        reloadImage()
+        // Precarga las imágenes vecinas.
+        const preview: number = 5;
+        images.slice(Math.max(0, index - (preview - 1)), index + preview).forEach((i) => {
+            preload(i.img, { as: 'image' })
+        })
         if (historyStack.current.length > 1 && historyStack.current[historyStack.current.length - 2] === pathname) {
-            console.log('Back button navigation detected!');
-
             // Remove the last item to sync the tracking stack
             historyStack.current.pop();
         } else {
@@ -112,7 +85,7 @@ export const ViewPage = ({ code, currentPage, pack }: PreviewPageProps) => {
                 <PaginationView
                     pages={images}
                     allPages={images.length}
-                    page={parseInt(numPage!)}
+                    page={position}
                     code={code}
                     clickLeftFirst={() => updateQueryParam({ init: true })}
                     clickLeftSecond={() => updateQueryParam({ preview: true })}
@@ -122,7 +95,7 @@ export const ViewPage = ({ code, currentPage, pack }: PreviewPageProps) => {
                 />
                 <View
                     image={urlImage!}
-                    numPage={parseInt(numPage!)}
+                    numPage={position}
                     allPage={images.length}
                     clickNext={() => updateQueryParam({ next: true })}
                     clickPreview={() => updateQueryParam({ preview: true })}
@@ -130,7 +103,7 @@ export const ViewPage = ({ code, currentPage, pack }: PreviewPageProps) => {
                 <PaginationView
                     pages={images}
                     allPages={images.length}
-                    page={parseInt(numPage!)}
+                    page={position}
                     code={code}
                     clickLeftFirst={() => updateQueryParam({ init: true })}
                     clickLeftSecond={() => updateQueryParam({ preview: true })}
@@ -138,6 +111,14 @@ export const ViewPage = ({ code, currentPage, pack }: PreviewPageProps) => {
                     clickRightSecond={() => updateQueryParam({ finish: true })}
                     changePage={(page) => updateQueryParam({ page: page })}
                 />
+                {locked > 0 && !pack.full_access && (
+                    <div className='flex mx-auto flex-wrap items-center justify-center gap-2 py-2 text-center'>
+                        <span>{t('paginas_bloqueadas', { count: locked })}</span>
+                        <Link href={`/buy/${code}`} className='rounded-full bg-gray-800 px-3 py-1 hover:bg-gray-700'>
+                            {t('extra-pack.comprar')}
+                        </Link>
+                    </div>
+                )}
                 <div className='flex mx-auto flex-wrap items-center justify-center pb-1'>
                     <Link href={`/pack/${code}`} className='flex items-center justify-center hover:bg-gray-800 rounded-full'>
                         Volver a la galeria

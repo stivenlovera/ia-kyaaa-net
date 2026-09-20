@@ -15,6 +15,8 @@ interface IExtraPackProps {
     user_like: boolean,
     user_favorite: boolean
     user_buy: boolean
+    /** Pack gratuito: no hay nada que comprar. */
+    free?: boolean
 }
 export const ExtraPack = ({
     code,
@@ -22,7 +24,8 @@ export const ExtraPack = ({
     pack_id,
     user_like,
     user_favorite,
-    user_buy
+    user_buy,
+    free = false
 }: IExtraPackProps) => {
     const router = useRouter();
     const t = useTranslations('pack-info');
@@ -150,7 +153,7 @@ export const ExtraPack = ({
                             {t('extra-pack.ver_compras')}
                         </button>
                     </div>
-                ) : (
+                ) : free ? null : (
                     <div className='py-2'>
                         <button
                             className='btn-primary w-full font-bold'

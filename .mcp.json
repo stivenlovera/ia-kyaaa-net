@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "mysql-kyaaa": {
+      "command": "node",
+      "args": ["mcp/mysql-kyaaa/index.mjs"]
+    }
+  }
+}

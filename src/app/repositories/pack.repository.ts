@@ -11,6 +11,9 @@ export const repositoryPack = {
                 pack_id: true,
                 code: true,
                 pages: {
+                    // Portada: prefiere una página gratis (page_type 1) y luego la de menor número.
+                    orderBy: [{ page_type_id: 'asc' }, { num: 'asc' }],
+                    take: 1,
                     select: {
                         num: true,
                         page_size: {
@@ -67,6 +70,9 @@ export const repositoryPack = {
                 price_list: true,
                 update_at: true,
                 pages: {
+                    // Portada: prefiere una página gratis (page_type 1) y luego la de menor número.
+                    orderBy: [{ page_type_id: 'asc' }, { num: 'asc' }],
+                    take: 1,
                     select: {
                         num: true,
                         page_size: {
@@ -84,7 +90,6 @@ export const repositoryPack = {
                             }
                         }
                     },
-                    take: 1,
                 },
                 pack_serie: {
                     select: {

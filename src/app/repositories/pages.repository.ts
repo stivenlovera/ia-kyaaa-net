@@ -1,11 +1,15 @@
 import { IPagePack } from "../types/page.types";
-import logger from "../utils/logger";
+import { PACK_TYPE, PAGE_TYPE } from "../utils/page-access";
 import { prisma } from "../utils/prisma";
 
 export const repositoryPage = {
 
-    findPagesPack: async (code: string, id_size: number): Promise<IPagePack | null> => {
-        const pages = await prisma.pack.findFirst({
+    /**
+     * Páginas de un pack visibles para el usuario. Ve todas si el pack es gratuito o si lo compró;
+     * en cualquier otro caso (anónimo o sin compra) solo las páginas marcadas como gratis.
+     */
+    findPagesPack: async (code: string, id_size: number, user_id?: number): Promise<IPagePack | null> => {
+        const pack = await prisma.pack.findFirst({
             where: {
                 code: code
             },
@@ -14,28 +18,74 @@ export const repositoryPage = {
                 description: true,
                 pack_id: true,
                 code: true,
-                pages: {
+                pack_types: {
                     select: {
-                        num: true,
-                        page_size: {
-                            where: {
-                                size_id: id_size
-                            },
-                            take: 1,
-                            select: {
-                                size: {
-                                    select: {
-                                        extension: true,
-                                        name: true
-                                    }
+                        type_id: true
+                    }
+                }
+            }
+        });
+        if (pack === null) {
+            return null;
+        }
+
+        const isFreePack = pack.pack_types.some(({ type_id }) => type_id === PACK_TYPE.FREE);
+        let fullAccess = isFreePack;
+        if (!fullAccess && user_id !== undefined) {
+            const buy = await prisma.buy_Pack.findFirst({
+                select: {
+                    pack_id: true
+                },
+                where: {
+                    pack_id: pack.pack_id,
+                    user_id: user_id
+                }
+            });
+            fullAccess = buy !== null;
+        }
+
+        const [pages, total, free] = await Promise.all([
+            prisma.page.findMany({
+                where: {
+                    pack_id: pack.pack_id,
+                    ...(fullAccess ? {} : { page_type_id: PAGE_TYPE.FREE })
+                },
+                orderBy: {
+                    num: 'asc'
+                },
+                select: {
+                    num: true,
+                    page_size: {
+                        where: {
+                            size_id: id_size
+                        },
+                        take: 1,
+                        select: {
+                            size: {
+                                select: {
+                                    extension: true,
+                                    name: true
                                 }
                             }
                         }
                     }
-                },
-            }
-        });
-        return pages;
+                }
+            }),
+            prisma.page.count({ where: { pack_id: pack.pack_id } }),
+            prisma.page.count({ where: { pack_id: pack.pack_id, page_type_id: PAGE_TYPE.FREE } }),
+        ]);
+
+        return {
+            name: pack.name,
+            description: pack.description,
+            pack_id: pack.pack_id,
+            code: pack.code,
+            pages: pages,
+            total: total,
+            free: isFreePack ? total : free,
+            is_free: isFreePack,
+            full_access: fullAccess,
+        };
     },
 
 

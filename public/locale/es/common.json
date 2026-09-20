@@ -28,6 +28,7 @@
     "autor": "Autores",
     "paginas": "Imagenes",
     "paginas_gratis": "Imagenes gratis",
+    "paginas_bloqueadas": "Hay {count} imagenes mas en este pack",
     "actualizado": "Actualizado",
     "extra-pack": {
       "descarga": "Descargar",

@@ -1,0 +1,16 @@
+{
+  "name": "mysql-kyaaa",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Servidor MCP de solo lectura para la base de datos MariaDB de kyaaa.net",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "node index.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "mysql2": "^3.24.4",
+    "zod": "^4.6.5"
+  }
+}
