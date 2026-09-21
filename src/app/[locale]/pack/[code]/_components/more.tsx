@@ -21,7 +21,7 @@ export const More = ({ pages, code, saltos }: IMore) => {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5">
             {
                 paginas.map((image, i) => {
-                    const imagePage = `${process.env.NEXT_PUBLIC_PACKS_URL_S3}/${code}/${image.page_size[0].size.name}/${image.num}.${image.page_size[0].size.extension}`
+                    const imagePage = image.url
                     return (
                         <div
                             className="flex p-1 sm:p-1 md:p-1 lg:p-2 xl:p-2 justify-center w-full"

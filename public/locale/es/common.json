@@ -43,7 +43,8 @@
     }
   },
   "buy": {
-    "titulo": "Confirma tu compra"
+    "titulo": "Confirma tu compra",
+    "error_pago": "No pudimos procesar el pago. Inténtalo de nuevo en unos segundos y revisa «Mis compras» antes de pagar otra vez."
   },
   "personaje": {
     "titulo": "Personajes"

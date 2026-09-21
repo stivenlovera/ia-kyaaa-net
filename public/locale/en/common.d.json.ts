@@ -46,7 +46,8 @@ declare const messages: {
     }
   },
   "buy": {
-    "titulo": "Confirm your purchase"
+    "titulo": "Confirm your purchase",
+    "error_pago": "We could not process the payment. Please try again in a few seconds, and check “My purchases” before paying again."
   },
   "personaje": {
     "titulo": "Characters"

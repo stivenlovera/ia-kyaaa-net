@@ -17,6 +17,8 @@ export interface IPagePack {
 export interface IPage {
     num: string
     page_size: IPageSize[]
+    /** URL de la imagen: pública si la página es gratis, firmada (caduca) si es de pago. */
+    url: string
 }
 
 export interface IPageSize {

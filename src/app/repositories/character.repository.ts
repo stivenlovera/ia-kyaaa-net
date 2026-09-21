@@ -1,6 +1,7 @@
 import { ICountTag } from "../[locale]/pack/_components/card-section";
 import { ICharacter } from "../types/character.types";
 import { IListPacks } from "../types/pack.types";
+import { packPortada } from "../utils/pack-portada";
 import { prisma } from "../utils/prisma";
 
 export const repositoryCharacter = {
@@ -53,6 +54,7 @@ export const repositoryCharacter = {
                     take: 1,
                     select: {
                         num: true,
+                        page_type_id: true,
                         page_size: {
                             where: {
                                 size_id: 1
@@ -79,17 +81,13 @@ export const repositoryCharacter = {
                 }
             }
         })
-        const newPacks = packs.map((p) => {
+        const newPacks = await Promise.all(packs.map(async (p) => {
             const pack: IListPacks = {
                 ...p,
-                portada: {
-                    extension: p.pages[0].page_size[0].size.extension,
-                    name: p.pages[0].page_size[0].size.name,
-                    num: p.pages[0].num
-                }
+                portada: await packPortada(p.code, p.pages[0])
             }
             return pack
-        })
+        }))
         return newPacks
     }
 }

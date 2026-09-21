@@ -78,7 +78,7 @@ export default async function Home({ params }: PageHomeProps) {
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-2 lg:gap-3 xl:gap-4">
           {
             listNewPacks.map((pack, i) => {
-              const urlImage = `${process.env.NEXT_PUBLIC_PACKS_URL_S3}/${pack.code}/${pack.portada.name}/${pack.portada.num}.${pack.portada.extension}`
+              const urlImage = pack.portada.url
               return (
                 <Card
                   pack={pack}

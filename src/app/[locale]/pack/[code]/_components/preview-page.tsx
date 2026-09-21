@@ -28,7 +28,7 @@ export const ViewPage = ({ code, currentPage, pack }: PreviewPageProps) => {
     const images: ImagesProps[] = pack.pages.map((p) => {
         const img: ImagesProps = {
             num: p.num,
-            img: `${process.env.NEXT_PUBLIC_PACKS_URL_S3}/${pack?.code}/${p.page_size[0].size.name}/${p.num}.${p.page_size[0].size.extension}`
+            img: p.url
         }
         return img
     })

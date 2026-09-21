@@ -1,4 +1,5 @@
 import { IPagePack } from "../types/page.types";
+import { packImageUrl } from "../utils/pack-images";
 import { PACK_TYPE, PAGE_TYPE } from "../utils/page-access";
 import { prisma } from "../utils/prisma";
 
@@ -55,6 +56,7 @@ export const repositoryPage = {
                 },
                 select: {
                     num: true,
+                    page_type_id: true,
                     page_size: {
                         where: {
                             size_id: id_size
@@ -80,7 +82,18 @@ export const repositoryPage = {
             description: pack.description,
             pack_id: pack.pack_id,
             code: pack.code,
-            pages: pages,
+            // Las de pago salen firmadas (caducan); las gratis, con la URL pública.
+            pages: await Promise.all(pages.map(async ({ num, page_type_id, page_size }) => ({
+                num,
+                page_size,
+                url: page_size[0] === undefined ? '' : await packImageUrl({
+                    code: pack.code,
+                    size: page_size[0].size.name,
+                    num,
+                    extension: page_size[0].size.extension,
+                    free: page_type_id === PAGE_TYPE.FREE,
+                }),
+            }))),
             total: total,
             free: isFreePack ? total : free,
             is_free: isFreePack,

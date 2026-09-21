@@ -87,7 +87,7 @@ export const PreviewPack = async ({ code }: PreviewPackProps) => {
         favorite: isFavorite !== undefined ? true : false,
     }
 
-    const imageDescription = `${process.env.NEXT_PUBLIC_PACKS_URL_S3}/${packInfo?.code}/${packInfo?.portada.name}/${packInfo?.portada.num}.${packInfo?.portada.extension}`
+    const imageDescription = packInfo.portada.url
     const saltos: number = 40;
     const morePage = packInfo.pages!.filter((image, i) => {
         if (i > (saltos - 1)) {
@@ -213,7 +213,7 @@ export const PreviewPack = async ({ code }: PreviewPackProps) => {
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5">
                 {
                     packInfo.pages!.map((image, i) => {
-                        const imagePage = `${process.env.NEXT_PUBLIC_PACKS_URL_S3}/${packInfo?.code}/${image.page_size[0].size.name}/${image.num}.${image.page_size[0].size.extension}`
+                        const imagePage = image.url
                         if (i < (saltos)) {
                             return (
                                 <div

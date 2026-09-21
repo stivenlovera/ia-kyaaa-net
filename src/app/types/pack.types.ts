@@ -10,6 +10,8 @@ export interface IListPacks {
         num: string,
         extension: string
         name: string
+        /** URL de la portada: pública, o firmada si la portada es una página de pago. */
+        url: string
     }
 }
 
@@ -31,6 +33,8 @@ export interface IPackInfo {
         num: string,
         extension: string
         name: string
+        /** URL de la portada: pública, o firmada si la portada es una página de pago. */
+        url: string
     }
     pack_serie: PackSerie[]
     pack_types: PackType[]

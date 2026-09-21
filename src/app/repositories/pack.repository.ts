@@ -1,4 +1,5 @@
 import { IListPacks, IPackInfo } from "../types/pack.types";
+import { packPortada } from "../utils/pack-portada";
 import { prisma } from "../utils/prisma";
 
 export const repositoryPack = {
@@ -16,6 +17,7 @@ export const repositoryPack = {
                     take: 1,
                     select: {
                         num: true,
+                        page_type_id: true,
                         page_size: {
                             where: {
                                 size_id: 1
@@ -33,17 +35,13 @@ export const repositoryPack = {
                 },
             }
         });
-        const newPacks = packs.map((p) => {
+        const newPacks = await Promise.all(packs.map(async (p) => {
             const pack: IListPacks = {
                 ...p,
-                portada: {
-                    extension: p.pages[0].page_size[0].size.extension,
-                    name: p.pages[0].page_size[0].size.name,
-                    num: p.pages[0].num
-                }
+                portada: await packPortada(p.code, p.pages[0])
             }
             return pack
-        })
+        }))
         /* const serialize: IPackInfo = {
             ...pack!,
             update_at: pack!.update_at!,
@@ -75,6 +73,7 @@ export const repositoryPack = {
                     take: 1,
                     select: {
                         num: true,
+                        page_type_id: true,
                         page_size: {
                             where: {
                                 size_id: 2
@@ -157,11 +156,7 @@ export const repositoryPack = {
             const serialize: IPackInfo = {
                 ...pack!,
                 price_list: pack.price_list.toNumber(),
-                portada: {
-                    extension: pack!.pages[0].page_size[0].size.extension,
-                    name: pack!.pages[0].page_size[0].size.name,
-                    num: pack!.pages[0].num
-                }
+                portada: await packPortada(pack.code, pack.pages[0])
             }
             return serialize;
         }

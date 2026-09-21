@@ -20,7 +20,7 @@ export const PayPack = ({ pack }: PayPackProps) => {
         intent: "capture",
     };
 
-    const urlImage = `${process.env.NEXT_PUBLIC_PACKS_URL_S3}/${pack.code}/${pack.portada.name}/${pack.portada.num}.${pack.portada.extension}`
+    const urlImage = pack.portada.url
 
     return (
         <PayPalScriptProvider options={initialOptions}>
