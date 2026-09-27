@@ -72,7 +72,10 @@ export const DialogPackForm = ({ open, onClose, pack, onSaved }: DialogPackFormP
                             className='w-full'
                             name="name"
                             value={form.name}
-                            onChange={(e) => { setForm((f) => ({ ...f, name: e.currentTarget.value })) }}
+                            onChange={(e) => {
+                                const name = e.currentTarget.value
+                                setForm((f) => ({ ...f, name: name }))
+                            }}
                             disabled={isPending}
                             autoFocus
                         />
@@ -84,7 +87,10 @@ export const DialogPackForm = ({ open, onClose, pack, onSaved }: DialogPackFormP
                             className='w-full'
                             name="code"
                             value={form.code}
-                            onChange={(e) => { setForm((f) => ({ ...f, code: e.currentTarget.value })) }}
+                            onChange={(e) => {
+                                const code = e.currentTarget.value
+                                setForm((f) => ({ ...f, code: code }))
+                            }}
                             disabled={isPending}
                         />
                     </div>
@@ -96,7 +102,10 @@ export const DialogPackForm = ({ open, onClose, pack, onSaved }: DialogPackFormP
                             name="description"
                             rows={3}
                             value={form.description}
-                            onChange={(e) => { setForm((f) => ({ ...f, description: e.currentTarget.value })) }}
+                            onChange={(e) => {
+                                const description = e.currentTarget.value
+                                setForm((f) => ({ ...f, description: description }))
+                            }}
                             disabled={isPending}
                         />
                     </div>
@@ -110,7 +119,10 @@ export const DialogPackForm = ({ open, onClose, pack, onSaved }: DialogPackFormP
                             min="0"
                             step="0.01"
                             value={form.price_list}
-                            onChange={(e) => { setForm((f) => ({ ...f, price_list: e.currentTarget.value })) }}
+                            onChange={(e) => {
+                                const price_list = e.currentTarget.value
+                                setForm((f) => ({ ...f, price_list: price_list }))
+                            }}
                             disabled={isPending}
                         />
                     </div>
@@ -119,7 +131,10 @@ export const DialogPackForm = ({ open, onClose, pack, onSaved }: DialogPackFormP
                             id="state"
                             type="checkbox"
                             checked={form.state}
-                            onChange={(e) => { setForm((f) => ({ ...f, state: e.currentTarget.checked })) }}
+                            onChange={(e) => {
+                                const state = e.currentTarget.checked
+                                setForm((f) => ({ ...f, state: state }))
+                            }}
                             disabled={isPending}
                         />
                         <label htmlFor="state" className="text-sm">Activo</label>
