@@ -1,5 +1,5 @@
 import { ICountTag } from "../[locale]/pack/_components/card-section";
-import { ILabel } from "../types/label.types";
+import { IAdminLabel, IAdminLabelPage, ILabel } from "../types/label.types";
 import { IListPacks } from "../types/pack.types";
 import logger, { jsonLog } from "../utils/logger";
 import { packPortada } from "../utils/pack-portada";
@@ -92,5 +92,53 @@ export const repositoryLabel = {
             return pack
         }))
         return listPacks
+    },
+
+    findPaginated: async (page: number, pageSize: number): Promise<IAdminLabelPage> => {
+        const [labels, total] = await Promise.all([
+            prisma.label.findMany({
+                orderBy: { name: 'asc' },
+                skip: (page - 1) * pageSize,
+                take: pageSize,
+                select: {
+                    label_id: true,
+                    name: true,
+                    slug: true,
+                    state: true,
+                    update_at: true,
+                }
+            }),
+            prisma.label.count(),
+        ])
+        return { labels, total }
+    },
+
+    create: async (name: string, slug: string, state: number): Promise<IAdminLabel> => {
+        return await prisma.label.create({
+            data: { name, slug, state, create_at: new Date(), update_at: new Date() },
+            select: { label_id: true, name: true, slug: true, state: true, update_at: true }
+        })
+    },
+
+    update: async (label_id: number, name: string, slug: string, state: number): Promise<IAdminLabel> => {
+        return await prisma.label.update({
+            where: { label_id },
+            data: { name, slug, state, update_at: new Date() },
+            select: { label_id: true, name: true, slug: true, state: true, update_at: true }
+        })
+    },
+
+    delete: async (label_id: number): Promise<void> => {
+        await prisma.label.delete({ where: { label_id } })
+    },
+
+    findBySlug: async (slug: string, excludeLabelId?: number): Promise<{ label_id: number } | null> => {
+        return await prisma.label.findFirst({
+            where: {
+                slug,
+                ...(excludeLabelId !== undefined ? { label_id: { not: excludeLabelId } } : {})
+            },
+            select: { label_id: true }
+        })
     }
 }

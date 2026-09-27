@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import logger, { jsonLog } from "../../utils/logger";
 import { PageHomeProps } from "../layout";
 import { FormProfile } from "./_components/form-profile";
+import { getCurrentUser } from "../../utils/auth";
 
 export const metadata: Metadata = {
     title: 'Mi cuenta',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 export default async function Page({ params }: PageHomeProps) {
     const { locale } = await params;
     logger.info(`my-account locale ${jsonLog(locale)}`)
-
+    logger.info(`my-account getCurrentUser ${jsonLog( await getCurrentUser())}`)
     return (
         <div className="flex items-center justify-center h-dvs md:h-screen">
             <div className="p-4 w-full sm:w-3xl">

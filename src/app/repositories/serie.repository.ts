@@ -1,6 +1,6 @@
 import { ICountTag } from "../[locale]/pack/_components/card-section";
 import { IListPacks } from "../types/pack.types";
-import { ISerie } from "../types/serie.types";
+import { IAdminSerie, IAdminSeriePage, ISerie } from "../types/serie.types";
 import { packPortada } from "../utils/pack-portada";
 import { prisma } from "../utils/prisma";
 
@@ -89,5 +89,53 @@ export const repositorySerie = {
             return pack
         }))
         return listPacks
+    },
+
+    findPaginated: async (page: number, pageSize: number): Promise<IAdminSeriePage> => {
+        const [series, total] = await Promise.all([
+            prisma.serie.findMany({
+                orderBy: { name: 'asc' },
+                skip: (page - 1) * pageSize,
+                take: pageSize,
+                select: {
+                    serie_id: true,
+                    name: true,
+                    slug: true,
+                    state: true,
+                    update_at: true,
+                }
+            }),
+            prisma.serie.count(),
+        ])
+        return { series, total }
+    },
+
+    create: async (name: string, slug: string, state: number): Promise<IAdminSerie> => {
+        return await prisma.serie.create({
+            data: { name, slug, state, create_at: new Date(), update_at: new Date() },
+            select: { serie_id: true, name: true, slug: true, state: true, update_at: true }
+        })
+    },
+
+    update: async (serie_id: number, name: string, slug: string, state: number): Promise<IAdminSerie> => {
+        return await prisma.serie.update({
+            where: { serie_id },
+            data: { name, slug, state, update_at: new Date() },
+            select: { serie_id: true, name: true, slug: true, state: true, update_at: true }
+        })
+    },
+
+    delete: async (serie_id: number): Promise<void> => {
+        await prisma.serie.delete({ where: { serie_id } })
+    },
+
+    findBySlug: async (slug: string, excludeSerieId?: number): Promise<{ serie_id: number } | null> => {
+        return await prisma.serie.findFirst({
+            where: {
+                slug,
+                ...(excludeSerieId !== undefined ? { serie_id: { not: excludeSerieId } } : {})
+            },
+            select: { serie_id: true }
+        })
     }
 }

@@ -12,8 +12,7 @@ import { repositoryAuthor } from "@/src/app/repositories/author.repository"
 import { repositoryPage } from "@/src/app/repositories/pages.repository"
 import { getCurrentUser } from "@/src/app/utils/auth"
 import { getTranslations } from "next-intl/server"
-import logger, { jsonLog } from "@/src/app/utils/logger"
-import { More } from "./more"
+import { NumericPagination } from "./numeric-pagination"
 import { ExtraPack } from "./extras-pack"
 import { ILikePack } from "@/src/app/types/like-pack.types"
 import { IBuyPack } from "@/src/app/types/buy_pack.types"
@@ -25,9 +24,11 @@ import { notFound } from "next/navigation"
 
 interface PreviewPackProps {
     code: string
+    /** Página del listado de miniaturas (empieza en 1). */
+    currentPage?: number
 }
 
-export const PreviewPack = async ({ code }: PreviewPackProps) => {
+export const PreviewPack = async ({ code, currentPage = 1 }: PreviewPackProps) => {
     const t = await getTranslations('pack-info');
     const pack = await repositoryPack.findPackInfo(code);
     if (pack===null) {
@@ -89,13 +90,9 @@ export const PreviewPack = async ({ code }: PreviewPackProps) => {
 
     const imageDescription = packInfo.portada.url
     const saltos: number = 40;
-    const morePage = packInfo.pages!.filter((image, i) => {
-        if (i > (saltos - 1)) {
-            return image
-        }
-    });
-
-    logger.info(`morePage ${jsonLog(morePage)}`)
+    const totalPages = Math.max(1, Math.ceil(packInfo.pages!.length / saltos));
+    const page = Math.min(Math.max(1, currentPage), totalPages);
+    const pagePages = packInfo.pages!.slice((page - 1) * saltos, page * saltos);
 
     return (
         <div className='px-2 py-2 md:px-10 lg:px-20 xl:px-64 2xl:px-72 md:py-5 lg:py-10 xl:py-14'>
@@ -210,34 +207,29 @@ export const PreviewPack = async ({ code }: PreviewPackProps) => {
                     ></ExtraPack>
                 </div>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5">
+            <div id="paginas" className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 scroll-mt-16">
                 {
-                    packInfo.pages!.map((image, i) => {
-                        const imagePage = image.url
-                        if (i < (saltos)) {
-                            return (
-                                <div
-                                    className="flex p-1 sm:p-1 md:p-1 lg:p-2 xl:p-2 justify-center w-full"
-                                    key={i}
-                                >
-                                    <Link
-                                        href={`/pack/${packInfo?.code}?page=${image.num}`}
-                                        className=""
-                                    >
-                                        <Image
-                                            fetchPriority="high"
-                                            src={imagePage}
-                                            alt={`pagina ${image.num}`}
-                                            width={270}
-                                            height={347}
-                                            unoptimized
-                                            priority
-                                        />
-                                    </Link>
-                                </div>
-                            )
-                        }
-                    })
+                    pagePages.map((image) => (
+                        <div
+                            className="flex p-1 sm:p-1 md:p-1 lg:p-2 xl:p-2 justify-center w-full"
+                            key={image.num}
+                        >
+                            <Link
+                                href={`/pack/${packInfo?.code}?page=${image.num}`}
+                                className=""
+                            >
+                                <Image
+                                    fetchPriority="high"
+                                    src={image.url}
+                                    alt={`pagina ${image.num}`}
+                                    width={270}
+                                    height={347}
+                                    unoptimized
+                                    priority
+                                />
+                            </Link>
+                        </div>
+                    ))
                 }
             </div>
             {!pack_page.full_access && pack_page.total > pack_page.pages.length && (
@@ -245,11 +237,12 @@ export const PreviewPack = async ({ code }: PreviewPackProps) => {
                     <span>{t('paginas_bloqueadas', { count: pack_page.total - pack_page.pages.length })}</span>
                 </div>
             )}
-            <More
+            <NumericPagination
                 code={packInfo.code}
-                pages={morePage}
-                saltos={saltos}
-            ></More>
+                page={page}
+                totalPages={totalPages}
+                anchor="paginas"
+            />
         </div >
     )
 }

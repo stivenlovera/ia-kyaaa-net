@@ -1,5 +1,5 @@
 import { ICountTag } from "../[locale]/pack/_components/card-section";
-import { ICharacter } from "../types/character.types";
+import { IAdminCharacter, IAdminCharacterPage, ICharacter } from "../types/character.types";
 import { IListPacks } from "../types/pack.types";
 import { packPortada } from "../utils/pack-portada";
 import { prisma } from "../utils/prisma";
@@ -89,5 +89,53 @@ export const repositoryCharacter = {
             return pack
         }))
         return newPacks
+    },
+
+    findPaginated: async (page: number, pageSize: number): Promise<IAdminCharacterPage> => {
+        const [characters, total] = await Promise.all([
+            prisma.character.findMany({
+                orderBy: { name: 'asc' },
+                skip: (page - 1) * pageSize,
+                take: pageSize,
+                select: {
+                    character_id: true,
+                    name: true,
+                    slug: true,
+                    state: true,
+                    update_at: true,
+                }
+            }),
+            prisma.character.count(),
+        ])
+        return { characters, total }
+    },
+
+    create: async (name: string, slug: string, state: number): Promise<IAdminCharacter> => {
+        return await prisma.character.create({
+            data: { name, slug, state, create_at: new Date(), update_at: new Date() },
+            select: { character_id: true, name: true, slug: true, state: true, update_at: true }
+        })
+    },
+
+    update: async (character_id: number, name: string, slug: string, state: number): Promise<IAdminCharacter> => {
+        return await prisma.character.update({
+            where: { character_id },
+            data: { name, slug, state, update_at: new Date() },
+            select: { character_id: true, name: true, slug: true, state: true, update_at: true }
+        })
+    },
+
+    delete: async (character_id: number): Promise<void> => {
+        await prisma.character.delete({ where: { character_id } })
+    },
+
+    findBySlug: async (slug: string, excludeCharacterId?: number): Promise<{ character_id: number } | null> => {
+        return await prisma.character.findFirst({
+            where: {
+                slug,
+                ...(excludeCharacterId !== undefined ? { character_id: { not: excludeCharacterId } } : {})
+            },
+            select: { character_id: true }
+        })
     }
 }

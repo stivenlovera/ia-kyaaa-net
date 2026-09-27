@@ -1,4 +1,4 @@
-import { IListPacks, IPackInfo } from "../types/pack.types";
+import { IAdminPack, IAdminPackPage, IListPacks, IPackForEdit, IPackInfo, IPackRelationIds } from "../types/pack.types";
 import { packPortada } from "../utils/pack-portada";
 import { prisma } from "../utils/prisma";
 
@@ -161,5 +161,100 @@ export const repositoryPack = {
             return serialize;
         }
         return null;
+    },
+
+    findPaginated: async (page: number, pageSize: number): Promise<IAdminPackPage> => {
+        const [packs, total] = await Promise.all([
+            prisma.pack.findMany({
+                orderBy: { name: 'asc' },
+                skip: (page - 1) * pageSize,
+                take: pageSize,
+                select: {
+                    pack_id: true,
+                    name: true,
+                    code: true,
+                    description: true,
+                    price_list: true,
+                    state: true,
+                    update_at: true,
+                }
+            }),
+            prisma.pack.count(),
+        ])
+        return { packs: packs.map((p) => ({ ...p, price_list: p.price_list.toNumber() })), total }
+    },
+
+    create: async (name: string, code: string, description: string, price_list: number, state: number): Promise<IAdminPack> => {
+        const pack = await prisma.pack.create({
+            data: { name, code, description, price_list, state, create_at: new Date(), update_at: new Date() },
+            select: { pack_id: true, name: true, code: true, description: true, price_list: true, state: true, update_at: true }
+        })
+        return { ...pack, price_list: pack.price_list.toNumber() }
+    },
+
+    update: async (pack_id: number, name: string, code: string, description: string, price_list: number, state: number): Promise<IAdminPack> => {
+        const pack = await prisma.pack.update({
+            where: { pack_id },
+            data: { name, code, description, price_list, state, update_at: new Date() },
+            select: { pack_id: true, name: true, code: true, description: true, price_list: true, state: true, update_at: true }
+        })
+        return { ...pack, price_list: pack.price_list.toNumber() }
+    },
+
+    delete: async (pack_id: number): Promise<void> => {
+        await prisma.pack.delete({ where: { pack_id } })
+    },
+
+    findByCode: async (code: string, excludePackId?: number): Promise<{ pack_id: number } | null> => {
+        return await prisma.pack.findFirst({
+            where: {
+                code,
+                ...(excludePackId !== undefined ? { pack_id: { not: excludePackId } } : {})
+            },
+            select: { pack_id: true }
+        })
+    },
+
+    /** Datos mínimos para la pantalla de edición de relaciones y páginas: sin portada ni páginas. */
+    findForEdit: async (code: string): Promise<IPackForEdit | null> => {
+        return await prisma.pack.findFirst({
+            where: { code },
+            select: {
+                pack_id: true,
+                name: true,
+                code: true,
+                pack_label: { select: { label: { select: { name: true, label_id: true } } } },
+                pack_character: { select: { character: { select: { name: true, character_id: true } } } },
+                pack_serie: { select: { serie: { select: { name: true, serie_id: true } } } },
+                pack_authors: { select: { author: { select: { name: true, author_id: true } } } },
+                pack_languages: { select: { language: { select: { name: true, language_id: true } } } },
+            }
+        })
+    },
+
+    /** Reemplaza por completo las relaciones del pack con etiquetas, personajes, series, autores e idiomas. */
+    setRelations: async (pack_id: number, ids: IPackRelationIds): Promise<void> => {
+        await prisma.$transaction([
+            prisma.pack_label.deleteMany({ where: { pack_id } }),
+            prisma.pack_character.deleteMany({ where: { pack_id } }),
+            prisma.pack_serie.deleteMany({ where: { pack_id } }),
+            prisma.pack_author.deleteMany({ where: { pack_id } }),
+            prisma.pack_language.deleteMany({ where: { pack_id } }),
+            ...(ids.label_ids.length > 0 ? [prisma.pack_label.createMany({
+                data: ids.label_ids.map((label_id) => ({ pack_id, label_id }))
+            })] : []),
+            ...(ids.character_ids.length > 0 ? [prisma.pack_character.createMany({
+                data: ids.character_ids.map((character_id) => ({ pack_id, character_id }))
+            })] : []),
+            ...(ids.serie_ids.length > 0 ? [prisma.pack_serie.createMany({
+                data: ids.serie_ids.map((serie_id) => ({ pack_id, serie_id }))
+            })] : []),
+            ...(ids.author_ids.length > 0 ? [prisma.pack_author.createMany({
+                data: ids.author_ids.map((author_id) => ({ pack_id, author_id }))
+            })] : []),
+            ...(ids.language_ids.length > 0 ? [prisma.pack_language.createMany({
+                data: ids.language_ids.map((language_id) => ({ pack_id, language_id }))
+            })] : []),
+        ])
     }
 }

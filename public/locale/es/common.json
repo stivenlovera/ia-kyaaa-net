@@ -10,9 +10,10 @@
       "inciar_sesion": "Iniciar sesión",
       "auth": {
         "mis_compra": "Mis compras",
-        "favorito": "favoritos",
+        "favorito": "Favoritos",
         "mi_cuenta": "Mi cuenta",
-        "cerrar_sesion": "Cerrar session"
+        "cerrar_sesion": "Cerrar sesión",
+        "administrar": "Administrar"
       }
     }
   },
