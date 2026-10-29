@@ -2,6 +2,7 @@ import { ICountTag } from "../[locale]/pack/_components/card-section";
 import { IAdminAuthor, IAdminAuthorPage, IAuthor } from "../types/author.types";
 import { IListPacks } from "../types/pack.types";
 import { packPortada } from "../utils/pack-portada";
+import { STATE_PACK } from "../utils/page-access";
 import { prisma } from "../utils/prisma";
 
 export const repositoryAuthor = {
@@ -72,6 +73,8 @@ export const repositoryAuthor = {
                 },
             },
             where: {
+                // Solo packs publicados; "próximamente" y "borrador" no salen en el listado.
+                state_pack_id: STATE_PACK.PUBLISHED,
                 pack_authors: {
                     some: {
                         author: {

@@ -5,19 +5,22 @@ import Link from 'next/link'
 import { FaGear, FaPen, FaPlus, FaTrash } from 'react-icons/fa6'
 import { useRouter } from '@/src/i18n/navigation'
 import { IAdminPack } from '@/src/app/types/pack.types'
+import { IStatePack } from '@/src/app/types/state-pack.types'
 import { DialogPackForm } from './dialog-pack-form'
 import { DialogDeletePack } from './dialog-delete-pack'
 
 interface PackListProps {
     packs: IAdminPack[]
+    states: IStatePack[]
 }
 
-export const PackList = ({ packs }: PackListProps) => {
+export const PackList = ({ packs, states }: PackListProps) => {
     const router = useRouter()
     const [editingPack, setEditingPack] = useState<IAdminPack | null | undefined>(undefined)
     const [deletingPack, setDeletingPack] = useState<IAdminPack | null>(null)
 
     const refresh = () => { router.refresh() }
+    const stateName = (state_pack_id: number) => states.find((s) => s.state_pack_id === state_pack_id)?.name ?? state_pack_id
 
     return (
         <div>
@@ -38,6 +41,7 @@ export const PackList = ({ packs }: PackListProps) => {
                             <th className='p-2'>Código</th>
                             <th className='p-2'>Precio</th>
                             <th className='p-2'>Estado</th>
+                            <th className='p-2'>Estado del pack</th>
                             <th className='p-2'>Actualizado</th>
                             <th className='p-2'></th>
                         </tr>
@@ -45,7 +49,7 @@ export const PackList = ({ packs }: PackListProps) => {
                     <tbody>
                         {packs.length === 0 ? (
                             <tr>
-                                <td className='p-2' colSpan={6}>No hay packs registrados.</td>
+                                <td className='p-2' colSpan={7}>No hay packs registrados.</td>
                             </tr>
                         ) : packs.map((pack) => (
                             <tr key={pack.pack_id} className='border-b border-neutral-800'>
@@ -53,6 +57,7 @@ export const PackList = ({ packs }: PackListProps) => {
                                 <td className='p-2'>{pack.code}</td>
                                 <td className='p-2'>{pack.price_list}</td>
                                 <td className='p-2'>{pack.state === 1 ? 'Activo' : 'Inactivo'}</td>
+                                <td className='p-2'>{stateName(pack.state_pack_id)}</td>
                                 <td className='p-2'>{pack.update_at ? moment(pack.update_at).format('DD/MM/yyyy hh:mm') : ''}</td>
                                 <td className='p-2'>
                                     <div className='flex justify-end gap-2'>
@@ -90,6 +95,7 @@ export const PackList = ({ packs }: PackListProps) => {
             <DialogPackForm
                 open={editingPack !== undefined}
                 pack={editingPack}
+                states={states}
                 onClose={() => { setEditingPack(undefined) }}
                 onSaved={refresh}
             />

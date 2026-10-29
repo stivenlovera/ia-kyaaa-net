@@ -1,4 +1,5 @@
 import { repositoryPack } from '@/src/app/repositories/pack.repository'
+import { repositoryStatePack } from '@/src/app/repositories/state-pack.repository'
 import { isNumber } from '@/src/app/utils/other'
 import { AdminPagination } from '../_components/pagination'
 import { PackList } from './_components/pack-list'
@@ -24,12 +25,13 @@ export default async function Page({ searchParams }: AdminPackPageProps) {
     if (page !== requestedPage) {
         ({ packs: pagePacks, total } = await repositoryPack.findPaginated(page, PAGE_SIZE))
     }
+    const states = await repositoryStatePack.findAll()
 
     return (
         <div className='px-2 py-2 md:px-10 lg:px-20 xl:px-64 2xl:px-72 md:py-5 lg:py-10 xl:py-14'>
             <div className='card'>
                 <h1 className='text-center text-2xl md:text-3xl font-bold pb-3'>Packs</h1>
-                <PackList packs={pagePacks} />
+                <PackList packs={pagePacks} states={states} />
                 <AdminPagination basePath='/admin/pack' page={page} totalPages={totalPages} />
             </div>
         </div>

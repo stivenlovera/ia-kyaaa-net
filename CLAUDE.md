@@ -9,7 +9,7 @@ Este archivo ofrece orientación a Claude Code (claude.ai/code) cuando trabaja c
 - `npm run lint` — ESLint (configuración flat en `eslint.config.mjs`)
 - `npx prisma generate` — regenera el cliente de Prisma en `generated/prisma` (ignorado por git; hay que ejecutarlo después de `npm ci` y tras cualquier cambio en `prisma/schema.prisma`; el Dockerfile lo ejecuta antes de `next build`)
 
-No hay suite de tests. No hay migraciones de Prisma en el repositorio; `data-base/schema.sql` y `prisma/schema.prisma` describen el esquema de MariaDB.
+No hay suite de tests. No hay migraciones de Prisma en el repositorio; `data-base/schema.sql` y `prisma/schema.prisma` describen el esquema de MariaDB (solo estructura; los datos de ejemplo están en `data-base/population.sql`, que se ejecuta después). Los cambios de esquema van además como scripts en `data-base/migrations/`.
 
 El despliegue es CI/CD con GitHub Actions (`.github/workflows/ci-cd.yml`): en cada PR y push a `master` corre lint + `tsc --noEmit` y construye la imagen; en push a `master` la publica en GHCR (`ghcr.io/stivenlovera/ia-kyaaa-net:<sha>`) y la despliega en CapRover con `caprover/deploy-from-github`. La imagen usa `output: 'standalone'` (`node server.js`) y no contiene secretos: solo las `NEXT_PUBLIC_*` se pasan como build args (desde las *Variables* del repo en GitHub, porque Next las incrusta en el cliente); el resto de variables se inyecta en runtime desde *App Configs* de CapRover. Una nueva variable de servidor solo hay que darla de alta en CapRover; una nueva `NEXT_PUBLIC_*` requiere además añadir el `ARG`/`ENV` en el `Dockerfile`, el `build-args` del workflow y la variable en GitHub. El lockfile debe estar sincronizado con el npm de `node:22` (`npm ci` falla si no).
 
