@@ -1,8 +1,12 @@
 -- Completa 2026-09-27_state_pack.sql: asigna "publicado" (state_pack_id 1) a los packs
 -- existentes y vuelve la columna obligatoria con ese mismo valor por defecto.
 --
--- Ejecutar una sola vez, después de 2026-09-27_state_pack.sql, y con state_pack ya poblada
--- (ver data-base/population.sql) para que el id 1 exista.
+-- Ejecutar una sola vez, después de 2026-09-27_state_pack.sql.
+
+-- Mismos estados que data-base/population.sql; IGNORE por si ya estaban cargados.
+-- Sin el id 1 el UPDATE falla por la FK pack_ibfk_1.
+INSERT IGNORE INTO `state_pack` (`state_pack_id`, `name`)
+VALUES (1,'publicado'),(2,'próximamente'),(3,'borrador');
 
 UPDATE `pack` SET `state_pack_id` = 1;
 
