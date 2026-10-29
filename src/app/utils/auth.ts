@@ -16,7 +16,6 @@ export async function generateAccessToken(payload: JWTPayload): Promise<string> 
         user_id: payload.user_id,
         email: payload.email,
         name: payload.name,
-        role: payload.role
     })
         .setProtectedHeader({ alg: 'HS256' })
         .setIssuedAt()

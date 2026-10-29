@@ -20,8 +20,7 @@
   --font-wild-words-roman: "WildWordsRoman", sans-serif;
 }
 
-@layer base {
-}
+@layer base {}
 
 @utility card {
   @apply items-center justify-center p-2 md:p-5 lg:p-7 xl:p-7 border border-neutral-700 rounded-lg shadow-md;
@@ -52,6 +51,10 @@
     @apply bg-neutral-100 hover:bg-neutral-50 placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow;
   }
 
+  textarea {
+    @apply bg-neutral-100 hover:bg-neutral-50 placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow;
+  }
+
   input[type="checkbox"] {
     @apply bg-neutral-100 hover:text-neutral-100;
   }
@@ -71,6 +74,7 @@
   iframe {
     position: initial !important;
   }
+
   .paypal-buttons {
     position: initial !important;
   }

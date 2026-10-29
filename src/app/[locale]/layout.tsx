@@ -57,7 +57,7 @@ export default async function LocaleLayout({
     
     return (
         <html className=" text-white" lang={locale}>
-            <body className={`${inter.className} bg-neutral-900`}>
+            <body className={`${inter.className} bg-neutral-900 min-h-screen flex flex-col`}>
                 <Suspense fallback={<Splashscreen></Splashscreen>}>
                     <NextIntlClientProvider>
                         <AuthProvider auth={user === null ? user : {
@@ -70,7 +70,7 @@ export default async function LocaleLayout({
                                 <AlertProvider>
                                     <Header></Header>
                                     <ToastProvider>
-                                        <div className='h-full'>
+                                        <div className='flex-1'>
                                             {children}
                                         </div>
                                         <div className='bg-neutral-800 p-2'>

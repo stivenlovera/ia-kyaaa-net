@@ -16,6 +16,7 @@ interface PagePaginateProps {
     }>,
     searchParams: Promise<{
         page: string
+        p?: string
     }>
 }
 
@@ -38,7 +39,7 @@ export async function generateMetadata({ params, searchParams }: PagePaginatePro
 
 export default async function Page({ params, searchParams }: PagePaginateProps) {
     const { code } = await params;
-    const { page } = await searchParams;
+    const { page, p } = await searchParams;
     logger.info(`/pack ${jsonLog(page)}`)
 
     if (page !== undefined) {
@@ -60,6 +61,7 @@ export default async function Page({ params, searchParams }: PagePaginateProps) 
         return (
             <PreviewPack
                 code={code}
+                currentPage={p !== undefined && isNumber(p) ? Math.trunc(Number(p)) : 1}
             >
             </PreviewPack>
         )

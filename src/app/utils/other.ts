@@ -20,3 +20,14 @@ export const divideInBLocks = <T>(arr: T[], tamaño: number): T[][] => {
     arr.slice(i * tamaño, i * tamaño + tamaño)
   );
 };
+
+// Convierte un nombre en un slug para URL: minúsculas, sin tildes, espacios y símbolos como "-".
+export function slugify(name: string): string {
+  return name
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}

@@ -15,7 +15,8 @@ declare const messages: {
         "mis_compra": "My purchases",
         "favorito": "Favorites",
         "mi_cuenta": "My account",
-        "cerrar_sesion": "Log out"
+        "cerrar_sesion": "Log out",
+        "administrar": "Manage"
       }
     }
   },

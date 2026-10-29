@@ -1,5 +1,5 @@
 import { ICountTag } from "../[locale]/pack/_components/card-section";
-import { IAuthor } from "../types/author.types";
+import { IAdminAuthor, IAdminAuthorPage, IAuthor } from "../types/author.types";
 import { IListPacks } from "../types/pack.types";
 import { packPortada } from "../utils/pack-portada";
 import { prisma } from "../utils/prisma";
@@ -89,5 +89,53 @@ export const repositoryAuthor = {
             return pack
         }))
         return listPacks
+    },
+
+    findPaginated: async (page: number, pageSize: number): Promise<IAdminAuthorPage> => {
+        const [authors, total] = await Promise.all([
+            prisma.author.findMany({
+                orderBy: { name: 'asc' },
+                skip: (page - 1) * pageSize,
+                take: pageSize,
+                select: {
+                    author_id: true,
+                    name: true,
+                    slug: true,
+                    state: true,
+                    update_at: true,
+                }
+            }),
+            prisma.author.count(),
+        ])
+        return { authors, total }
+    },
+
+    create: async (name: string, slug: string, state: number): Promise<IAdminAuthor> => {
+        return await prisma.author.create({
+            data: { name, slug, state, create_at: new Date(), update_at: new Date() },
+            select: { author_id: true, name: true, slug: true, state: true, update_at: true }
+        })
+    },
+
+    update: async (author_id: number, name: string, slug: string, state: number): Promise<IAdminAuthor> => {
+        return await prisma.author.update({
+            where: { author_id },
+            data: { name, slug, state, update_at: new Date() },
+            select: { author_id: true, name: true, slug: true, state: true, update_at: true }
+        })
+    },
+
+    delete: async (author_id: number): Promise<void> => {
+        await prisma.author.delete({ where: { author_id } })
+    },
+
+    findBySlug: async (slug: string, excludeAuthorId?: number): Promise<{ author_id: number } | null> => {
+        return await prisma.author.findFirst({
+            where: {
+                slug,
+                ...(excludeAuthorId !== undefined ? { author_id: { not: excludeAuthorId } } : {})
+            },
+            select: { author_id: true }
+        })
     }
 }

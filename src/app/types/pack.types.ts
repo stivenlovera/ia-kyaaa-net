@@ -122,3 +122,51 @@ export interface Language {
     name: string
     language_id: number
 }
+
+export interface IAdminPack {
+    pack_id: number;
+    name: string;
+    code: string;
+    description: string;
+    price_list: number;
+    state: number;
+    update_at: Date | null;
+}
+
+export interface IAdminPackPage {
+    packs: IAdminPack[];
+    total: number;
+}
+
+export interface IFormPack {
+    pack_id?: number;
+    name: string;
+    code: string;
+    description: string;
+    price_list: number;
+    state: number;
+}
+
+/** Datos mínimos del pack para la pantalla de edición de relaciones y páginas (sin portada ni páginas). */
+export interface IPackForEdit {
+    pack_id: number;
+    name: string;
+    code: string;
+    pack_label: PackLabel[];
+    pack_character: PackCharacter[];
+    pack_serie: PackSerie[];
+    pack_authors: PackAuthor[];
+    pack_languages: PackLanguage[];
+}
+
+export interface IPackRelationIds {
+    label_ids: number[];
+    character_ids: number[];
+    serie_ids: number[];
+    author_ids: number[];
+    language_ids: number[];
+}
+
+export interface IFormPackRelations extends IPackRelationIds {
+    pack_id: number;
+}

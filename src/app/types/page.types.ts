@@ -33,3 +33,21 @@ export interface ISize {
 export interface Size {
     name: "tumb" | "medium" | "web" | "premium-web" | "meta"
 }
+
+/** Página de un pack para la gestión de admin: sin filtrar por acceso del usuario. */
+export interface IAdminPage {
+    page_id: number
+    num: string
+    /** 1 = gratis, 2 = de pago (ver PAGE_TYPE en utils/page-access.ts). */
+    page_type_id: number
+    state: number
+    /** Miniatura (size "tumb"); cadena vacía si no se generó todavía. */
+    url: string
+}
+
+export interface IFormPage {
+    page_id: number
+    num: string
+    page_type_id: number
+    state: number
+}
