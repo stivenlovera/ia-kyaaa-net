@@ -29,6 +29,8 @@ jobs:
         env:
           DATABASE_URL: mysql://build:build@localhost:3306/build
       - run: npm run lint
+      # Genera en .next/types los tipos globales de rutas (LayoutProps, PageProps) que usa tsc
+      - run: npx next typegen
       - run: npx tsc --noEmit
 
   build:
