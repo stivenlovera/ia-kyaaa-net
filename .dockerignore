@@ -1,0 +1,16 @@
+.git
+.github
+.next
+.vscode
+node_modules
+generated/prisma
+logs
+certificates
+mcp
+readme
+.env*
+*.tsbuildinfo
+next-env.d.ts
+.mcp.json
+Dockerfile
+captain-definition

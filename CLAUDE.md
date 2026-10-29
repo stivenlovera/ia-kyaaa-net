@@ -11,7 +11,7 @@ Este archivo ofrece orientación a Claude Code (claude.ai/code) cuando trabaja c
 
 No hay suite de tests. No hay migraciones de Prisma en el repositorio; `data-base/schema.sql` y `prisma/schema.prisma` describen el esquema de MariaDB.
 
-El despliegue se hace con Docker / CapRover (`Dockerfile`, `captain-definition`). Cada variable de entorno de `.env.example` se propaga en el Dockerfile como un par `ARG`/`ENV`, por lo que una nueva variable de entorno debe agregarse en ambos lugares.
+El despliegue es CI/CD con GitHub Actions (`.github/workflows/ci-cd.yml`): en cada PR y push a `master` corre lint + `tsc --noEmit` y construye la imagen; en push a `master` la publica en GHCR (`ghcr.io/stivenlovera/ia-kyaaa-net:<sha>`) y la despliega en CapRover con `caprover/deploy-from-github`. La imagen usa `output: 'standalone'` (`node server.js`) y no contiene secretos: solo las `NEXT_PUBLIC_*` se pasan como build args (desde las *Variables* del repo en GitHub, porque Next las incrusta en el cliente); el resto de variables se inyecta en runtime desde *App Configs* de CapRover. Una nueva variable de servidor solo hay que darla de alta en CapRover; una nueva `NEXT_PUBLIC_*` requiere además añadir el `ARG`/`ENV` en el `Dockerfile`, el `build-args` del workflow y la variable en GitHub. El lockfile debe estar sincronizado con el npm de `node:22` (`npm ci` falla si no).
 
 ## Stack
 
