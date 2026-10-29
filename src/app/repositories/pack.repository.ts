@@ -1,11 +1,16 @@
 import { IAdminPack, IAdminPackPage, IListPacks, IPackForEdit, IPackInfo, IPackRelationIds } from "../types/pack.types";
 import { packPortada } from "../utils/pack-portada";
+import { STATE_PACK } from "../utils/page-access";
 import { prisma } from "../utils/prisma";
 
 export const repositoryPack = {
 
     findPacksNew: async (): Promise<IListPacks[] | null> => {
         const packs = await prisma.pack.findMany({
+            // Solo packs publicados; "próximamente" y "borrador" no salen en la portada.
+            where: {
+                state_pack_id: STATE_PACK.PUBLISHED
+            },
             select: {
                 name: true,
                 description: true,
@@ -176,6 +181,7 @@ export const repositoryPack = {
                     description: true,
                     price_list: true,
                     state: true,
+                    state_pack_id: true,
                     update_at: true,
                 }
             }),
@@ -184,21 +190,30 @@ export const repositoryPack = {
         return { packs: packs.map((p) => ({ ...p, price_list: p.price_list.toNumber() })), total }
     },
 
-    create: async (name: string, code: string, description: string, price_list: number, state: number): Promise<IAdminPack> => {
+    create: async (name: string, code: string, description: string, price_list: number, state: number, state_pack_id: number): Promise<IAdminPack> => {
         const pack = await prisma.pack.create({
-            data: { name, code, description, price_list, state, create_at: new Date(), update_at: new Date() },
-            select: { pack_id: true, name: true, code: true, description: true, price_list: true, state: true, update_at: true }
+            data: { name, code, description, price_list, state, state_pack_id, create_at: new Date(), update_at: new Date() },
+            select: { pack_id: true, name: true, code: true, description: true, price_list: true, state: true, state_pack_id: true, update_at: true }
         })
         return { ...pack, price_list: pack.price_list.toNumber() }
     },
 
-    update: async (pack_id: number, name: string, code: string, description: string, price_list: number, state: number): Promise<IAdminPack> => {
+    update: async (pack_id: number, name: string, code: string, description: string, price_list: number, state: number, state_pack_id: number): Promise<IAdminPack> => {
         const pack = await prisma.pack.update({
             where: { pack_id },
-            data: { name, code, description, price_list, state, update_at: new Date() },
-            select: { pack_id: true, name: true, code: true, description: true, price_list: true, state: true, update_at: true }
+            data: { name, code, description, price_list, state, state_pack_id, update_at: new Date() },
+            select: { pack_id: true, name: true, code: true, description: true, price_list: true, state: true, state_pack_id: true, update_at: true }
         })
         return { ...pack, price_list: pack.price_list.toNumber() }
+    },
+
+    /** Cambio rápido del estado editorial del pack (publicado/próximamente/borrador), sin tocar el resto de campos. */
+    updateStatePack: async (pack_id: number, state_pack_id: number): Promise<{ pack_id: number, state_pack_id: number }> => {
+        return await prisma.pack.update({
+            where: { pack_id },
+            data: { state_pack_id, update_at: new Date() },
+            select: { pack_id: true, state_pack_id: true }
+        })
     },
 
     delete: async (pack_id: number): Promise<void> => {
@@ -223,6 +238,7 @@ export const repositoryPack = {
                 pack_id: true,
                 name: true,
                 code: true,
+                state_pack_id: true,
                 pack_label: { select: { label: { select: { name: true, label_id: true } } } },
                 pack_character: { select: { character: { select: { name: true, character_id: true } } } },
                 pack_serie: { select: { serie: { select: { name: true, serie_id: true } } } },

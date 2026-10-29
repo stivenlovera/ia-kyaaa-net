@@ -3,6 +3,7 @@ import { IAdminLabel, IAdminLabelPage, ILabel } from "../types/label.types";
 import { IListPacks } from "../types/pack.types";
 import logger, { jsonLog } from "../utils/logger";
 import { packPortada } from "../utils/pack-portada";
+import { STATE_PACK } from "../utils/page-access";
 import { prisma } from "../utils/prisma";
 
 export const repositoryLabel = {
@@ -74,6 +75,8 @@ export const repositoryLabel = {
                 },
             },
             where: {
+                // Solo packs publicados; "próximamente" y "borrador" no salen en el listado.
+                state_pack_id: STATE_PACK.PUBLISHED,
                 pack_label: {
                     some: {
                         label: {

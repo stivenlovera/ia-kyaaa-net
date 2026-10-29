@@ -28,6 +28,8 @@ model Pack {
   price_list        Decimal
   code_free         String?
   state             Int                @default(1)
+  state_pack_id     Int                @default(1)
+  state_pack        State_Pack         @relation(fields: [state_pack_id], references: [state_pack_id])
   create_at         DateTime?
   update_at         DateTime?
   pages             Page[]
@@ -43,6 +45,17 @@ model Pack {
   likePacks         Like_Pack[]
 
   @@map(name: "pack")
+}
+
+model State_Pack {
+  state_pack_id Int      @default(autoincrement())
+  name          String
+  create_at     DateTime @default(now())
+  update_at     DateTime @updatedAt
+  packs         Pack[]
+
+  @@id([state_pack_id])
+  @@map(name: "state_pack")
 }
 
 model Page {

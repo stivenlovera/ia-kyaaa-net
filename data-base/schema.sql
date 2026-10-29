@@ -5,6 +5,7 @@ use `ia_kyaaa`;
 
 -- Estructura generada desde la base ia_kyaaa (MySQL 8.0.30) el 2026-09-20.
 -- Las tablas van ordenadas por dependencia de claves foráneas.
+-- Los datos de ejemplo (catálogos y los dos packs de prueba) están en population.sql, que se ejecuta después.
 
 DROP TABLE IF EXISTS `author`;
 CREATE TABLE `author` (
@@ -59,6 +60,15 @@ CREATE TABLE `method_buy` (
   PRIMARY KEY (`method_buy_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+DROP TABLE IF EXISTS `state_pack`;
+CREATE TABLE `state_pack` (
+  `state_pack_id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(250) NOT NULL,
+  `create_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  `update_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`state_pack_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 DROP TABLE IF EXISTS `pack`;
 CREATE TABLE `pack` (
   `pack_id` int NOT NULL AUTO_INCREMENT,
@@ -69,9 +79,12 @@ CREATE TABLE `pack` (
   `price_list` decimal(10,2) NOT NULL,
   `code_free` varchar(20) DEFAULT '',
   `state` tinyint(1) NOT NULL DEFAULT '1',
+  `state_pack_id` int NOT NULL DEFAULT '1',
   `create_at` datetime DEFAULT CURRENT_TIMESTAMP,
   `update_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`pack_id`)
+  PRIMARY KEY (`pack_id`),
+  KEY `state_pack_id` (`state_pack_id`),
+  CONSTRAINT `pack_ibfk_1` FOREIGN KEY (`state_pack_id`) REFERENCES `state_pack` (`state_pack_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 DROP TABLE IF EXISTS `page_type`;
@@ -344,89 +357,3 @@ CREATE TABLE `vote` (
   CONSTRAINT `vote_ibfk_1` FOREIGN KEY (`participate_pack_id`) REFERENCES `participate_pack` (`participate_pack_id`),
   CONSTRAINT `vote_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-#POBLACION
-insert into `type` (type_id,name) values (1,'de pago');
-insert into `type` (type_id,name) values (2,'gratis');
-insert into page_type (page_type_id,name) values (1,'free'),(2,'buy');
-insert into size (size_id, name, extension) 
-values 
-(1,'tumb','avif'),
-(2,'medium','avif'), 
-(3,'web','avif'),
-(4,'premium-web','avif'),
-(5,'meta','jpeg');
-
-insert into label (label_id, name) values
- (1,'ahegao'), 
- (2,'lolicon'), 
- (3,'ray-x'), 
- (4,'no penetration'), 
- (5,'rape'), 
- (6,'nakadashi'),
- (7,'twintails'),
- (8,'ponytail'),
- (9,'stomach deformation'),
- (10,'anal'),
- (11,'bukkake');
- 
-insert into serie (serie_id, name) 
-values 
-(1,'original'), 
-(2,'love live project'), 
-(3,'love live sunshine'), 
-(4,'jujutsu kaisen'), 
-(5,'demashita! powerpuff girls Z'), 
-(6,'houkago no pleiades'),
-(7,'shion murasaki');
-
-insert into `character` (character_id, name) 
-values 
-(1,'momoko akatsutsumi'), 
-(2,'nishikino maki'), 
-(3,'niko yazawa'),
-(4,'yoshiko tsushima'), 
-(5,'utahime iori'), 
-(6,'mao mao'), 
-(7,'shinonome akira'),
-(8,'mizuki-ia'), 
-(9,'honoka kosaka'), 
-(10,'kotori minami'), 
-(11,'murasaki shion');
-
-insert into `author` (author_id,name) values 
-(1,'iaKyaaa'),
-(2,'zeroRealistic');
-insert into `language` (name) values ('solo imagen');
-
-#POBLACION te encontre
-insert into pack (name,code,price_list) values ('te encontre','20260128202950',7.0);
-insert into pack_type (type_id, pack_id) values (2,1);
-insert into pack_label (label_id, pack_id) values (1,1),(2,1),(3,1),(6,1),(8,1),(9,1);
-insert into pack_serie (serie_id, pack_id) values (5,1);
-insert into pack_character (character_id,pack_id) values (1,1);
-insert into pack_author (author_id,pack_id) values (1,1);
-insert into pack_language (language_id,pack_id) values (1,1);
-
-#POBLACION nico anal
-insert into pack (name,code,price_list) values ('nicoAnal','20260128202951',7.0);
-insert into pack_type (type_id, pack_id) values (1,2);
-insert into pack_label (label_id, pack_id) values (1,2),(2,2),(3,2),(5,2),(6,2),(7,2),(9,2),(10,2),(11,2);
-insert into pack_serie (serie_id, pack_id) values (2,2);
-insert into pack_character (character_id,pack_id) values (3,2);
-insert into pack_author (author_id,pack_id) values (2,2);
-insert into pack_language (language_id,pack_id) values (1,2);
-
-
-select * from page;
-select * from serie;
-select * from label;
-select * from `character`;
-
-#PAGINAS GRATIS (page_type 1 = free, 2 = buy). Se ejecuta después de cargar las páginas de cada pack.
-#te encontre es gratuito: todas sus páginas son gratis.
-update page set page_type_id = 1 where pack_id = 1;
-#nico anal es de pago: solo estas páginas son gratis.
-update page set page_type_id = 1
- where pack_id = 2
-   and cast(num as unsigned) in (1,2,4,5,8,9,15,16,19,20,22,24,28,30,36,39,40,43,46,48,51,52,56,59);

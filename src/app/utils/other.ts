@@ -21,6 +21,16 @@ export const divideInBLocks = <T>(arr: T[], tamaño: number): T[][] => {
   );
 };
 
+// Código numérico único para un pack nuevo: fecha/hora (YYYYMMDDHHmmss) + 3 dígitos al azar,
+// para evitar choques si se crean dos packs en el mismo segundo. Mismo formato que ya usan los packs existentes.
+export function generatePackCode(): string {
+  const now = new Date();
+  const pad = (n: number) => String(n).padStart(2, '0');
+  const timestamp = `${now.getFullYear()}${pad(now.getMonth() + 1)}${pad(now.getDate())}${pad(now.getHours())}${pad(now.getMinutes())}${pad(now.getSeconds())}`;
+  const random = String(Math.floor(Math.random() * 1000)).padStart(3, '0');
+  return `${timestamp}${random}`;
+}
+
 // Convierte un nombre en un slug para URL: minúsculas, sin tildes, espacios y símbolos como "-".
 export function slugify(name: string): string {
   return name

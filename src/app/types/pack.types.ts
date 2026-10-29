@@ -130,6 +130,7 @@ export interface IAdminPack {
     description: string;
     price_list: number;
     state: number;
+    state_pack_id: number;
     update_at: Date | null;
 }
 
@@ -145,6 +146,7 @@ export interface IFormPack {
     description: string;
     price_list: number;
     state: number;
+    state_pack_id: number;
 }
 
 /** Datos mínimos del pack para la pantalla de edición de relaciones y páginas (sin portada ni páginas). */
@@ -152,6 +154,7 @@ export interface IPackForEdit {
     pack_id: number;
     name: string;
     code: string;
+    state_pack_id: number;
     pack_label: PackLabel[];
     pack_character: PackCharacter[];
     pack_serie: PackSerie[];
